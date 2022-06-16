@@ -24,29 +24,40 @@ public static class AddTwoNumbers
      }
     public static ListNode Operation1(ListNode l1, ListNode l2)
     {
+        if(l1 == null && l2 == null) { return new ListNode(); }
 
-        List<int> outList = new List<int>(); string str = string.Empty;
-        
-        int n1 = 0, n2 = 0, k = 1, output = 0; int temp = 0;
+        int n1, n2, cf = 0, val=0;
+        bool isCF = false;
+        List<int> outList = new List<int>();
 
-        //for (int i = l1.Count -1; i >=0 ; i--) {
-        //    n1 += l1[i] * Convert.ToInt32(Math.Pow(10, i));
-        //}
+        ListNode l1next = l1, l2next = l2, outnext = null;
+        while (!( (l1next == null) && (l2next == null))) {
 
-        //for (int j = l2.Count - 1; j >= 0; j--) {
-        //    n2 += l2[j] * Convert.ToInt32(Math.Pow(10, j));
-        //}
+            n1 = l1next == null ? 0 : l1next.val;
+            n2 = l2next == null ? 0 : l2next.val;
+            
+            val = (n1 + n2 + cf) % 10; if( (n1+n2+cf) >=10) { isCF = true; }
+            cf = (n1 + n2 + cf) / 10;
 
-        output = n1 + n2;
+            outList.Add(val);
 
-        temp = output;
-        while (output > 0)
+            l1next = l1next == null ? null : l1next.next; 
+            l2next = l2next == null ? null: l2next.next;
+        }
+
+        if(isCF && cf !=0) { outList.Add(cf); }
+
+        int count1 = outList.Count();
+        ListNode prev1Node = null;
+        ListNode output;
+
+        for (int i = count1 - 1; i >= 0; i--)
         {
-            temp = output % 10;
-            outList.Add(temp);
-            output = output / 10;
-        }        
+            ListNode newNode = new ListNode(outList[i], prev1Node);
+            prev1Node = newNode;
+        }
+        output = prev1Node;
 
-        return null;
+        return output;
     }
 }
