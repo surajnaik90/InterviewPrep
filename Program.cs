@@ -1,4 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using usingInterface;
+
+// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
 //int[] nums = { 2, 7, 11, 15 };
@@ -73,6 +75,9 @@ int res13 = StringToIntegerMyAtoi.Approach2("21474836460"); //out: 2147483647
 
 //DynamicPolymorphism.AngryBird.Render(new DynamicPolymorphism.Hen());
 
-StaticPolymorphism.AngryBird.Render(new StaticPolymorphism.Eagle());
+//StaticPolymorphism.AngryBird.Render(new StaticPolymorphism.Eagle());
+
+IFlyable m = new Mosquito();
+m.Fly();
 
 Console.WriteLine("done");
