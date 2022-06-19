@@ -57,13 +57,22 @@ int res13 = StringToIntegerMyAtoi.Approach2("21474836460"); //out: 2147483647
 
 //AddTwoNumbers.ListNode res =  AddTwoNumbers.Operation1(l1, l2);
 
-List<int> a = new List<int>() { 10000, 10000, 10000 , 10000 , 10000 , 10000 , 10000 , 10000 };
-int b = 100;
+//List<int> a = new List<int>() { 10000, 10000, 10000 , 10000 , 10000 , 10000 , 10000 , 10000 };
+//int b = 100;
 
-int res = CountOfPairs.Operation1(a, b);
+//int res = CountOfPairs.Operation1(a, b);
 
 //int mod = CountOfPairs.Operation2(48402461, 59790711, 69852954);
 
-int result = CountOfPairs.Operation3(new List<int>() {-15, -45, 43, 23, -63, 69, 35, 19, 37, -52});
+//int result = CountOfPairs.Operation3(new List<int>() {-15, -45, 43, 23, -63, 69, 35, 19, 37, -52});
+
+//List<int> A = new List<int>() { 927, 707, 374, 394, 279, 799, 878, 937, 431, 112 };
+
+//List<int> A = new List<int>() {2,6,4};
+//MaxMod.Operation1(A);
+
+//DynamicPolymorphism.AngryBird.Render(new DynamicPolymorphism.Hen());
+
+StaticPolymorphism.AngryBird.Render(new StaticPolymorphism.Eagle());
 
 Console.WriteLine("done");
