@@ -77,7 +77,13 @@ int res13 = StringToIntegerMyAtoi.Approach2("21474836460"); //out: 2147483647
 
 //StaticPolymorphism.AngryBird.Render(new StaticPolymorphism.Eagle());
 
-IFlyable m = new Mosquito();
-m.Fly();
+//IFlyable m = new Mosquito();
+//m.Fly();
+
+char[] chars = new char[] { '1', '0', '1'};
+string str = string.Concat(chars);
+
+
+int res = Teams.Operation1("10010100111100001011");
 
 Console.WriteLine("done");
