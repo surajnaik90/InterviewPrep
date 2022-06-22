@@ -85,6 +85,8 @@ int res13 = StringToIntegerMyAtoi.Approach2("21474836460"); //out: 2147483647
 //int res = Teams.solve("01111011001001000110");
 
 
-string res = LongestPalindrome.Operation("ac");
+//string res = LongestPalindrome.Operation("ac");
+
+int res = NoOfFactors.Operation2(24);
 
 Console.WriteLine("done");
