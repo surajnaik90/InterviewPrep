@@ -84,6 +84,6 @@ char[] chars = new char[] { '1', '0', '1'};
 string str = string.Concat(chars);
 
 
-int res = Teams.Operation1("10010100111100001011");
+int res = Teams.solve("01111011001001000110");
 
 Console.WriteLine("done");

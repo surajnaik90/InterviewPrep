@@ -6,6 +6,9 @@ Find and return maximum number of substrings in which A can be broken.
 */
 public static class Teams
 {
+
+    static int output = 1;
+    //Operation 1 is super complicated approach. Go to Operation 2
     public static int Operation1(string A)
     {
         if(string.IsNullOrEmpty(A)) {  return 0; }
@@ -17,7 +20,19 @@ public static class Teams
         char ch = chars[0];
         for (int i = 0; i < chars.Length; i++)
         {
-            if(chars[i] == ch) { count++; continue; }
+            if(chars[i] == ch) {
+
+                if ( (expectedCount!=0) && (expectedCount == count))
+                {
+                    output++; count = 0; read = 0; expectedCount = 0;
+
+                    if (i + 1 < chars.Length) { ch = chars[i + 1]; }
+                    continue;
+                }
+
+                count++; 
+                continue;
+            }
 
             read++;
             if(read == 2) { split = true; read = 0; }
@@ -26,11 +41,19 @@ public static class Teams
             {
                 ch = chars[i]; expectedCount = count; count = 1;
 
-                if(expectedCount == count) { output++; count = 0; read = 0;}
+                if(expectedCount == count) { 
+                    output++; count = 0; read = 0; expectedCount = 0;
+
+                    if (i + 1 < chars.Length) { ch = chars[i + 1]; }
+                }
             }
             else
             {
-                if (expectedCount == count) { output++;  read = 0; }
+                if (expectedCount == count) { 
+                    output++;  read = 0; expectedCount = 0;
+
+                    if (i + 1 < chars.Length) { ch = chars[i + 1]; }
+                }
 
                 int res = i % expectedCount;
 
@@ -47,12 +70,54 @@ public static class Teams
         return output;
     }
 
-    private static string Helper(string str)
+
+    public static int solve1(string A)
     {
-        string res = string.Empty;
+        if(string.IsNullOrEmpty(A)) { return 0; }
 
-        char[] chars = str.ToCharArray();
+        int count = 0; bool match = true;
+        char ch = A[0];
 
-        return res;
+        for (int i = 0; i < A.Length; i++)
+        {
+            if (A[i] == ch) { count++; continue; }
+
+            ch = A[i];
+            for (int j = count; j < count*2; j++) {
+
+                if (A[j] != ch) { match = false; break; }
+            }
+
+            if(match) {
+                output++;
+                string newStr = A.Remove(0, count*2);
+
+                solve(newStr);
+                break;
+            }
+            else { i = (count * 2)-1; }
+        }
+
+        return output;
+    }
+
+    public static int solve(string A)
+    {
+        if (string.IsNullOrEmpty(A)) { return 0; }
+
+        List<char> zeros = new List<char>();
+        List<char> ones = new List<char>();
+        int output = 0;
+
+        for (int i = 0; i < A.Length; i++)
+        {
+            if (A[i] == '0') { zeros.Add(A[i]); }
+
+            else { ones.Add(A[i]); }
+
+            if (zeros.Count == ones.Count) { output++; }
+        }
+
+        return output;
     }
 }
