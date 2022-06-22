@@ -8,7 +8,7 @@ public static class Teams
 {
 
     static int output = 1;
-    //Operation 1 is super complicated approach. Go to Operation 2
+    //Operation 1 is super complicated approach. Go to solve
     public static int Operation1(string A)
     {
         if(string.IsNullOrEmpty(A)) {  return 0; }
