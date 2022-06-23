@@ -84,9 +84,9 @@ int res13 = StringToIntegerMyAtoi.Approach2("21474836460"); //out: 2147483647
 //string str = string.Concat(chars);
 //int res = Teams.solve("01111011001001000110");
 
-
 //string res = LongestPalindrome.Operation("ac");
+//int res = NoOfFactors.Operation2(24);
 
-int res = NoOfFactors.Operation2(24);
+IsItPrime.Operation1(829702);
 
 Console.WriteLine("done");
