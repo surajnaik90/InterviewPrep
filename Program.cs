@@ -101,6 +101,8 @@ for (int i = 0; i < N; i++)
     inputs.Add(Convert.ToInt32(input));
 }*/
 
-IsItPerfectNumber.Operation1(1, new List<int>() { 496});
+//IsItPerfectNumber.Operation1(1, new List<int>() { 496});
+
+//SummationGame.Operation1();
 
 Console.WriteLine("done");
