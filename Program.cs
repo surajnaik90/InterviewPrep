@@ -87,6 +87,20 @@ int res13 = StringToIntegerMyAtoi.Approach2("21474836460"); //out: 2147483647
 //string res = LongestPalindrome.Operation("ac");
 //int res = NoOfFactors.Operation2(24);
 
-IsItPrime.Operation1(829702);
+//IsItPrime.Operation1(829702);
+
+/*string count = Console.ReadLine();
+int N = Convert.ToInt32(count);
+
+if(!(N>=1 && N<=10)) { return; }
+
+List<int> inputs = new List<int>();
+for (int i = 0; i < N; i++)
+{
+    string input = Console.ReadLine();
+    inputs.Add(Convert.ToInt32(input));
+}*/
+
+IsItPerfectNumber.Operation1(1, new List<int>() { 496});
 
 Console.WriteLine("done");
