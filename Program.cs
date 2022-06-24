@@ -105,6 +105,8 @@ for (int i = 0; i < N; i++)
 
 //SummationGame.Operation1();
 
-int res = SquareRoot.Operation1(100000000);
+//int res = SquareRoot.Operation1(100000000);
+
+//int res = ArmstrongNumber.Operation1(200);
 
 Console.WriteLine("done");
