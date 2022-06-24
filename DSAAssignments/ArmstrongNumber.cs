@@ -65,8 +65,6 @@ public static class ArmstrongNumber
         {
             int temp = i; sum = 0; reminder = temp % 10;
 
-            if (i == 407) { Console.WriteLine(); }
-
             while (temp != 0)
             {
                 sum = sum + Convert.ToInt32(Math.Pow(reminder, 3));
