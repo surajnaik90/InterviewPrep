@@ -109,4 +109,6 @@ for (int i = 0; i < N; i++)
 
 //int res = ArmstrongNumber.Operation1(200);
 
+//MultiplicationTable.Operation1();
+
 Console.WriteLine("done");
