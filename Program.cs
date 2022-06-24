@@ -105,4 +105,6 @@ for (int i = 0; i < N; i++)
 
 //SummationGame.Operation1();
 
+int res = SquareRoot.Operation1(100000000);
+
 Console.WriteLine("done");
