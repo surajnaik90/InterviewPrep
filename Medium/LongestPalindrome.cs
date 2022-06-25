@@ -9,48 +9,43 @@
 */
 public static class LongestPalindrome
 {
-    public static string Operation(string str)
+
+    //This operation takes around 7000ms to execute which is insane.
+    public static string Operation1(string str)
     {
         if(str.Length == 0) { return string.Empty; }
-
-        if(str.Length == 1) { return str; }
         
         string output = string.Empty; string substr = string.Empty;
+        List<string> possiblePalindromes = new List<string>();
         Dictionary<string, int> palindromes = new Dictionary<string, int>();
 
         for (int i = 0; i < str.Length; i++)
         {
-            substr = str[i].ToString();
-            
-            if (!(palindromes.ContainsKey(substr)))
+            for (int j = i; j < str.Length; j++)
             {
-                if (IsPalindrome(substr))
-                {
-                    palindromes.Add(substr, substr.Length);
-                }
-            }            
+                substr = str.Substring(i, j-i+1);
 
-            for (int j = i+1; j < str.Length; j++)
-            {
-                substr = string.Concat(substr, str[j]);
-                if (!(palindromes.ContainsKey(substr)))
+                if (i == j) { 
+                    substr = string.Concat("", str[i]);
+                }
+
+                if ((str[i] == str[j]) && (!(possiblePalindromes.Contains(substr)))) 
                 {
-                    if (IsPalindrome(substr))
-                    {
-                        palindromes.Add(substr, substr.Length);
-                    }
+                    possiblePalindromes.Add(substr);
                 }
             }
         }
 
-        if(palindromes.Count > 0)
+        int count = 0;
+        for (int i = 0; i < possiblePalindromes.Count; i++)
         {
-            palindromes = palindromes.OrderByDescending(val => val.Value).ToDictionary(k=>k.Key,va=>va.Value);
-            output = palindromes.ElementAt(0).Key;
-        }
-        else
-        {
-            output=string.Empty;
+            if (IsPalindrome(possiblePalindromes[i])) {
+                if(count < possiblePalindromes[i].Length) {
+                    output = possiblePalindromes[i];
+                    palindromes.Add(possiblePalindromes[i], possiblePalindromes[i].Length);
+                    count = possiblePalindromes[i].Length;
+                }
+            }
         }
         return output;
     }
