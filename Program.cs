@@ -120,10 +120,12 @@ for (int i = 0; i < N; i++)
 
 //RotationGame.Operation1();
 
-List<int> inputs = new List<int>() { -7,1,5,2,-4,3,0};
+//List<int> inputs = new List<int>() { -7,1,5,2,-4,3,0};
 
-int ress = EquilibriumIndex.Operation1(inputs);
+//int ress = EquilibriumIndex.Operation1(inputs);
 
-List<int> revArr = ReverseArray.Operation1(inputs);
+//List<int> revArr = ReverseArray.Operation1(inputs);
+
+MaxMin.Operation1();
 
 Console.WriteLine("done");
