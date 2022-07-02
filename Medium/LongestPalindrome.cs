@@ -59,7 +59,6 @@ public static class LongestPalindrome
         if (str.Length == 0) { return string.Empty; }
 
         string output = string.Empty; string substr = string.Empty;
-        List<string> possiblePalindromes = new List<string>();
         int count = 0;
 
         for (int i = 0; i < str.Length; i++)
@@ -73,7 +72,7 @@ public static class LongestPalindrome
                     substr = string.Concat("", str[i]);
                 }
 
-                if ((str[i] == str[j]) && (!(possiblePalindromes.Contains(substr))))
+                if (str[i] == str[j])
                 {
                     if (IsPalindrome(substr))
                     {
@@ -86,6 +85,63 @@ public static class LongestPalindrome
                 }
             }
         }
+        return output;
+    }
+
+    public static string Operation3(string str)
+    {
+        if (str.Length == 0) { return string.Empty; }
+
+        string output = string.Empty; string substr = string.Empty;
+        Dictionary<char, int> vault = new Dictionary<char, int>();
+        int count = 0; bool flag;
+        List<string> palindromes = new List<string>();
+
+        for (int i = 0; i < str.Length; i++)
+        {
+            vault.Clear(); flag = false;
+
+            for (int j = i; j < str.Length; j++)
+            {
+                substr = str.Substring(i, j - i + 1); flag = false;
+
+                if (vault.ContainsKey(str[j])) { ++vault[str[j]]; }
+
+                else { vault.Add(str[j], 1); }
+
+                if (str[i] == str[j])
+                {
+                    if ((substr.Length % 2 == 0) && (!(vault.Values.Contains(1))) &&
+                        (!(vault.Where(val => val.Value % 2 == 1).Count()>=1))) {
+
+                        flag = true;
+                        palindromes.Add(substr);
+                    }
+                    else if ((substr.Length % 2 == 1)) {
+
+                        int onesCount = vault.Where(val => val.Value==1).Count();
+
+                        int others = vault.Where(val => val.Value % 2 == 1).Count();
+
+                        if(onesCount > 1 || others > 1 ) { flag = false; }
+                    }
+
+                    if (flag)
+                    {
+                        if(!IsPalindrome(substr)) { continue; }
+
+                        if (count < substr.Length) {
+                            output = substr;
+                            count = substr.Length;
+                        }
+                    }
+                }
+                else { }
+            }
+        }
+
+        
+
         return output;
     }
 
