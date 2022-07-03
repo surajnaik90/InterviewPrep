@@ -134,6 +134,8 @@ for (int i = 0; i < N; i++)
 
 //int res = MinimumPicks.Operation1(new List<int> { 74, 9, 51, 51, 75, 0, 35, 89, 96, 77 });
 
-SeparateOddEven.Operation1();
+//SeparateOddEven.Operation1();
+
+int res = LittlePonnyMaxElement.Operation1(new List<int>() {2,4,3,1,5 }, 3);
 
 Console.WriteLine("done");
