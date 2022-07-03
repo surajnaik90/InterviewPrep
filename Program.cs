@@ -126,6 +126,8 @@ for (int i = 0; i < N; i++)
 
 //List<int> revArr = ReverseArray.Operation1(inputs);
 
-MaxMin.Operation1();
+//MaxMin.Operation1();
+
+SearchElement.Operation1();
 
 Console.WriteLine("done");
