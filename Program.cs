@@ -132,6 +132,8 @@ for (int i = 0; i < N; i++)
 
 //int res1 = SecondLargest.Operation1(new List<int>() {2,5,4,3});
 
-int res = MinimumPicks.Operation1(new List<int> { 74, 9, 51, 51, 75, 0, 35, 89, 96, 77 });
+//int res = MinimumPicks.Operation1(new List<int> { 74, 9, 51, 51, 75, 0, 35, 89, 96, 77 });
+
+SeparateOddEven.Operation1();
 
 Console.WriteLine("done");
