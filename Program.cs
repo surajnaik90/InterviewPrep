@@ -128,6 +128,8 @@ for (int i = 0; i < N; i++)
 
 //MaxMin.Operation1();
 
-SearchElement.Operation1();
+//SearchElement.Operation1();
+
+int res = GoodPair.Operation1(new List<int>() { 2,3},5);
 
 Console.WriteLine("done");
