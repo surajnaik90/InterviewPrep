@@ -47,35 +47,36 @@ public static class RotationGame
 {
     public static void Operation1()
     {
-        Console.WriteLine("Please enter the array size N & the array & then followed by B in the new line");
         string input1 = Console.ReadLine();
         string input2 = Console.ReadLine();
 
         int N = Convert.ToInt32(input1.Split()[0]);
+        string[] arrInputs = input1.Split();
 
         int[] arr = new int[N];
         for (int i = 0; i < N; i++) {
-            arr[i] = Convert.ToInt32(input1.Split(' ')[i+1]);
+            arr[i] = Convert.ToInt32(arrInputs[i+1]);
         }
 
         int B = Convert.ToInt32(input2);
         int[] newArr = new int[N];
 
-        int pointer = B % N;
+        if (B > N) { B = B % N; }
 
-        for (int i = N-pointer,k=0; i < N; i++,k++)
+        int index = N - B;
+        for (int i = 0; i < N; i++)
         {
-            newArr[k] = arr[i];
-        }
+            newArr[i] = arr[index++];
 
-        for (int j = 0, k=N-pointer; j < N - pointer; j++,k++)
-        {
-            newArr[k] = arr[j];
+            if (index >= N)
+            {
+                index = index % N;
+            }
         }
 
         for (int i = 0; i < N; i++)
         {
-            Console.WriteLine(newArr[i]);
+            Console.Write(newArr[i] +" ");
         }
     }
 }

@@ -136,6 +136,8 @@ for (int i = 0; i < N; i++)
 
 //SeparateOddEven.Operation1();
 
-int res = LittlePonnyMaxElement.Operation1(new List<int>() {2,4,3,1,5 }, 3);
+//int res = LittlePonnyMaxElement.Operation1(new List<int>() {2,4,3,1,5 }, 3);
+
+RotationGame.Operation1();
 
 Console.WriteLine("done");
