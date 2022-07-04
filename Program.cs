@@ -142,6 +142,8 @@ for (int i = 0; i < N; i++)
 
 //MultipleLeftRotations.Operation1(new List<int>() { 1,2,3,4,5}, new List<int>() { 2,3});
 
-int res = TimeToEquality.Operation1(new List<int>() {2,4,1,3,2});
+//int res = TimeToEquality.Operation1(new List<int>() {2,4,1,3,2});
+
+List<int> list = ProductArray.Operation1(new List<int>() { 1, 2, 3, 4, 5 });
 
 Console.WriteLine("done");
