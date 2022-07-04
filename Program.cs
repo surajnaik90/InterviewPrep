@@ -140,6 +140,8 @@ for (int i = 0; i < N; i++)
 
 //RotationGame.Operation1();
 
-MultipleLeftRotations.Operation1(new List<int>() { 1,2,3,4,5}, new List<int>() { 2,3});
+//MultipleLeftRotations.Operation1(new List<int>() { 1,2,3,4,5}, new List<int>() { 2,3});
+
+int res = TimeToEquality.Operation1(new List<int>() {2,4,1,3,2});
 
 Console.WriteLine("done");
