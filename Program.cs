@@ -138,6 +138,8 @@ for (int i = 0; i < N; i++)
 
 //int res = LittlePonnyMaxElement.Operation1(new List<int>() {2,4,3,1,5 }, 3);
 
-RotationGame.Operation1();
+//RotationGame.Operation1();
+
+MultipleLeftRotations.Operation1(new List<int>() { 1,2,3,4,5}, new List<int>() { 2,3});
 
 Console.WriteLine("done");
