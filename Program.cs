@@ -144,6 +144,12 @@ for (int i = 0; i < N; i++)
 
 //int res = TimeToEquality.Operation1(new List<int>() {2,4,1,3,2});
 
-List<int> list = ProductArray.Operation1(new List<int>() { 1, 2, 3, 4, 5 });
+//List<int> list = ProductArray.Operation1(new List<int>() { 1, 2, 3, 4, 5 });
+
+//int res = EvenOddIndex.Operation1(new List<int>() { 2, 1, 6, 4 });
+
+//int res = SpecialSubsequenceAG.Operation1("ABCGAG");
+
+List<int> res = LeadersInArray.Operation1(new List<int>() { 16, 17, 4, 3, 5, 2 });
 
 Console.WriteLine("done");
