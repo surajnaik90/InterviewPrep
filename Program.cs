@@ -150,6 +150,14 @@ for (int i = 0; i < N; i++)
 
 //int res = SpecialSubsequenceAG.Operation1("ABCGAG");
 
-List<int> res = LeadersInArray.Operation1(new List<int>() { 16, 17, 4, 3, 5, 2 });
+//List<int> res1 = LeadersInArray.Operation1(new List<int>() { 16, 17, 4, 3, 5, 2 });
+
+//List<int> res2 = LeadersInArray.Operation2(new List<int>() { 16, 17, 4, 3, 5, 2 });
+
+int res1 = AmazingSubstring.Operation1("ABEC");
+
+int res2 = AmazingSubstring.Operation2("ABEC");
+
+//string output = EvenSubarrays.Operation1(new List<int>() { 2, 4, 8, 7,6 });
 
 Console.WriteLine("done");

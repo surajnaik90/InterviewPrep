@@ -86,4 +86,34 @@ public static class LeadersInArray
 
         return output;
     }
+
+    //This is a brute force approach. Not optimized. Time Complexity is  O(N^2)
+    public static List<int> Operation2(List<int> A)
+    {
+        List<int> output = new List<int>();
+        int N = A.Count;
+
+        //Find the suffix max array
+        List<int> suffixMax = new List<int>();
+
+        for (int i = N-1 ; i >=0; i--)
+        {
+            if(i==N-1) { suffixMax.Add(A[i]); continue; }
+
+            if (A[i] >= suffixMax[i+1]) { suffixMax.Add(A[i]); }
+
+            else { suffixMax.Add(A[i+1]); }
+        }
+
+        
+        for (int i = 0; i < N; i++)
+        {
+            if (A[i] == suffixMax[i])
+            {
+                output.Add(A[i]);
+            }
+        }
+
+        return output;
+    }
 }
