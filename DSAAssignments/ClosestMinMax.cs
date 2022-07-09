@@ -49,8 +49,6 @@ Explanation 2:
 
 public static class ClosestMinMax
 {
-
-    //Time Limit Exceeded - Not optimized
     public static int Operation1(List<int> A)
     {
         int output = int.MaxValue;
