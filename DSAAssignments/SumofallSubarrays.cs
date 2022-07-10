@@ -48,7 +48,7 @@ public static class SubarraySum
 {
     public static long Operation1(List<int> A)
     {
-        long output = 0; int N = A.Count;
+        long output = 0; long N = A.Count;
 
         for (int i = 0; i < N; i++)
         {

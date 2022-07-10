@@ -52,7 +52,7 @@ public static class MaxSubarrayConstraint1
 {   
     public static int Operation1(int A, int B, List<int> C)
     {
-        int output = 0, subarrSum = int.MinValue;
+        int output = 0, subarrSum;
 
         for (int s = 0; s < A; s++)
         {
