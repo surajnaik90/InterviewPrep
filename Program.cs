@@ -186,12 +186,14 @@ for (int i = 0; i < N; i++)
 
 //List<int> res = AlternateSubarrays.Operation1(new List<int>() { 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1 }, 1);
 
-List<int> i1 = new List<int>() { 1, 4 };
-List<int> i2 = new List<int>() { 2, 3 };
-List<List<int>> matrices = new List<List<int>>();
-matrices.Add(i1);
-matrices.Add(i2);
+//List<int> i1 = new List<int>() { 1, 4 };
+//List<int> i2 = new List<int>() { 2, 3 };
+//List<List<int>> matrices = new List<List<int>>();
+//matrices.Add(i1);
+//matrices.Add(i2);
 
-List<long> res = RangeSumQuery.Operation1(new List<int>() { 1, 2, 3, 4, 5 }, matrices);
+//List<long> res = RangeSumQuery.Operation1(new List<int>() { 1, 2, 3, 4, 5 }, matrices);
+
+int res = PickfromBothSides.Operation1(new List<int>() { 5, -2, 3, 1, 2 }, 3);
 
 Console.WriteLine("done");
