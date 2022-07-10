@@ -176,6 +176,8 @@ for (int i = 0; i < N; i++)
 
 //int res = MaxSubarray.Operation3(new List<int>() { 1, 2, 3, 4 });
 
-int res = CountSubarrays.Operation1(new List<int>() { 2, 5, 6 }, 10);
+//int res = CountSubarrays.Operation1(new List<int>() { 2, 5, 6 }, 10);
+
+int res = GoodSubarray.Operation1(new List<int>() { 1, 2, 3, 4, 5 }, 4);
 
 Console.WriteLine("done");
