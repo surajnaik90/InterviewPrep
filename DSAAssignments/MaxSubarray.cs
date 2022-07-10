@@ -48,7 +48,6 @@ Explanation 2:
 
 public static class MaxSubarray
 {
-
     //Time Limit Exceeds for larger input as this is a O(N^2) time complexity
     public static int Operation1(List<int> A)
     {
@@ -67,6 +66,76 @@ public static class MaxSubarray
                 }
             }
         }
+        return output;
+    }
+
+    //Find the max element. Traverse on each side to find themax sum of the subarray.
+    //THis approach doesn't work. But interesting logic to look into. Please take a look. This code doesnt find the right answer.
+    public static int Operation2(List<int> A)
+    {
+        int output = int.MinValue, N = A.Count, sum=0;
+
+        int max = int.MinValue, maxIndex=-1;
+        for (int i = 0; i < N; i++)
+        {
+            if (A[i] > max)
+            {
+                max = A[i];
+                maxIndex = i;
+            }
+        }
+
+        //Traverse right of max
+        for (int i = maxIndex; i < N ; i++)
+        {
+            sum += A[i];
+
+            if (sum > output)
+            {
+                output = sum;
+            }
+        }
+
+        if(maxIndex==0) { return output; }
+
+        sum = output;
+        //Traverse left of max
+        for (int i = maxIndex-1; i >= 0; i--)
+        {
+            sum += A[i];
+
+            if (sum > output)
+            {
+                output = sum;
+            }
+        }
+
+        return output;
+    }
+
+    //THis doesn't work
+    public static int Operation3(List<int> A)
+    {
+        int output = int.MinValue, N = A.Count, sum = 0, prev = 0;
+
+        for (int i = 0; i < N; i++)
+        {
+            if (A[i] > output) { output = A[i]; }
+
+            sum += A[i];
+            if (sum > output) { output = sum; }
+
+            if(i>1) { 
+                int temp = A[i] + A[i - 1];
+
+                if (temp > output) { output = temp; }
+
+                prev = temp + A[i];
+            }
+
+            if (prev > output) { output = prev; }
+        }
+
         return output;
     }
 }
