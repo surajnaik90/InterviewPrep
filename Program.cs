@@ -180,6 +180,8 @@ for (int i = 0; i < N; i++)
 
 //int res = GoodSubarray.Operation1(new List<int>() { 1, 2, 3, 4, 5 }, 4);
 
-int res = SubarrayLeastAverage.Operation2(new List<int>() { 20, 3, 13, 5, 10, 14, 8, 5, 11, 9, 1, 11 }, 9);
+//int res = SubarrayLeastAverage.Operation2(new List<int>() { 20, 3, 13, 5, 10, 14, 8, 5, 11, 9, 1, 11 }, 9);
+
+int res = MaxSubarrayConstraint1.Operation1(3, 1, new List<int>() { 2, 2, 2 });
 
 Console.WriteLine("done");
