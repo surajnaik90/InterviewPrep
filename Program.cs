@@ -194,6 +194,32 @@ for (int i = 0; i < N; i++)
 
 //List<long> res = RangeSumQuery.Operation1(new List<int>() { 1, 2, 3, 4, 5 }, matrices);
 
-int res = PickfromBothSides.Operation1(new List<int>() { 5, -2, 3, 1, 2 }, 3);
+//int res = PickfromBothSides.Operation1(new List<int>() { 5, -2, 3, 1, 2 }, 3);
+
+//string res = EvenSubarrays.Operation1(new List<int>() { 978, 847, 95, 729, 778, 586, 188, 782, 813, 870, 871, 940, 312, 693, 580, 101, 760, 837, 564, 633, 680, 155, 241, 374, 682, 290, 850, 601, 433, 922, 773, 959, 530, 290, 990, 50, 516, 409, 868, 131, 664, 851, 721, 880, 20, 450, 745, 387, 787, 823, 392, 242, 674, 347, 65, 135, 819, 324, 651, 678, 139, 940 });
+
+//int res = AmazingSubstring.Operation2("AAABAAQEA");
+
+List<int> i1 = new List<int>() { 1,2,3 };
+List<int> i2 = new List<int>() { 4,5,6 };
+List<int> i3 = new List<int>() { 7,8,9 };
+List<List<int>> A = new List<List<int>>();
+//A.Add(i1); 
+//A.Add(i2);
+//A.Add(i3);
+
+List<int> i4 = new List<int>() { 9, 8, 7 };
+List<int> i5 = new List<int>() { 6, 5, 4 };
+List<int> i6 = new List<int>() { 3, 2, 1 };
+List<List<int>> B = new List<List<int>>();
+//B.Add(i4);
+//B.Add(i5); 
+//B.Add(i6);
+
+List<int> i7 = new List<int>() { 6, 2,3,10,1,3 };
+List<int> i8 = new List<int>() { 6,7,3,8,1,2 };
+A.Add(i7); B.Add(i8);
+
+List<List<int>> output = AddtheMatrices.Operation1(A,B);
 
 Console.WriteLine("done");

@@ -36,7 +36,7 @@ See Expected Output
 public static class AmazingSubstring
 {   
 
-    //Time Limit Exceeded - Not optimized
+    //Time Limit Exceeded - Not optimized & fails too as it doesn't give the right answer.
     public static int Operation1(string A)
     {
         int output = 0; char[] vowels = new char[] {'a','e','i','o','u','A','E','I','O','U'};
@@ -60,17 +60,41 @@ public static class AmazingSubstring
 
     public static int Operation2(string A)
     {
-        int output = 0; char[] vowels = new char[] { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
+        if(A==string.Empty) { return 0; }
 
-        int length = A.Length;
-        for (int i = 0,j=length; i < length; i++,j--)
+        A = A.ToLower();
+        
+        int length = A.Length, output=0, count=0;
+        char[] vowels = new char[] { 'a', 'e', 'i', 'o', 'u' };
+        Dictionary<char, int> vowelState = new Dictionary<char, int>() 
+        { {'a',0 }, {'e',0 }, { 'i', 0 }, { 'o', 0 }, {'u',0 } };        
+
+        char prev = A[0];
+        for (int i = 0; i < length; i++)
         {
-            if (vowels.Contains(A[i]))
-            {
-                output += j;
-            }
-        }
+            if (!vowels.Contains(A[i])){ continue; }
 
+            output += length - i;
+
+            if (A[i] == prev) {
+                count++;
+                prev = A[i]; continue;
+            }
+
+            if(count <= vowelState[A[i]])
+            {
+                output = output - count;
+            }
+            else
+            {
+                output = output -(count - vowelState[A[i]]);
+                vowelState[A[i]] = count;
+            }
+
+            int diff = ((count - 1) * (count)) / 2;
+            output = output - diff;
+            count = 0;
+        }
         return output % 10003;
     }
 }

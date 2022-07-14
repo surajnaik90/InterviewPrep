@@ -53,20 +53,30 @@ public static class EvenSubarrays
 {
     public static string Operation1(List<int> A)
     {
-        string output = "NO"; bool isPossible = true;
-        int N = A.Count; 
+        int N = A.Count,count=0; int sub = 0;
 
-        if (N%2 != 0) { return output; }
+        if (N%2 != 0) { return "NO"; }
 
-        for (int i = 0; i < N; i++)
+        for (int s = 0; s < N; s++)
         {
-            if (A[i] % 2 != 0) {
-                return output;
+            for (int e = s; e < N; e++)
+            {
+                if( (e-s+1)%2 != 0) { continue; }
+
+                if ((A[s]%2==0) && (A[e] % 2 == 0))
+                {
+                    count += e - s + 1;
+                    sub++;
+                    s = e; break;
+                }
             }
         }
 
-        if(isPossible) { output = "YES"; }
-
-        return output;
+        if (count == N) { 
+            return "YES";
+        }
+        else { 
+            return "NO";
+        }
     }
 }
