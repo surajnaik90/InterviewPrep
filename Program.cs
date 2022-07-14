@@ -204,22 +204,24 @@ List<int> i1 = new List<int>() { 1,2,3 };
 List<int> i2 = new List<int>() { 4,5,6 };
 List<int> i3 = new List<int>() { 7,8,9 };
 List<List<int>> A = new List<List<int>>();
-//A.Add(i1); 
-//A.Add(i2);
-//A.Add(i3);
+A.Add(i1); 
+A.Add(i2);
+A.Add(i3);
 
 List<int> i4 = new List<int>() { 9, 8, 7 };
 List<int> i5 = new List<int>() { 6, 5, 4 };
 List<int> i6 = new List<int>() { 3, 2, 1 };
 List<List<int>> B = new List<List<int>>();
-//B.Add(i4);
-//B.Add(i5); 
-//B.Add(i6);
+B.Add(i4);
+B.Add(i5); 
+B.Add(i6);
 
 List<int> i7 = new List<int>() { 6, 2,3,10,1,3 };
 List<int> i8 = new List<int>() { 6,7,3,8,1,2 };
-A.Add(i7); B.Add(i8);
+//A.Add(i7); B.Add(i8);
 
-List<List<int>> output = AddtheMatrices.Operation1(A,B);
+List<List<int>> output1 = AddtheMatrices.Operation1(A,B);
+
+List<List<int>> output2 = MatrixSubtraction.Operation1(A, B);
 
 Console.WriteLine("done");
