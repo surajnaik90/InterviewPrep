@@ -236,6 +236,8 @@ List<int> i8 = new List<int>() { 6,7,3,8,1,2 };
 
 //List<int> res = MatrixRowSum.Operation1(A);
 
-int res = MatrixMainDiagonalSum.Operation1(A);
+//int res = MatrixMainDiagonalSum.Operation1(A);
+
+int res = MatrixMinorDiagonalSum.Operation1(A);
 
 Console.WriteLine("done");
