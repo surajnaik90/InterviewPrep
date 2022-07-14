@@ -230,6 +230,8 @@ List<int> i8 = new List<int>() { 6,7,3,8,1,2 };
 
 //MatrixRotate90.Operation1(A);
 
-int res = EqualMatrices.Operation1(A, B);
+//int res = EqualMatrices.Operation1(A, B);
+
+List<List<int>> output = MatrixScalerProduct.Operation1(A, 2);
 
 Console.WriteLine("done");
