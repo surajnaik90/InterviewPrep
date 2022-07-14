@@ -220,8 +220,10 @@ List<int> i7 = new List<int>() { 6, 2,3,10,1,3 };
 List<int> i8 = new List<int>() { 6,7,3,8,1,2 };
 //A.Add(i7); B.Add(i8);
 
-List<List<int>> output1 = AddtheMatrices.Operation1(A,B);
+//List<List<int>> output1 = AddtheMatrices.Operation1(A,B);
 
-List<List<int>> output2 = MatrixSubtraction.Operation1(A, B);
+//List<List<int>> output2 = MatrixSubtraction.Operation1(A, B);
+
+List<int> output = MatrixColumnSum.Operation1(A);
 
 Console.WriteLine("done");
