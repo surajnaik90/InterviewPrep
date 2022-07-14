@@ -232,6 +232,8 @@ List<int> i8 = new List<int>() { 6,7,3,8,1,2 };
 
 //int res = EqualMatrices.Operation1(A, B);
 
-List<List<int>> output = MatrixScalerProduct.Operation1(A, 2);
+//List<List<int>> output = MatrixScalerProduct.Operation1(A, 2);
+
+List<int> res = MatrixRowSum.Operation1(A);
 
 Console.WriteLine("done");
