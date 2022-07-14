@@ -228,6 +228,8 @@ List<int> i8 = new List<int>() { 6,7,3,8,1,2 };
 
 //List<List<int>> output = MatrixTranspose.Operation1(A);
 
-MatrixRotate90.Operation1(A);
+//MatrixRotate90.Operation1(A);
+
+int res = EqualMatrices.Operation1(A, B);
 
 Console.WriteLine("done");
