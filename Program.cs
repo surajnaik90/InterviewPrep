@@ -224,6 +224,8 @@ List<int> i8 = new List<int>() { 6,7,3,8,1,2 };
 
 //List<List<int>> output2 = MatrixSubtraction.Operation1(A, B);
 
-List<int> output = MatrixColumnSum.Operation1(A);
+//List<int> output = MatrixColumnSum.Operation1(A);
+
+List<List<int>> output = MatrixTranspose.Operation1(A);
 
 Console.WriteLine("done");
