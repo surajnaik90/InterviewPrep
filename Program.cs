@@ -244,12 +244,16 @@ List<int> i10 = new List<int>() { 1, 2 };
 List<List<int>> C = new List<List<int>>();
 C.Add(i10);
 
-List<int> i40 = new List<int>() { 3, 4, 5 };
-List<int> i50 = new List<int>() { 6, 7, 8 };
+List<int> i40 = new List<int>() { 1, 2, 3, 4 };
+List<int> i50 = new List<int>() { 5, 6, 7, 0 };
+List<int> i60 = new List<int>() { 9, 2, 0, 4 };
 List<List<int>> D = new List<List<int>>();
 D.Add(i40);
 D.Add(i50);
+D.Add(i60);
 
-List<List<int>> output1 = MatrixMultiplication.Operation1(C, D);
+//List<List<int>> output1 = MatrixMultiplication.Operation1(C, D);
+
+List<List<int>> output1 = RowtoColumnZero.Operation1(D);
 
 Console.WriteLine("done");
