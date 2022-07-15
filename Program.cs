@@ -238,6 +238,18 @@ List<int> i8 = new List<int>() { 6,7,3,8,1,2 };
 
 //int res = MatrixMainDiagonalSum.Operation1(A);
 
-int res = MatrixMinorDiagonalSum.Operation1(A);
+//int res = MatrixMinorDiagonalSum.Operation1(A);
+
+List<int> i10 = new List<int>() { 1, 2 };
+List<List<int>> C = new List<List<int>>();
+C.Add(i10);
+
+List<int> i40 = new List<int>() { 3, 4, 5 };
+List<int> i50 = new List<int>() { 6, 7, 8 };
+List<List<int>> D = new List<List<int>>();
+D.Add(i40);
+D.Add(i50);
+
+List<List<int>> output1 = MatrixMultiplication.Operation1(C, D);
 
 Console.WriteLine("done");
