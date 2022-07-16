@@ -262,6 +262,8 @@ List<int> a = new List<int>() { 4,2,8,1,3,5,9,6 };
 List<int> b = new List<int>() { 1, 2, 3,4,5,6,7,8 };
 //int res = ChristmasTree.Operation1(a,b);
 
-StarPattern.Operation1(8);
+//StarPattern.Operation1(8);
+
+List<int> res = MaximumPositivity.Operation1(new List<int>() { -1, -2, 3, -4, -5, -6, -7, -8, 9, -10 });
 
 Console.WriteLine("done");
