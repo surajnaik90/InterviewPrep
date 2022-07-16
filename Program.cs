@@ -1,7 +1,7 @@
 ﻿using usingInterface;
 
 // See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+//Console.WriteLine("Hello, World!");
 
 //int[] nums = { 2, 7, 11, 15 };
 // int[] nums = {-3, 4, 3, 90};
@@ -254,6 +254,14 @@ D.Add(i60);
 
 //List<List<int>> output1 = MatrixMultiplication.Operation1(C, D);
 
-List<List<int>> output1 = RowtoColumnZero.Operation1(D);
+//List<List<int>> output1 = RowtoColumnZero.Operation1(D);
+
+//List<List<int>> output = AntiDiagonal.Operation1(A);
+
+List<int> a = new List<int>() { 4,2,8,1,3,5,9,6 };
+List<int> b = new List<int>() { 1, 2, 3,4,5,6,7,8 };
+//int res = ChristmasTree.Operation1(a,b);
+
+StarPattern.Operation1(8);
 
 Console.WriteLine("done");
