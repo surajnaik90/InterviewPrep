@@ -57,43 +57,79 @@ Explanation 2:
 
 public static class ChristmasTree
 {
+    //Brute force approach - Time Limit Exceeds
     public static int Operation1(List<int> A, List<int> B)
     {
-        int output = int.MaxValue, k=3, N = A.Count;
+        int output = int.MaxValue, N=A.Count;
 
-        //Find the prefix sum
-        List<int> pfSum = new List<int>();
-        pfSum.Add(B[0]);
-        for (int p = 1; p < B.Count; p++)
+        for (int i = 0; i < N; i++)
         {
-            pfSum.Add(pfSum[p - 1] + B[p]);
+            for (int j = i+1; j < N; j++)
+            {
+                if (A[j] > A[i])
+                {
+                    for (int k = j+1; k < N; k++)
+                    {
+                        if(A[k] > A[j]) {
+
+                            int cost;
+
+                            cost = B[k] + B[j] + B[i];
+
+                            if (cost < output) {
+                                output = cost;
+                            }
+
+                        }
+                    }
+                }
+
+            }
         }
 
-        int s, e; bool isValidSubarr;
-        for (s = 0; s <= N-k; s++)
-        {
-            e = s + k - 1; isValidSubarr = true;
+        if(output == int.MaxValue) { output = -1; }
 
-            for (int j = s+1; j <= e; j++)
+        return output;
+    }
+
+    //Optimized a bit
+    public static int Operation2(List<int> A, List<int> B)
+    {
+        int output = int.MaxValue, N = A.Count;
+
+        List<List<int>> costs = new List<List<int>>();
+
+        for (int i = 0; i < N; i++)
+        {
+            List<int> costRow = new List<int>();
+            for (int j = i+1; j < N; j++)
             {
-                if (A[j] < A[j - 1]) {
-                    isValidSubarr = false;
-                    break;
+                if (A[j] > A[i]){
+                    costRow.Add(B[j] + B[i]);
                 }
             }
-            if (isValidSubarr)
+            costs.Add(costRow);
+        }
+
+        for (int i = 1; i < costs.Count; i++)
+        {
+            if (A[i] < A[i + 1])
             {
-                int cost;
+                for (int j = 0; j < costs[i].Count; j++)
+                {
+                    int cost;
 
-                if (s == 0) { cost = pfSum[e]; }
+                    cost = B[i] + costs[i + 1][j];
 
-                else { cost = pfSum[e] - pfSum[s - 1]; }
-
-                if (cost < output) { output = cost; }
+                    if (cost < output)
+                    {
+                        output = cost;
+                    }
+                }
             }
         }
 
-        if(output == int.MaxValue) { return -1; }
+        if (output == int.MaxValue) { output = -1; }
 
         return output;
     }

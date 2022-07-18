@@ -258,12 +258,17 @@ D.Add(i60);
 
 //List<List<int>> output = AntiDiagonal.Operation1(A);
 
-List<int> a = new List<int>() { 4,2,8,1,3,5,9,6 };
-List<int> b = new List<int>() { 1, 2, 3,4,5,6,7,8 };
-//int res = ChristmasTree.Operation1(a,b);
+List<int> a = new List<int>() { 1, 6, 4, 2, 6, 9 };
+List<int> b = new List<int>() { 2, 5, 7, 3, 2, 7 };
+//int res = ChristmasTree.Operation2(a,b);
 
 //StarPattern.Operation1(8);
 
-List<int> res = MaximumPositivity.Operation1(new List<int>() { -1, -2, 3, -4, -5, -6, -7, -8, 9, -10 });
+//List<int> res = MaximumPositivity.Operation1(new List<int>() { -1, -2, 3, -4, -5, -6, -7, -8, 9, -10 });
+
+
+//List<List<int>> output = SpiralOrderMatrix.Operation1(4);
+
+int res = XORExercise1.Operation1(new List<int>() { 6, 9, 6, 10, 9, 10, 100 });
 
 Console.WriteLine("done");
