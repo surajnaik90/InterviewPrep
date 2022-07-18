@@ -269,6 +269,10 @@ List<int> b = new List<int>() { 2, 5, 7, 3, 2, 7 };
 
 //List<List<int>> output = SpiralOrderMatrix.Operation1(4);
 
-int res = XORExercise1.Operation1(new List<int>() { 6, 9, 6, 10, 9, 10, 100 });
+//int res = XORExercise1.Operation1(new List<int>() { 6, 9, 6, 10, 9, 10, 100 });
+
+//bool res = BitwiseOperatorProperties.isEvenOdd(6);
+
+bool res = BitwiseOperatorProperties.isPalindrome("madam");
 
 Console.WriteLine("done");
