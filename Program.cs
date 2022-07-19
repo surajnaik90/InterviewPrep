@@ -273,6 +273,8 @@ List<int> b = new List<int>() { 2, 5, 7, 3, 2, 7 };
 
 //bool res = BitwiseOperatorProperties.isEvenOdd(6);
 
-bool res = BitwiseOperatorProperties.isPalindrome("madam");
+//bool res = BitwiseOperatorProperties.isPalindrome("eeeeee");
+
+int res = BitNumberof1bits.Operation1(11);
 
 Console.WriteLine("done");

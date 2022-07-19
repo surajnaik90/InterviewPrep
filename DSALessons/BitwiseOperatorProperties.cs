@@ -24,7 +24,10 @@ public static class BitwiseOperatorProperties
 
         int mid = (s.Length / 2);
 
-        if (s[mid] == ch) { return true; }
+        Console.WriteLine(ch);
+        if (s[mid] == ch) { 
+            return true; 
+        }
 
         return false;
     }

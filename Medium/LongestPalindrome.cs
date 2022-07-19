@@ -145,6 +145,37 @@ public static class LongestPalindrome
         return output;
     }
 
+
+    public static string Operation4(string str)
+    {
+        if (str.Length == 0) { return string.Empty; }
+
+        string output = string.Empty;
+        int count = int.MinValue;
+
+        for (int i = 0; i < str.Length; i++)
+        {
+            char ch = str[i];
+            for (int j = i+1; j < str.Length; j++) {
+
+                int length = j - i + 1;
+
+                ch ^= str[j];
+
+                int mid = (length / 2);
+
+                if (str[mid] == ch)
+                {
+                    if ( length > count)
+                    {
+                        count = length;
+                        output = str.Substring(i, length);
+                    }
+                }
+            }
+        }
+        return output;
+    }
     private static bool IsPalindrome(string str)
     {
         if(str.Length == 1) { return true; }
