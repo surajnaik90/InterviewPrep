@@ -275,6 +275,18 @@ List<int> b = new List<int>() { 2, 5, 7, 3, 2, 7 };
 
 //bool res = BitwiseOperatorProperties.isPalindrome("eeeeee");
 
-int res = BitNumberof1bits.Operation1(11);
+//int res = BitNumberof1bits.Operation1(11);
+
+//long res = BitReverseBits.Operation1(4294967294);
+
+//string res = BitBinaryAddition.Operation1("111", "111");
+
+//bool result = BitwiseOperatorProperties.isBitSet(4, 1);
+
+//int res = BitwiseOperatorProperties.setBit(4, 1);
+
+//int res = BitwiseOperatorProperties.unsetBit(4, 1);
+
+int res = BitwiseOperatorProperties.togggleBit(4, 1);
 
 Console.WriteLine("done");

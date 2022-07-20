@@ -158,16 +158,20 @@ public static class LongestPalindrome
             char ch = str[i];
             for (int j = i+1; j < str.Length; j++) {
 
-                int length = j - i + 1;
+                int length = j - i + 1; bool res = false;
 
                 ch ^= str[j];
 
-                int mid = (length / 2);
-
-                if (str[mid] == ch)
+                if ((length&1) == 1)
                 {
-                    if ( length > count)
-                    {
+                    int mid = (length / 2);
+
+                    if (str[mid] == ch) { res = true; }
+                }
+                else { res =  IsPalindrome(str.Substring(i, length)); }
+
+                if (res) {
+                    if (length > count) {
                         count = length;
                         output = str.Substring(i, length);
                     }
