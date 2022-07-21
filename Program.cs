@@ -302,6 +302,8 @@ List<int> b = new List<int>() { 2, 5, 7, 3, 2, 7 };
 
 //int res = HelpFromSam.Operation1(5);
 
-long res = BitReverseBits.Operation1(4);
+//long res = BitReverseBits.Operation1(4);
+
+int res = FindingGoodDays.Operation1(8);
 
 Console.WriteLine("done");
