@@ -1,98 +1,65 @@
 ﻿/*
-Given an array A, find the size of the smallest subarray such that it contains at least one occurrence of the maximum value of the array
+A wire connects N light bulbs.
 
-and at least one occurrence of the minimum value of the array.
+Each bulb has a switch associated with it; however, due to faulty wiring, a switch also changes the state of all the bulbs
+to the right of the current bulb.
 
+Given an initial state of all bulbs, find the minimum number of switches you have to press to turn on all the bulbs.
 
+You can press the same switch multiple times.
+
+Note: 0 represents the bulb is off and 1 represents the bulb is on.
 
 Problem Constraints
-1 <= |A| <= 2000
-
-
+1 <= N <= 5×105
+0 <= A[i] <= 1
 
 Input Format
-First and only argument is vector A
-
-
+The first and the only argument contains an integer array A, of size N.
 
 Output Format
-Return the length of the smallest subarray which has at least one occurrence of minimum and maximum element of the array
-
-
+Return an integer representing the minimum number of switches required.
 
 Example Input
 Input 1:
 
-A = [1, 3]
+ A = [0, 1, 0, 1]
 Input 2:
 
-A = [2]
-
+ A = [1, 1, 1, 1]
 
 Example Output
 Output 1:
 
- 2
+ 4
 Output 2:
 
- 1
-
+ 0
 
 Example Explanation
 Explanation 1:
 
- Only choice is to take both elements.
+ press switch 0 : [1 0 1 0]
+ press switch 1 : [1 1 0 1]
+ press switch 2 : [1 1 1 0]
+ press switch 3 : [1 1 1 1]
 Explanation 2:
 
- Take the whole array.
+ There is no need to turn any switches as all the bulbs are already on.
  */
 
 public static class Bulbs
 {   
     public static int Operation1(List<int> A)
     {
-        int output = 0, N = A.Count; bool isReset = false;
+        int output = 0;
 
-        for (int i = 0; i < N; i++)
-        {
-            int digit = A[i];
-
-            if(digit==1 && !isReset) { continue; }
-
-            if (i % 2 != 0)
-            {
-                isReset = true;
-
-                if (A[i] == 0) { digit = 1; }
-
-                else { digit = 0; }
-            }
-
-            if(digit == 1) {
-                continue;
-            }
-
-            else {  output++; isReset = true; }
-        }
-
-        return output;
-    }
-
-    public static int Operation2(List<int> A)
-    {
-        int output = 0, number=0;
-
-        int N = A.Count-1;
-        for (int i = 0; i < A.Count; i++){
-            number += A[i] * Convert.ToInt32((Math.Pow(2, N--)));
-        }
-
-        int count = 0;
         for (int i = 0; i < A.Count; i++)
         {
-            if ((number & (1 << i)) != 0)
-            {
-                count++;
+            int digit = output%2==0 ? A[i] : A[i] ^ 1;
+
+            if(digit == 0) { 
+                output++;
             }
         }
 
