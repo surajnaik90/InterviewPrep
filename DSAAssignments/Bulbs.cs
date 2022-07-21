@@ -77,4 +77,25 @@ public static class Bulbs
 
         return output;
     }
+
+    public static int Operation2(List<int> A)
+    {
+        int output = 0, number=0;
+
+        int N = A.Count-1;
+        for (int i = 0; i < A.Count; i++){
+            number += A[i] * Convert.ToInt32((Math.Pow(2, N--)));
+        }
+
+        int count = 0;
+        for (int i = 0; i < A.Count; i++)
+        {
+            if ((number & (1 << i)) != 0)
+            {
+                count++;
+            }
+        }
+
+        return output;
+    }
 }

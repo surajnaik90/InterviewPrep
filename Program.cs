@@ -287,6 +287,10 @@ List<int> b = new List<int>() { 2, 5, 7, 3, 2, 7 };
 
 //int res = BitwiseOperatorProperties.unsetBit(4, 1);
 
-int res = BitwiseOperatorProperties.togggleBit(4, 1);
+//int res = BitwiseOperatorProperties.togggleBit(4, 1);
+
+//int res = Bulbs.Operation2(new List<int>() { 0, 1, 0,1 });
+
+long res = UnsetbitsFromRight.Operation1(93, 4);
 
 Console.WriteLine("done");
