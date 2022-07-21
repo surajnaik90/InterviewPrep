@@ -1,25 +1,49 @@
-﻿/* Write a function that takes an integer and returns the number of 1 bits it has.
+﻿/* Reverse the bits of an 32 bit unsigned integer A.
+
+
 
 Problem Constraints
-1 <= A <= 109
+0 <= A <= 232
+
+
 
 Input Format
-First and only argument contains integer A
+First and only argument of input contains an integer A.
+
+
 
 Output Format
-Return an integer as the answer
+Return a single unsigned integer denoting the decimal value of reversed bits.
+
+
 
 Example Input
-Input1:
-11
+Input 1:
+
+ 0
+Input 2:
+
+ 3
+
 
 Example Output
-Output1:
-3
+Output 1:
+
+ 0
+Output 2:
+
+ 3221225472
+
 
 Example Explanation
-Explaination1:
-11 is represented as 1011 in binary. */
+Explanation 1:
+
+        00000000000000000000000000000000    
+=>      00000000000000000000000000000000
+Explanation 2:
+
+        00000000000000000000000000000011    
+=>      11000000000000000000000000000000 */
 public static class BitReverseBits
 {
     public static long Operation1(long A)
