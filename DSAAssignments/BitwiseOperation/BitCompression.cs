@@ -54,24 +54,20 @@ public static class BitCompression
 {
     public static int Operation1(List<int> A)
     {
-        int output = 0;
+        int output;
 
         for (int i = 0; i < A.Count; i++)
         {
-            //int ai = A[i];
+            int ai = A[i];
             for (int j = i+1; j < A.Count; j++)
             {
-                //int aj = A[j];
-
-                // A[i] = ai & aj;
-                //A[j] = ai | aj;
-
-                // A[i] = ai & aj;
-                //A[j] = ai | aj;
+                A[i] = ai & A[j];
+                A[j] = ai | A[j];
             }
         }
 
-        for (int i = 0; i < A.Count; i++)
+        output = A[0];
+        for (int i = 1; i < A.Count; i++)
         {
             output ^= A[i];
         }

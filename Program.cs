@@ -295,7 +295,13 @@ List<int> b = new List<int>() { 2, 5, 7, 3, 2, 7 };
 
 //int res = BitCompression.Operation1(new List<int>() { 5, 30, 30, 5, 24, 21, 12, 4, 16, 4, 31 });
 
-int[] arr = new int[100000];
-long res = SubarrayswithBitwiseOR1.Operation2(100000, arr.ToList());
+//int[] arr = new int[100000];
+//long res = SubarrayswithBitwiseOR1.Operation2(100000, arr.ToList());
+
+//List<int> res = SingleNumberIII.Operation1(new List<int>() {1,2,3,1,2,4});
+
+//int res = HelpFromSam.Operation1(5);
+
+long res = BitReverseBits.Operation1(4);
 
 Console.WriteLine("done");

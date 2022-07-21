@@ -24,31 +24,16 @@ public static class BitReverseBits
 {
     public static long Operation1(long A)
     {
-        long output, N=A; int count = 0;
+        long output=0, N=A; int j = 31;
 
-        while (N >= 1) {
+        while (N != 0) {
 
-            count++;
+            int item = (N & 1) == 1 ? 1 : 0;
+            
+            output += item * (Convert.ToInt64(Math.Pow(2, j--)));
 
             N = N / 2;
         }
-
-        
-        output = A << (32-count);
-
-        int onescount = 0; long M=A;
-
-        while (M >= 1)
-        {
-            if ((M & 1) == 1)
-            {
-                onescount++;
-            }
-
-            M = M / 2;
-        }
-
-        if (onescount==1) { output /= A; }
 
         return output;
     }
