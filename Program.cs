@@ -291,6 +291,11 @@ List<int> b = new List<int>() { 2, 5, 7, 3, 2, 7 };
 
 //int res = Bulbs.Operation2(new List<int>() { 0, 1, 0,1 });
 
-long res = UnsetbitsFromRight.Operation1(93, 4);
+//long res = UnsetbitsFromRight.Operation1(93, 4);
+
+//int res = BitCompression.Operation1(new List<int>() { 5, 30, 30, 5, 24, 21, 12, 4, 16, 4, 31 });
+
+int[] arr = new int[100000];
+long res = SubarrayswithBitwiseOR1.Operation2(100000, arr.ToList());
 
 Console.WriteLine("done");
