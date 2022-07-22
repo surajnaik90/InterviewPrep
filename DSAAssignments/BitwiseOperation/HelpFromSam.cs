@@ -1,58 +1,64 @@
-﻿/* Given an integer A. Unset B bits from the right of A in binary.
-For eg:-
-A = 93, B = 4
-A in binary = 1011101
-A should become = 1010000 = 80. Therefore return 80.
+﻿/* Alex and Sam are good friends. Alex is doing a lot of programming these days. He has set a target score of A for himself.
+Initially, Alex's score was zero. Alex can double his score by doing a question, or Alex can seek help from Sam for doing 
+questions that will contribute 1 to Alex's score. Alex wants his score to be precisely A. Also, he does not want to take much 
+help from Sam.
 
+Find and return the minimum number of times Alex needs to take help from Sam to achieve a score of A.
 
 Problem Constraints
-1 <= A <= 1018
-1 <= B <= 60
-
+0 <= A <= 10^9
 
 Input Format
-The first argument is a single integer A.
-The second argument is a single integer B.
-
+The only argument given is an integer A.
 
 Output Format
-Return the number with B unset bits from the right.
-
+Return the minimum number of times help taken from Sam.
 
 Example Input
-Input 1:-
-A = 25
-B = 3
-Input 2:-
-A = 37
-B = 3
+Input 1:
+A = 5
+Input 2:
 
+A = 3
 
 Example Output
-Output 1:-
-24
-Output 2:-
-32
+Output 1:
+2
+Output 2:
 
+2
 
 Example Explanation
-Explanation 1:-
-A = 11001 to 11000
-Explantio 2:-
-A = 100101 to 100000 */
+Explanation 1:
+Initial score : 0
+Takes help from Sam, score : 1
+Alex solves a question, score : 2
+Alex solves a question, score : 4
+Takes help from Sam, score: 5
+Explanation 2:
+
+Initial score : 0
+Takes help from Sam, score : 1
+Alex solves a question, score : 2
+Takes help from Sam, score : 3 */
 public static class HelpFromSam
 {
+
+    // A = A / 2 is same as A >> 1. It's just that bitwise operators are faster.
     public static int Operation1(int A)
     {
-        int help=1, i=1, score = 0;
+        int output = 0;
 
-        while (score<A) {
+        while (A >= 1)
+        {
+            if ((A & 1) == 1)
+            {
+                output++;
+            }
 
-            score = 1 << i++;
-
-            help++;
+            A = A >> 1;
         }
 
-        return help;
+        return output;
     }
 }
