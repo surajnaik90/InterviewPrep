@@ -306,6 +306,10 @@ List<int> b = new List<int>() { 2, 5, 7, 3, 2, 7 };
 
 //int res = FindingGoodDays.Operation1(8);
 
-int res = Bulbs.Operation1(new List<int>() { 0, 1, 0, 1 });
+//int res = Bulbs.Operation1(new List<int>() { 0, 1, 0, 1 });
+
+//string res = BitBinaryAddition.Operation1("1010110111001101101000", "1000011011000000111100110");
+
+List<int> res = SingleNumberIII.Operation1(new List<int>() { 186, 256, 102, 377, 186, 377 });
 
 Console.WriteLine("done");

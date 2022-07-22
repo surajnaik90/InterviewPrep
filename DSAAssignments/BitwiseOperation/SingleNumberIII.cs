@@ -1,59 +1,88 @@
-﻿/* Given an integer A. Unset B bits from the right of A in binary.
-For eg:-
-A = 93, B = 4
-A in binary = 1011101
-A should become = 1010000 = 80. Therefore return 80.
+﻿/* Given an array of positive integers A, two integers appear only once, and all the other integers appear twice.
+Find the two integers that appear only once.
+
+Note: Return the two numbers in ascending order.
 
 
 Problem Constraints
-1 <= A <= 1018
-1 <= B <= 60
+2 <= |A| <= 100000
+1 <= A[i] <= 109
+
 
 
 Input Format
-The first argument is a single integer A.
-The second argument is a single integer B.
+The first argument is an array of integers of size N.
+
 
 
 Output Format
-Return the number with B unset bits from the right.
+Return an array of two integers that appear only once.
+
 
 
 Example Input
-Input 1:-
-A = 25
-B = 3
-Input 2:-
-A = 37
-B = 3
+Input 1:
+A = [1, 2, 3, 1, 2, 4]
+Input 2:
+
+A = [1, 2]
 
 
 Example Output
-Output 1:-
-24
-Output 2:-
-32
+Output 1:
+[3, 4]
+Output 2:
+
+[1, 2]
 
 
 Example Explanation
-Explanation 1:-
-A = 11001 to 11000
-Explantio 2:-
-A = 100101 to 100000 */
+Explanation 1:
+3 and 4 appear only once.
+Explanation 2:
+
+1 and 2 appear only once.*/
 public static class SingleNumberIII
 {
     public static List<int> Operation1(List<int> A)
     {
-        List<int> result = new List<int>();
-
-        int ans = 76 ^ 129;
-
+        //Take XOR of all elements
         int res = A[0];
         for (int i = 1; i < A.Count; i++)
         {
             res ^= A[i];
         }
 
-        return result;
+        //Find the first set bit from right side
+        int temp = res, bit = 0;
+        while(temp!=0) {
+            if( (temp & 1)==1) {
+                break;
+            }
+            bit++;
+            temp /= 2;
+        }
+
+        //Find the unique elements
+        int element1=0, element2=0;
+        for (int i = 0; i < A.Count; i++)
+        {
+            if (((A[i]&(1<<bit)) != 0)) {
+                element1 ^= A[i];
+            }
+
+            else {
+                element2 ^= A[i];
+            }
+        }
+
+        int n = element1;
+        if(element1 > element2)
+        {
+            element1 = element2;
+            element2 = n;
+        }
+
+        return new List<int>() { element1, element2};
     }
 }

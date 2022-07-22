@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Hard\" />
+    <Folder Include="Leetcode\" />
   </ItemGroup>
 
 </Project>

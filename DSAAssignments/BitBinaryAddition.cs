@@ -9,41 +9,25 @@ public static class BitBinaryAddition
 {
     public static string Operation1(string A, string B)
     {
-        string output = string.Empty;
-        int N, carry=0; 
+        int N=32, carry=0, i;
+        char[] outchars = new char[N];
 
-        if (A.Length < B.Length) { 
-            N = B.Length;
+        string a = string.Concat(new string(Enumerable.Repeat('0', N - A.Length).ToArray()),A);
+        string b = string.Concat(new string(Enumerable.Repeat('0', N - B.Length).ToArray()), B);
 
-            int[] newA = new int[N];
+        for (i = N-1; i >= 0; i--) {
 
-        }
+            int res = a[i] + b[i] + carry;
 
-        else if(B.Length < A.Length){ 
-            N = A.Length;
-            int[] newB = new int[N];
-        }
+            carry = res / 2;
 
-        else { N = A.Length; }
-
-        for (int i = N-1; i >= 0; i--) {
-
-            int res = A[i] ^ B[i] ^ carry;
-
-            carry = ((A[i] & B[i]) == '1') ? 1 : 0;
-
-            output+=res.ToString();
+            outchars[i] = res % 2 == 0 ? '0' : '1';
         }
 
         if(carry != 0) {
-            output += carry.ToString();
+            outchars[i] = carry == 1 ? '1' : '0';
         }
 
-        string result = string.Empty;
-        for (int i = output.Length-1; i >=0 ; i--) {
-            result += output[i];
-        }
-
-        return result;
+        return (new string(outchars)).TrimStart('0');
     }
 }
