@@ -61,22 +61,40 @@ public static class AntiDiagonal
 {
     public static List<List<int>> Operation1(List<List<int>> A)
     {
-        List<List<int>> output = new List<List<int>>();
+        int N = A.Count, M = (2*N)-1, cMax = N - 1, rMax = cMax, rinc = 0, cinc = 1;
+        int innerLoopCount = 0, delta = 1, x = 0, y = 0, r=x, c;
+        int[,] outMatrix = new int[M, N];
 
-        int N = A[0].Count, r=0, k=1;
-        
-        for (int i = 0; i < (2 * N) - 1; i++)
+        List<List<int>> output = new List<List<int>>();        
+
+        for (int i = 0; i < M; i++)
         {
-            int[] row = new int[N];
-
-            if (i > N - 1) { k = r - 1; }
-
-            int x = i, y = 0;
-            for (int c = 0; c < k; c++) {
-                row[c] = A[x++][y--];
+            if(y==cMax+1) {
+                rinc = 1; cinc = 0; y = cMax; x++;
             }
-                        
-            output.Add(row.ToList());
+            if (innerLoopCount!=0 && innerLoopCount % N == 0) {
+                delta = -1;
+            }
+
+            r = x; c = y; innerLoopCount += delta;
+            for (int k = 0; k < innerLoopCount; k++)
+            {
+                int value = A[r++][c--];
+                outMatrix[i, k] = value;
+            }
+            x += rinc;y += cinc; 
+        }
+
+        for (int i = 0; i < M; i++)
+        {
+            List<int> row = new List<int>();
+
+            for (int m = 0; m < A.Count; m++)
+            {
+                row.Add(outMatrix[i, m]);
+            }
+
+            output.Add(row);
         }
 
         return output;

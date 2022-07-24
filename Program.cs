@@ -316,4 +316,13 @@ List<int> b = new List<int>() { 2, 5, 7, 3, 2, 7 };
 
 List<List<int>> res = SpiralOrderMatrix.Operation1(5);
 
+
+List<int> input1 = new List<int>() { 1, 2, 3 };
+List<int> input2 = new List<int>() { 4,5,6 };
+List<int> input3 = new List<int>() { 7,8,9 };
+List<List<int>> input = new List<List<int>>();
+input.Add(input1); input.Add(input2); input.Add(input3);
+
+List<List<int>> output = AntiDiagonal.Operation1(input);
+
 Console.WriteLine("done");
