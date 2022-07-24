@@ -53,30 +53,27 @@ public static class EvenSubarrays
 {
     public static string Operation1(List<int> A)
     {
-        int N = A.Count,count=0; int sub = 0;
+        int N = A.Count, subArraySize = 2;
 
-        if (N%2 != 0) { return "NO"; }
+        if(N%2 != 0) { return "NO"; }
 
-        for (int s = 0; s < N; s++)
-        {
-            for (int e = s; e < N; e++)
+        while(subArraySize <= N) {
+
+            if(N%subArraySize!=0) { subArraySize += 2; continue; }
+
+            int s = 0, e = subArraySize - 1; bool isEven = true;
+            for (int i = 0; i < N/subArraySize; i++)
             {
-                if( (e-s+1)%2 != 0) { continue; }
-
-                if ((A[s]%2==0) && (A[e] % 2 == 0))
-                {
-                    count += e - s + 1;
-                    sub++;
-                    s = e; break;
+                if (A[s] % 2 != 0 || A[e] % 2 != 0) {
+                    isEven = false; break;
                 }
+                s = s + subArraySize; e = e + subArraySize;
             }
-        }
 
-        if (count == N) { 
-            return "YES";
+            if (isEven) { return "YES"; }
+
+            subArraySize += 2;
         }
-        else { 
-            return "NO";
-        }
+        return "NO";
     }
 }

@@ -329,6 +329,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = BitCompression.Operation1(new List<int>() { 5, 30, 30, 5, 24, 21, 12, 4, 16, 4, 31 });
 
-int res = BitCompression.Operation1(new List<int>() { 21, 9, 25, 16, 10, 31, 15, 30, 30 });
+//int res = BitCompression.Operation1(new List<int>() { 21, 9, 25, 16, 10, 31, 15, 30, 30 });
+
+string result = EvenSubarrays.Operation1(new List<int>() { 2, 4, 6, 8 });
 
 Console.WriteLine("done");
