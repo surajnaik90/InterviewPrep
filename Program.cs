@@ -314,7 +314,7 @@ List<int> b = new List<int>() { 2, 5, 7, 3, 2, 7 };
 
 //string output = InterestingArray.Operation1(new List<int>() { 9, 17 });
 
-List<List<int>> res = SpiralOrderMatrix.Operation1(5);
+//List<List<int>> res = SpiralOrderMatrix.Operation1(5);
 
 
 List<int> input1 = new List<int>() { 1, 2, 3 };
@@ -323,6 +323,12 @@ List<int> input3 = new List<int>() { 7,8,9 };
 List<List<int>> input = new List<List<int>>();
 input.Add(input1); input.Add(input2); input.Add(input3);
 
-List<List<int>> output = AntiDiagonal.Operation1(input);
+//List<List<int>> output = AntiDiagonal.Operation1(input);
+
+//string res = EvenSubarrays.Operation1(new List<int>() { 978, 847, 95, 729, 778, 586, 188, 782, 813, 870, 871, 940, 312, 693, 580, 101, 760, 837, 564, 633, 680, 155, 241, 374, 682, 290, 850, 601, 433, 922, 773, 959, 530, 290, 990, 50, 516, 409, 868, 131, 664, 851, 721, 880, 20, 450, 745, 387, 787, 823, 392, 242, 674, 347, 65, 135, 819, 324, 651, 678, 139, 940 });
+
+//int res = BitCompression.Operation1(new List<int>() { 5, 30, 30, 5, 24, 21, 12, 4, 16, 4, 31 });
+
+int res = BitCompression.Operation1(new List<int>() { 21, 9, 25, 16, 10, 31, 15, 30, 30 });
 
 Console.WriteLine("done");

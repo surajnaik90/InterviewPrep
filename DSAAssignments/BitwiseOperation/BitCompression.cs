@@ -50,25 +50,17 @@ Explanation 2:
 Since all the elements are equal. 
 Even after applying the operations in any order, the array will be [1, 1, 1].
 The XOR of all the elements of this array is 1.*/
+
+
+//Problem statement is tricky. We are asked to help him find only the XOR of all :) 
 public static class BitCompression
 {
     public static int Operation1(List<int> A)
     {
         int output;
 
-        for (int i = 0; i < A.Count; i++)
-        {
-            int ai = A[i];
-            for (int j = i+1; j < A.Count; j++)
-            {
-                A[i] = ai & A[j];
-                A[j] = ai | A[j];
-            }
-        }
-
         output = A[0];
-        for (int i = 1; i < A.Count; i++)
-        {
+        for (int i = 1; i < A.Count; i++) {
             output ^= A[i];
         }
 
