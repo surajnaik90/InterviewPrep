@@ -64,37 +64,68 @@ public static class AmazingSubstring
 
         A = A.ToLower();
         
-        int length = A.Length, output=0, count=0;
+        int length = A.Length, output= ((length)*(length+1))/2, count=0, diff=0,i;
         char[] vowels = new char[] { 'a', 'e', 'i', 'o', 'u' };
         Dictionary<char, int> vowelState = new Dictionary<char, int>() 
-        { {'a',0 }, {'e',0 }, { 'i', 0 }, { 'o', 0 }, {'u',0 } };        
+        { {'a',0 }, {'e',0 }, { 'i', 0 }, { 'o', 0 }, {'u',0 } };
 
-        char prev = A[0];
-        for (int i = 0; i < length; i++)
+        char prevChar = '\0'; bool lastVowel = false;
+        for (i = 0; i < length; i++)
         {
-            if (!vowels.Contains(A[i])){ continue; }
+            //If vowel found
+            if (vowels.Contains(A[i])){
 
-            output += length - i;
+                lastVowel = true;
 
-            if (A[i] == prev) {
-                count++;
-                prev = A[i]; continue;
+                if (prevChar == '\0') { prevChar = A[i]; }
+
+                if (A[i]==prevChar) {
+                    count++;
+                }
+                else {
+                    if (vowelState[prevChar]==1) {
+                        diff += (count * (count + 1)) / 2;
+                    }
+                    else {
+                        diff += ((count - 1) * count) / 2;
+                        vowelState[prevChar] = 1;
+                    }
+                    count = 1; prevChar = A[i];
+                }
+                continue;
             }
 
-            if(count <= vowelState[A[i]])
+            //If consonant found
+            diff += length - i;
+
+            if (lastVowel) {
+                if (vowelState[A[i - 1]] == 1) {
+                    diff += (count * (count + 1)) / 2;
+                }
+                else {
+                    diff += ((count - 1) * count) / 2;
+                    vowelState[A[i-1]] = 1;
+                }
+            }
+            count = 0; lastVowel = false;
+        }
+
+
+        if (lastVowel)
+        {
+            if (vowelState[A[i - 1]] == 1)
             {
-                output = output - count;
+                diff += (count * (count + 1)) / 2;
             }
             else
             {
-                output = output -(count - vowelState[A[i]]);
-                vowelState[A[i]] = count;
+                diff += ((count - 1) * count) / 2;
+                vowelState[A[i - 1]] = 1;
             }
-
-            int diff = ((count - 1) * (count)) / 2;
-            output = output - diff;
-            count = 0;
         }
+
+        output -= diff;
+
         return output % 10003;
     }
 }

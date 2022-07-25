@@ -42,23 +42,45 @@ public static class EvenOddIndex
 {
     public static int Operation1(List<int> A)
     {
-        int output = 0, e=0, o=0;
+        int output = 0, N=A.Count;
+        int[] prefixEvenSum = new int[N]; int[] prefixOddSum = new int[N];
+        int evenIndexedSum, oddIndexedSum, deltaEven, deltaOdd;
 
-        for (int i = 0; i < A.Count; i++)
+        //Build Prefix Even Sum & Prefix Odd Sum array
+        prefixEvenSum[0] = A[0]; prefixOddSum[0] = 0;
+        for (int i = 1; i < N; i++){
+
+            if (i % 2 == 0) {
+                prefixEvenSum[i] = prefixEvenSum[i - 1] + A[i];
+                prefixOddSum[i] = prefixOddSum[i - 1];
+            }
+            else {
+                prefixEvenSum[i] = prefixEvenSum[i - 1];
+                prefixOddSum[i] = prefixOddSum[i - 1] + A[i];
+            }
+        }
+
+        //Calculate count of indices when removed the even sum will equal to odd sum.
+        for (int i = 0; i < N; i++)
         {
-            e = 0; o = 0; 
-
-            for (int j = 0; j < A.Count-1; j++)
-            {
-                if(i!=j)
-                {
-                    if (j % 2 == 0) { e += A[j]; }
-
-                    else { o += A[j]; }
-                }
+            //Remove ith element & check for equality
+            if(i==0) { 
+                evenIndexedSum = 0;
+                oddIndexedSum = prefixOddSum[0];
+            }
+            else {
+                evenIndexedSum = prefixEvenSum[i - 1];
+                oddIndexedSum = prefixOddSum[i - 1];
             }
 
-            if (e == o) { output++; }
+            deltaEven = prefixOddSum[N - 1] - prefixOddSum[i];
+            deltaOdd = prefixEvenSum[N-1] - prefixEvenSum[i];
+
+            evenIndexedSum += deltaEven; oddIndexedSum += deltaOdd;
+
+            if (evenIndexedSum == oddIndexedSum) {
+                output++;
+            }
         }
 
         return output;

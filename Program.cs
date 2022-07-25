@@ -331,6 +331,10 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = BitCompression.Operation1(new List<int>() { 21, 9, 25, 16, 10, 31, 15, 30, 30 });
 
-string result = EvenSubarrays.Operation1(new List<int>() { 2, 4, 6, 8 });
+//string result = EvenSubarrays.Operation1(new List<int>() { 2, 4, 6, 8 });
+
+//int ans = AmazingSubstring.Operation2("pGpEusuCSWEaPOJmamlFAnIBgAJGtcJaMPFTLfUfkQKXeymydQsdWCTyEFjFgbSmknAmKYFHopWceEyCSumTyAFwhrLqQXbWnXSn");
+
+int res = EvenOddIndex.Operation1(new List<int>() { 1,1,1 });
 
 Console.WriteLine("done");
