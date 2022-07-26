@@ -35,7 +35,6 @@ Explanation 2:
 
 public static class DivisibilityBy8
 {
-    //Time Limit Exceeds
     public static int Operation1(string A)
     {
         int N = A.Length, number;
