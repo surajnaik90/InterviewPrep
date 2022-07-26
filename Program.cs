@@ -335,6 +335,10 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int ans = AmazingSubstring.Operation2("pGpEusuCSWEaPOJmamlFAnIBgAJGtcJaMPFTLfUfkQKXeymydQsdWCTyEFjFgbSmknAmKYFHopWceEyCSumTyAFwhrLqQXbWnXSn");
 
-int res = EvenOddIndex.Operation1(new List<int>() { 1,1,1 });
+//int res = EvenOddIndex.Operation1(new List<int>() { 1,1,1 });
+
+//int res = ABModulo.Operation1(5, 10);
+
+int res = DivisibilityBy8.Operation1("1240");
 
 Console.WriteLine("done");
