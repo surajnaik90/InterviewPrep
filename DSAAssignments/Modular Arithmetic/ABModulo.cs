@@ -42,19 +42,6 @@ public static class ABModulo
     //Time Limit Exceeds
     public static int Operation1(int A,int B)
     {
-        int output = int.MinValue;
-
-        int M = A > B ? A : B;
-
-        for (int i = 1; i <= M; i++) {
-
-            int aModulo = A % i, bModulo = B % i;
-
-            if(aModulo==bModulo) {
-                output = i>output ? i : output;
-            }
-        }
-
-        return output;
+        return Math.Abs(A - B);
     }
 }
