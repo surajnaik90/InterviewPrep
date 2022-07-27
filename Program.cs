@@ -339,6 +339,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = ABModulo.Operation1(5, 10);
 
-int res = DivisibilityBy8.Operation1("1240");
+//int res = DivisibilityBy8.Operation1("1240");
+
+int res = Concatentate3Numbers.Operation1(70, 70, 70);
 
 Console.WriteLine("done");
