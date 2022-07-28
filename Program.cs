@@ -341,6 +341,10 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = DivisibilityBy8.Operation1("1240");
 
-int res = Concatentate3Numbers.Operation1(70, 70, 70);
+//int res = Concatentate3Numbers.Operation1(70, 70, 70);
+
+//int res = ModString.Operation1("2935876", 467);
+
+int res = LeapYearIII.Operation1(1999);
 
 Console.WriteLine("done");

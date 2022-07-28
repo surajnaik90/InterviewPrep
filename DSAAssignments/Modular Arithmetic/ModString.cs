@@ -40,9 +40,11 @@ public static class ModString
 {
     public static int Operation1(string A, int B)
     {
-        int output;
+        int N=A.Length, output = Convert.ToInt32(A[N-1]);
 
-        output = (Convert.ToInt32(A)) % B;
+        for (int i = N-1; i >=0; i--) {
+            output %= B;
+        }
 
         return output;
     }
