@@ -345,6 +345,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = ModString.Operation1("2935876", 467);
 
-int res = LeapYearIII.Operation1(1999);
+//int res = LeapYearIII.Operation1(1999);
+
+LCM.Operation1();
 
 Console.WriteLine("done");
