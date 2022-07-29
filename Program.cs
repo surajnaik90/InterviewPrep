@@ -347,6 +347,10 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = LeapYearIII.Operation1(1999);
 
-LCM.Operation1();
+//LCM.Operation1();
+
+//int res = TwoRectanglesOverlap.Operation1(12,47,39,72,8,3,47,55);
+
+int res = MooreVotingAlgorithm.Operation1(new List<int>() { 4, 4, 3, 8, 8, 4, 9, 4, 4 });
 
 Console.WriteLine("done");

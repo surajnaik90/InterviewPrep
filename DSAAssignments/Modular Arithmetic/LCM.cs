@@ -46,7 +46,7 @@ public static class LCM
 {
     public static void Operation1()
     {
-        int ans = FindLCM2(4, 5);
+        int ans = FindLCM2(4, 4);
         int ans2 = FindLCM2(3, 9);
 
         //Read test cases count
@@ -98,15 +98,9 @@ public static class LCM
     //Optmized approach
     static int FindLCM2(int A, int B)
     {
-        if (A == B) { return A; }
-
-        int n = 2;
-
-        int big = A > B ? A : B;
-        int small = A < B ? A : B;
+        int big = Math.Max(A, B), small = Math.Min(A, B), n=2;
 
         int value = big;
-
         while (true) {
 
             if (value % small == 0) {
