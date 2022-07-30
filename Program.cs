@@ -351,6 +351,17 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = TwoRectanglesOverlap.Operation1(12,47,39,72,8,3,47,55);
 
-int res = MooreVotingAlgorithm.Operation1(new List<int>() { 4, 4, 3, 8, 8, 4, 9, 4, 4 });
+//int res = MooreVotingAlgorithm.Operation1(new List<int>() { 4, 4, 3, 8, 8, 4, 9, 4, 4 });
+
+//List<int> a1 = new List<int>() { 2, 6 };
+//List<int> b1 = new List<int>() { 2, 6 };
+//List<int> c = new List<int>() { 2, 6 };
+
+//ist<List<int>> r = new List<List<int>>();
+//r.Add(a1);r.Add(b1);r.Add(c);
+
+//int s = 3 | 1;
+
+//MatrixQueries.Operation1();
 
 Console.WriteLine("done");
