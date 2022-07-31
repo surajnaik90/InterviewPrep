@@ -366,6 +366,9 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = MagicNumber.solve(4999);
 
-string res = InterestingArray.Operation1(new List<int>() { 9, 17 });
+//string res = InterestingArray.Operation1(new List<int>() { 9, 17 });
+
+List<int> s = new List<int>() { 2, 2, 1, 5, 3 };
+s.Sort();
 
 Console.WriteLine("done");
