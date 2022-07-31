@@ -364,4 +364,6 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //MatrixQueries.Operation1();
 
+int res = MagicNumber.solve(4999);
+
 Console.WriteLine("done");
