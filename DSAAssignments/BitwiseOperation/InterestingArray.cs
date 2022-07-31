@@ -55,8 +55,15 @@ public static class InterestingArray
 {
     public static string Operation1(List<int> A)
     {
-        int res = 27 ^ 28 ^ 29;
+        int res = A[0];
+        for (int i = 1; i < A.Count; i++) {
+            res ^= A[i];
+        }
 
-        return String.Empty;
+        if (res % 2 == 0) { 
+            return "Yes";
+        }
+
+        return "No";
     }
 }

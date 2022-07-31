@@ -364,6 +364,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //MatrixQueries.Operation1();
 
-int res = MagicNumber.solve(4999);
+//int res = MagicNumber.solve(4999);
+
+string res = InterestingArray.Operation1(new List<int>() { 9, 17 });
 
 Console.WriteLine("done");
