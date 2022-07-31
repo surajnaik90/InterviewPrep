@@ -8,7 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Hard\" />
+    <Compile Remove="Hard\**" />
+    <EmbeddedResource Remove="Hard\**" />
+    <None Remove="Hard\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Leetcode\" />
   </ItemGroup>
 

@@ -368,7 +368,9 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //string res = InterestingArray.Operation1(new List<int>() { 9, 17 });
 
-List<int> s = new List<int>() { 2, 2, 1, 5, 3 };
-s.Sort();
+//List<int> s = new List<int>() { 2, 2, 1, 5, 3 };
+//s.Sort();
+
+int ans = ExcelColumnNumber.titleToNumber("ZZZZ");
 
 Console.WriteLine("done");
