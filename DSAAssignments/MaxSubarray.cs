@@ -116,26 +116,22 @@ public static class MaxSubarray
     //THis doesn't work
     public static int Operation3(List<int> A)
     {
-        int output = int.MinValue, N = A.Count, sum = 0, prev = 0;
+        int output = int.MinValue, N = A.Count, sum = 0;
 
-        for (int i = 0; i < N; i++)
-        {
-            if (A[i] > output) { output = A[i]; }
+        output = A[0];
 
-            sum += A[i];
-            if (sum > output) { output = sum; }
+        
 
-            if(i>1) { 
-                int temp = A[i] + A[i - 1];
+        for (int i = 1; i < N; i++) {
 
-                if (temp > output) { output = temp; }
-
-                prev = temp + A[i];
+            if (A[i] > sum) { 
+                sum = A[i];
             }
 
-            if (prev > output) { output = prev; }
         }
 
         return output;
+
+        
     }
 }

@@ -371,6 +371,10 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 //List<int> s = new List<int>() { 2, 2, 1, 5, 3 };
 //s.Sort();
 
-int ans = ExcelColumnNumber.titleToNumber("ZZZZ");
+//int ans = ExcelColumnNumber.titleToNumber("ZZZZ");
+
+//List<int> repeatedNumbers = RepeatMissingNumberArray.repeatedNumber(new List<int>() { 3,1,2,5,3});
+
+int res = ArithmeticProgression.solve(new List<int>() { 3, 5, 1 });
 
 Console.WriteLine("done");
