@@ -375,6 +375,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //List<int> repeatedNumbers = RepeatMissingNumberArray.repeatedNumber(new List<int>() { 3,1,2,5,3});
 
-int res = ArithmeticProgression.solve(new List<int>() { 3, 5, 1 });
+//int res = ArithmeticProgression.solve(new List<int>() { 3, 5, 1 });
+
+int res = ElementsRemoval.solve(new List<int>() {2, 1, 4});
 
 Console.WriteLine("done");
