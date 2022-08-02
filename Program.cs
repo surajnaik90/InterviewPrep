@@ -379,6 +379,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = ElementsRemoval.solve(new List<int>() {2, 1, 4});
 
-List<int> output = SortbyColor.solve(new List<int>() { 0, 1, 2, 0, 1, 2 });
+//List<int> output = SortbyColor.solve(new List<int>() { 0, 1, 2, 0, 1, 2 });
+
+int res = NobleInteger.solve(new List<int>() { -4, -2, 0, -1, -6 });
 
 Console.WriteLine("done");

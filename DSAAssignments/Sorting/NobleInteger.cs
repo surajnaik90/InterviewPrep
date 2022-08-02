@@ -40,9 +40,29 @@ public static class NobleInteger
 {
     public static int solve(List<int> A)
     {
+        int N = A.Count;
+
         A.Sort();
 
-        
+        int[] countArr = new int[N]; int count = 1;
+
+        if (countArr[N-1] == A[N-1]) { return 1; }
+
+        for (int i = N-2; i >= 0; i--) {
+
+            if (A[i] == A[i+1]) {
+                countArr[i] = countArr[i + 1];
+            }
+            else {
+                countArr[i] = count;
+            }
+
+            if (countArr[i] == A[i]) {
+                return 1;
+            }
+
+            count++;
+        }
 
         return -1;
     }
