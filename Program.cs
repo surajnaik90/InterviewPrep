@@ -381,6 +381,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //List<int> output = SortbyColor.solve(new List<int>() { 0, 1, 2, 0, 1, 2 });
 
-int res = NobleInteger.solve(new List<int>() { -4, -2, 0, -1, -6 });
+//int res = NobleInteger.solve(new List<int>() { -4, -2, 0, -1, -6 });
+
+string res = LargestInteger.solve(new List<int>() { 0,0,0,0,0 });
 
 Console.WriteLine("done");
