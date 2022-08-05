@@ -37,7 +37,6 @@ Explanation 1:
 
 using System.Text;
 
-
 // Please note: Using "+" operator to concatenate strings we hit TLE issues.
 // Instead use StringBuilder to concatenate strings.
 public static class SimpleReverse
