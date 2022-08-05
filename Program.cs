@@ -387,6 +387,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //string res = LongestPalindrome.Operation1("aaaabaaa");
 
-string res = ReverseString.Operation1("crulgzfkif gg ombt vemmoxrgf qoddptokkz op xdq hv ");
+//string res = ReverseString.Operation1("crulgzfkif gg ombt vemmoxrgf qoddptokkz op xdq hv ");
+
+string res = SimpleReverse.Operation1("crulgzfkif");
 
 Console.WriteLine("done");
