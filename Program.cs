@@ -383,6 +383,10 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = NobleInteger.solve(new List<int>() { -4, -2, 0, -1, -6 });
 
-string res = LargestInteger.solve(new List<int>() { 0,0,0,0,0 });
+//string res = LargestInteger.solve(new List<int>() {362,46});
+
+//string res = LongestPalindrome.Operation1("aaaabaaa");
+
+string res = ReverseString.Operation1("crulgzfkif gg ombt vemmoxrgf qoddptokkz op xdq hv ");
 
 Console.WriteLine("done");
