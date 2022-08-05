@@ -393,6 +393,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //List<char> res = ToLower.to_lower(new List<char>() { '#', 'c', 'A', 'l', 'e', 'r', 'A', 'c', 'a', 'D', 'e', 'm', 'y' });
 
-List<char> res = ToUpper.to_upper(new List<char>() { '#', 'c', 'A', 'l', 'e', 'r', 'A', 'c', 'a', 'D', 'e', 'm', 'y' });
+//List<char> res = ToUpper.to_upper(new List<char>() { '#', 'c', 'A', 'l', 'e', 'r', 'A', 'c', 'a', 'D', 'e', 'm', 'y' });
+
+int res = Isalnum.solve(new List<char>() { 'S', '*', 'a', 'l', 'e', 'r', 'A', 'c', 'a', 'd', 'e', 'm', 'y', '2', '0', '2', '0' });
 
 Console.WriteLine("done");
