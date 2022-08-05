@@ -391,6 +391,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //string res = SimpleReverse.Operation1("crulgzfkif");
 
-List<char> res = ToLower.to_lower(new List<char>() { '#', 'c', 'A', 'l', 'e', 'r', 'A', 'c', 'a', 'D', 'e', 'm', 'y' });
+//List<char> res = ToLower.to_lower(new List<char>() { '#', 'c', 'A', 'l', 'e', 'r', 'A', 'c', 'a', 'D', 'e', 'm', 'y' });
+
+List<char> res = ToUpper.to_upper(new List<char>() { '#', 'c', 'A', 'l', 'e', 'r', 'A', 'c', 'a', 'D', 'e', 'm', 'y' });
 
 Console.WriteLine("done");
