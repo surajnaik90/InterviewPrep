@@ -399,6 +399,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = Isalpha.solve(new List<char>() { 'S', '*', 'a', 'l', 'e', 'r', 'A', 'c', 'a', 'd', 'e', 'm', 'y', '2', '0', '2', '0' });
 
-string res = LongestPalindromcString.Operation1("bb");
+//string res = LongestPalindromcString.Operation1("bb");
+
+string res = LongestCommonPrefix.Operation1(new List<string>() { "abcd", "abde", "abcf" });
 
 Console.WriteLine("done");
