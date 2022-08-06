@@ -405,8 +405,10 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = ChangeCharacter.Operation1("abcabbccd",3);
 
-string res = StringOperations.solve("AbcaZeoB");
+//string res = StringOperations.solve("AbcaZeoB");
 
 //int res = FirstRepeatingElement.solve(new List<int>() { 10, 5, 3, 4, 3, 5, 6 });
+
+int res = CountOccurrences.solve("bobob");
 
 Console.WriteLine("done");
