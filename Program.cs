@@ -409,6 +409,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = FirstRepeatingElement.solve(new List<int>() { 10, 5, 3, 4, 3, 5, 6 });
 
-int res = CountOccurrences.solve("bobob");
+//int res = CountOccurrences.solve("bobob");
+
+int res = AmazingSubstring.solve("abec");
 
 Console.WriteLine("done");
