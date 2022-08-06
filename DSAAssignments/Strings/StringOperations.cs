@@ -47,18 +47,24 @@ public static class StringOperations
 
         StringBuilder stringBuilder = new StringBuilder();
 
-        stringBuilder.Append(A);
-        stringBuilder.Append(A);
+        stringBuilder.Append(A); stringBuilder.Append(A);
 
-        char[] resultStrChars = stringBuilder.ToString().ToCharArray();
+        StringBuilder smallLetters = new StringBuilder();
 
-        for (int i = 0; i < resultStrChars.Length; i++) {
+        string withoutUpperCase = stringBuilder.ToString();
+        for (int i = 0; i < withoutUpperCase.Length; i++) {
 
-            if (resultStrChars[i]>='A' && resultStrChars[i] <= 'Z') {
-                resultStrChars
+            if (withoutUpperCase[i]>='a' && withoutUpperCase[i] <= 'z') {
+
+                if (vowels.Contains(withoutUpperCase[i])) {
+                    smallLetters.Append('#');
+                }
+                else {
+                    smallLetters.Append(withoutUpperCase[i]);
+                }
             }
         }
 
-        return res;
+        return smallLetters.ToString();
     }
 }
