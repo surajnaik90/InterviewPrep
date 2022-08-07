@@ -413,6 +413,10 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = AmazingSubstring.solve("abec");
 
-int res = ChangeCharacter.Operation1("umeaylnlfd", 1);
+//int res = ChangeCharacter.Operation1("umeaylnlfd", 1);
+
+//int res = SubarrayZerosum.solve(new List<int>() { -1, 1 });
+
+int res = MaxSubarray.Operation1(new List<int>() { 1, 2, 3, 4, 5 });
 
 Console.WriteLine("done");
