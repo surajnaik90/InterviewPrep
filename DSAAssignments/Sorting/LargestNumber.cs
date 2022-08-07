@@ -62,16 +62,17 @@ public static class LargestInteger
     {
         public int Compare(int x, int y)
         {
-            StringBuilder s1 = new StringBuilder();
-            StringBuilder s2 = new StringBuilder();
+            StringBuilder s1 = new StringBuilder(x.ToString());
+            StringBuilder s2 = new StringBuilder(y.ToString());
 
-            s1.Append(x.ToString()); s1.Append(y.ToString());
-            s2.Append(y.ToString());s2.Append(x.ToString());
+            s1.Append(y.ToString()); s2.Append(x.ToString());
 
-            if (s1.ToString().CompareTo(s2.ToString()) < 0) {
+            string m = s1.ToString(), n = s2.ToString();
+
+            if (m.CompareTo(n) < 0) {
                 return -1;
             } 
-            else if (s1.ToString().CompareTo(s2.ToString()) == 0) {
+            else if (m.CompareTo(n) == 0) {
                 return 0;
             }
             else {

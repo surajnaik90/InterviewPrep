@@ -411,6 +411,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = CountOccurrences.solve("bobob");
 
-int res = AmazingSubstring.solve("abec");
+//int res = AmazingSubstring.solve("abec");
+
+int res = ChangeCharacter.Operation1("umeaylnlfd", 1);
 
 Console.WriteLine("done");

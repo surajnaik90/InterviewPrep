@@ -35,8 +35,29 @@ public static class ChangeCharacter
 {
     public static int Operation1(string A, int B)
     {
+        Dictionary<char, int> charCounts = new Dictionary<char, int>();
+        List<int> list = new List<int>();
 
+        for (int i = 0; i < A.Length; i++) {
 
-        return 1;
+            if (charCounts.ContainsKey(A[i])) {
+                charCounts[A[i]] += 1;
+            }
+            else {
+                charCounts[A[i]] = 1;
+            }
+        }
+
+        for (int i = 0; i < charCounts.Count; i++) {
+            list.Add(charCounts.ElementAt(i).Value);
+        }
+
+        int N = B, count=0, j=0; list.Sort();
+        while (N> 0) {
+            N -= list[j++];
+            if (N >= 0) { count++; }
+        }
+
+        return (charCounts.Keys.Count - count);
     }
 }
