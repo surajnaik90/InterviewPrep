@@ -417,6 +417,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = SubarrayZerosum.solve(new List<int>() { -1, 1 });
 
-int res = MaxSubarray.Operation1(new List<int>() { 1, 2, 3, 4, 5 });
+//int res = MaxSubarray.Operation1(new List<int>() { 1, 2, 3, 4, 5 });
+
+int res = ShaggyAndDistances.solve(new List<int>() {7,1,3,4,1,7});
 
 Console.WriteLine("done");

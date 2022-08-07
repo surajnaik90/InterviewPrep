@@ -42,10 +42,20 @@ public static class SubarrayZerosum
 {
     public static int solve(List<int> A)
     {
-        Dictionary<int, int> result = new Dictionary<int, int>();
+        int sum = A[0];
 
-        
-        
+        for (int i = 1; i < A.Count; i++) {
+
+            if (A[i]==0) {
+                return 1;
+            }
+
+            sum += A[i];
+
+            if (sum == 0) {
+                return 1;
+            }
+        }
 
         return 0;
     }
