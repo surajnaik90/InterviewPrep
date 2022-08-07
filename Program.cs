@@ -421,8 +421,12 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = ShaggyAndDistances.solve(new List<int>() {7,1,3,4,1,7});
 
-//int res = CheckPalindromeII.solve("vnpypznzpfxyivpppxfpp");
+//int res = CheckPalindromeII.solve("yzfbzbyyrurquqf");
 
-int res = NBy3RepeatNumber.solve(new List<int>() { 1000441, 1000441, 1000994 });
+//int res = NBy3RepeatNumber.solve(new List<int>() { 1000441, 1000441, 1000994 });
+
+//int res = KOccurrences.solve(5, 2, new List<int>() { 1, 2, 2, 3, 3 });
+
+int res = ColorfulNumber.solve(23);
 
 Console.WriteLine("done");

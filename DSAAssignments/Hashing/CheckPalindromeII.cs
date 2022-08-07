@@ -24,7 +24,6 @@ Input 2:
 
  A = "abbaee"
 
-
 Example Output
 Output 1:
 
@@ -57,22 +56,23 @@ public static class CheckPalindromeII
             }
         }
 
-        short onesCount = 0;
+        // Every element has to be multiple of 2
+        // All 2's or All 2's with just 1 or any odd number
+        short oddCount = 0;
         for (int i = 0; i < map.Count; i++) {
 
             int value = map.ElementAt(i).Value;
 
-            if (value == 1) {
-                onesCount++;
-            }
-
-            if (value!=1 && value % 2 != 0) {
-                return 0;
+            if (value%2!=0) {
+                oddCount++;
             }
         }
 
-        if (onesCount == 1 || onesCount==0) { return 1; }
-
-        return 0;
+        if (oddCount < 2) { 
+            return 1;
+        }
+        else {
+            return 0;
+        }
     }
 }
