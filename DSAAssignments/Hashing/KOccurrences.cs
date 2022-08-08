@@ -39,7 +39,7 @@ public static class KOccurrences
 {
     public static int solve(int A, int B, List<int> C)
     {
-        int sum = 0;
+        int sum = 0; bool isFound = false;
 
         Dictionary<int, int> map = new Dictionary<int, int>();
 
@@ -47,16 +47,27 @@ public static class KOccurrences
 
             if (map.ContainsKey(C[i])) {
                 map[C[i]] += 1;
-
-                if (map[C[i]] == B) {
-                    sum += C[i];
-                }
             }
             else {
                 map[C[i]] = 1;
             }
         }
 
-        return sum;
+        for (int i = 0; i < map.Count; i++) {
+
+            int value = map.ElementAt(i).Value;
+
+            if(value==B) {
+                sum += map.ElementAt(i).Key;
+                isFound = true;
+            }
+        }
+
+        if (isFound) {
+            return sum;
+        }
+        else {
+            return -1;
+        }
     }
 }

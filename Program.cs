@@ -425,8 +425,12 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = NBy3RepeatNumber.solve(new List<int>() { 1000441, 1000441, 1000994 });
 
-//int res = KOccurrences.solve(5, 2, new List<int>() { 1, 2, 2, 3, 3 });
+//int res = KOccurrences.solve(6, 2, new List<int>() { 1000000000, 1000000000, 999999999, 999999999, 999999998, 1 });
 
-int res = ColorfulNumber.solve(23);
+//int res = ColorfulNumber.solve(23);
+
+//List<int> output = CommonElements.solve(new List<int>() { 1, 2, 2, 1,2 }, new List<int>() { 2, 3, 1, 2, 2, 2 });
+
+List<int> output = CommonElements.solve(new List<int>() { 2, 1, 4, 10 }, new List<int>() { 3, 6, 2, 10, 10 });
 
 Console.WriteLine("done");
