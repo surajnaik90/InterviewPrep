@@ -58,7 +58,7 @@ public static class KOccurrences
             int value = map.ElementAt(i).Value;
 
             if(value==B) {
-                sum += map.ElementAt(i).Key;
+                sum = (sum + map.ElementAt(i).Key) % ((Convert.ToInt32(Math.Pow(10, 9)) + 7));
                 isFound = true;
             }
         }
