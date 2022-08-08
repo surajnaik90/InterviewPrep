@@ -63,12 +63,14 @@ public static class ColorfulNumber
         HashSet<int> products = new HashSet<int>();
 
         int count = 0;
-        for (int i = 1; i < str.Length; i++) {
+        for (int i = 0; i < str.Length; i++) {
 
             int product = 1;
-            for (int j = 0; j < str.Length; j++) {
+            for (int j = i; j < str.Length; j++) {
 
-                product *= 1;
+                int number = (int) char.GetNumericValue(str[j]);
+
+                product *= number;
 
                 products.Add(product);
 
