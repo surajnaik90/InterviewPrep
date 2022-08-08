@@ -40,21 +40,24 @@ Explanation 2:
  */
 public static class SubarrayZerosum
 {
+
+    //Technique: Maintain a prefix sum. If prefixsum values are same then we can 
+    //compute the subarraya sum zero.
     public static int solve(List<int> A)
     {
-        int sum = A[0];
+        Dictionary<long, int> prefixIndexMap = new Dictionary<long, int>();
+        long sum = 0;
 
-        for (int i = 1; i < A.Count; i++) {
-
-            if (A[i]==0) {
-                return 1;
-            }
+        prefixIndexMap.Add(sum, -1);
+        for (int i = 0; i < A.Count; i++) {
 
             sum += A[i];
 
-            if (sum == 0) {
+            if(prefixIndexMap.ContainsKey(sum)) {
                 return 1;
             }
+
+            prefixIndexMap.Add(sum, i);
         }
 
         return 0;
