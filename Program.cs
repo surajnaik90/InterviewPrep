@@ -433,6 +433,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //List<int> output = CommonElements.solve(new List<int>() { 2, 1, 4, 10 }, new List<int>() { 3, 6, 2, 10, 10 });
 
-int res = SubarrayZerosum.solve(new List<int>() { -1,1 });
+//int res = SubarrayZerosum.solve(new List<int>() { -1,1 });
+
+List<int> res = DistinctNumbersInWindow.solve(new List<int>() { 2, 7, 7, 81, 81 }, 1);
 
 Console.WriteLine("done");
