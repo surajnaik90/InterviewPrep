@@ -437,6 +437,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //List<int> res = DistinctNumbersInWindow.solve(new List<int>() { 2, 7, 7, 81, 81 }, 1);
 
-int res = DiffKII.solve(new List<int>() { 11, 85, 100, 44, 3, 32, 96, 72, 93, 76, 67, 93, 63, 5, 10, 45, 99, 35, 13 }, 60);
+//int res = DiffKII.solve(new List<int>() { 11, 85, 100, 44, 3, 32, 96, 72, 93, 76, 67, 93, 63, 5, 10, 45, 99, 35, 13 }, 60);
+
+List<int> res = TwoSumHashMap.solve(new List<int>() { 4, 7, -4, 2, 2, 2, 3, -5, -3, 9, -4, 9, -7, 7, -1, 9, 9, 4, 1, -4, -2, 3, -3, -5, 4, -7, 7, 9, -4, 4, -8 }, -3);
 
 Console.WriteLine("done");
