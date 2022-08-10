@@ -38,13 +38,50 @@ Explanation 2:
 public static class IsDictionary
 {
     public static int solve(List<string> A, string B)
-    {
-        List<int> result = new List<int>();
-        Dictionary<long, int> prefixIndexMap = new Dictionary<long, int>();
-        long sum = 0;
+    {   
+        Dictionary<char, int> hashmap = new Dictionary<char, int>();
 
-        
+        hashmap.Add('0', 0);
+        for (int i = 0; i < B.Length; i++) {
+            hashmap.Add(B[i], i+1);
+        }
 
-        return 0;
+        string prev = A[0];
+        for (int i = 1; i < A.Count; i++) {
+
+            if (hashmap[prev[0]] > hashmap[A[i][0]]) {
+                return 0;
+            }
+            else if (hashmap[prev[0]] < hashmap[A[i][0]]) {
+                prev = A[i];
+                continue;
+            }
+            else {
+
+                string p = prev, n=string.Empty;
+                if (prev.Length < A[i].Length) {
+                  p =  prev.PadRight(prev.Length + (A[i].Length - prev.Length), '0');
+                }
+                else if (prev.Length > A[i].Length) {
+                   n = A[i].PadRight(A[i].Length + (prev.Length - A[i].Length), '0');
+                }
+                else { n = A[i]; }
+
+                int k = 0;
+                while (k<=p.Length) {
+                    
+                    if(hashmap[p[k]] > hashmap[n[k]]) {
+                        return 0;
+                    }
+                    else if (hashmap[p[k]] < hashmap[n[k]]) {
+                        break;
+                    }
+                    k++;
+                }
+            }
+            prev = A[i];
+        }
+
+        return 1;
     }
 }
