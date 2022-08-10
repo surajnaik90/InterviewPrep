@@ -445,6 +445,10 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = PairsGivenXOR.solve(new List<int>() { 3, 6, 8, 10, 15, 50 }, 5);
 
-List<int> res = SubarrayGivenSum.solve(new List<int>() { 5, 10, 20, 100, 105 }, 130);
+//List<int> res = SubarrayGivenSum.solve(new List<int>() { 5, 10, 20, 100, 105 }, 130);
+
+//int res = IsDictionary.solve(new List<string>() { "hello", "scaler", "interviewbit" }, "adhbcfegskjlponmirqtxwuvzy");
+
+List<int> res = LargestContinuousSequenceZeroSum.solve(new List<int>() { 0, -10, -12, -8, 21, -11, -28, -11, 0, -8, 17, -1, -4, -7, -5, 22, -26, -24, -7, 13, 18, -21, 10 });
 
 Console.WriteLine("done");
