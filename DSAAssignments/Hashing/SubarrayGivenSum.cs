@@ -48,8 +48,8 @@ Explanation 2:
 public static class SubarrayGivenSum
 {
 
-    //Technique: Maintain a prefix sum. If prefixsum values are same then we can 
-    //compute the subarraya sum zero.
+    //Technique: Maintain a prefix sum. If you find sum-B then compute the
+    // ask and return
     public static List<int> solve(List<int> A, int B)
     {
         List<int> result = new List<int>();
@@ -62,11 +62,25 @@ public static class SubarrayGivenSum
             sum += A[i];
 
             if (prefixIndexMap.ContainsKey(sum)) {
-                return result;
+                prefixIndexMap[sum] = Math.Min(prefixIndexMap[sum], i);
             }
 
             prefixIndexMap.Add(sum, i);
+
+            if (prefixIndexMap.ContainsKey(sum-B)) {
+
+                int j = prefixIndexMap[sum-B] + 1;
+
+                while (j <= i) {
+
+                    result.Add(A[j++]);
+                }
+
+                return result;
+            }
         }
+
+        result.Add(-1);
 
         return result;
     }

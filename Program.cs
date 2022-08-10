@@ -443,6 +443,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //List<int> res = SubarrayGivenSum.solve(new List<int>() {1,2,3,4,5 }, 5);
 
-int res = PairsGivenXOR.solve(new List<int>() { 3, 6, 8, 10, 15, 50 }, 5);
+//int res = PairsGivenXOR.solve(new List<int>() { 3, 6, 8, 10, 15, 50 }, 5);
+
+List<int> res = SubarrayGivenSum.solve(new List<int>() { 5, 10, 20, 100, 105 }, 130);
 
 Console.WriteLine("done");
