@@ -32,11 +32,39 @@ public static class RepeatMissingNumberArray
     {
         int[] res = new int[2]; int N = A.Count;
 
-        int ans = A[0];
-        for (int i = 1; i < N; i++) {
-            ans ^= A[i];
+        int xor1 = 0, xor2 = 0, x = 1;
+        for (int i = 0; i < N; i++,x++) {
+            xor1 ^= A[i];
+            xor2 ^= x;
         }
- 
+
+        int xor = xor1 ^ xor2;
+
+        //Find the first set bit
+        int k = 1, j = 1;
+        while( (xor & k) != 1) {
+
+           k = k << j++;
+        }
+
+        res[0] = 0; j = j - 1; x = 1;
+        for (int i = 0; i < A.Count; i++,x++) {
+
+            if ((A[i] & (1<<j)) ==1) {
+                res[0] ^= A[i];
+            }
+            else {
+                res[1] ^= A[i];
+            }
+
+            if ((x & (1 << j)) != 1) {
+                res[1] ^= x;
+            }
+            else {
+                res[0] ^= x;
+            }
+        }
+
         return res.ToList();
     }
 }
