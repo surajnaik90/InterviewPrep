@@ -451,6 +451,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //List<int> res = LargestContinuousSequenceZeroSum.solve(new List<int>() { 0, -10, -12, -8, 21, -11, -28, -11, 0, -8, 17, -1, -4, -7, -5, 22, -26, -24, -7, 13, 18, -21, 10 });
 
-int res = Factorial.solve(6);
+//int res = Factorial.solve(6);
+
+int res = Fibonacci.solve(9);
 
 Console.WriteLine("done");
