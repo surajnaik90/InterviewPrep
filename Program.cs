@@ -463,6 +463,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = CheckPalindrome.solve("naman");
 
-int ans = SumOfDigits.solve(4568656);
+//int ans = SumOfDigits.solve(4568656);
+
+int ans = MagicNumber1.operate(1291);
 
 Console.WriteLine("done");
