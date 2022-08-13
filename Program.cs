@@ -457,10 +457,12 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = Fibonacci.solve(9);
 
-PrintReverseString.solve("visualstudio");
+//PrintReverseString.solve("visualstudio");
 
 //int res = LengthofLongestConsecutiveOnes.solve("111011100001011111111110000");
 
 //int res = CheckPalindrome.solve("naman");
+
+int ans = SumOfDigits.solve(4568656);
 
 Console.WriteLine("done");
