@@ -36,16 +36,29 @@ Explanation 2:
 43535321 % 47 = 20
  */
 
+using System.Text;
+
 public static class ModString
 {
+    //Technique: Think of a smaller problem and approach it.
     public static int Operation1(string A, int B)
     {
-        int N=A.Length, output = Convert.ToInt32(A[N-1]);
+        int reminder = 0;
 
-        for (int i = N-1; i >=0; i--) {
-            output %= B;
+        for (int i = 0; i < A.Length; i++) {
+
+            StringBuilder strNumBuilder = new StringBuilder();
+
+            strNumBuilder.Append(reminder);
+            strNumBuilder.Append(A[i]);
+
+            string strNum = strNumBuilder.ToString();
+
+            long num = Convert.ToInt64(strNum);
+
+            reminder = (int) (num % Convert.ToInt64(B)); 
         }
 
-        return output;
+        return reminder;
     }
 }

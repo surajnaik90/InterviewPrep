@@ -467,8 +467,10 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int ans = MagicNumber1.operate(1291);
 
-TypeCasting.solve();
+//TypeCasting.solve();
 
 //List<int> result = RepeatMissingNumberArray.repeatedNumber2(new List<int>() { 3, 1, 2, 5, 3 });
+
+int res = ModString.Operation1("4534535234544353", 235677);
 
 Console.WriteLine("done");
