@@ -35,12 +35,16 @@ public static class PrintReverseString
 {
     public static void solve(string A)
     {
-        int n = A.Length;
+        print(A, 0);
+    }
+    public static void print(string s, int i)
+    {
+        if (i == s.Length) { 
+            return;
+        }
 
-        if (A.Length == 1) { return; }
-        
-        solve(A.Substring(0,n-A.Length+1));
+        print(s, i+1);
 
-        Console.Write(A);
+        Console.Write(s[i]);
     }
 }
