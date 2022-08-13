@@ -68,20 +68,20 @@ public static class RepeatMissingNumberArray
         return res.ToList();
     }
 
+
+    // PLease note the data type conversions used here. Very important.
     public static List<int> repeatedNumber2(List<int> A)
     { 
         List<int> res = new List<int>();
 
-        int n = A.Count, p=0, q=0, c=0,d=0, a, b;
-
-        long sum = 0, sumsq=0;
+        long sum = 0, sumsq=0, a, b, p, q, c, d, n=A.Count;
         for (int i = 0; i < A.Count; i++) {
-            sum += A[i];
-            sumsq += Convert.ToInt32(Math.Pow(A[i], 2));
+            sum += Convert.ToInt64(A[i]);
+            sumsq += Convert.ToInt64(Math.Pow(A[i], 2));
         }
 
-        a = Convert.ToInt32(((n * (n + 1) * (2 * n + 1)) / 6) - sumsq);
-        b = Convert.ToInt32(((n * (n + 1)) / 2) - sum);
+        a = (((n * (n + 1) * (2 * n + 1)) / 6) - sumsq);
+        b = (((n * (n + 1)) / 2) - sum);
 
         p = a / b;
         q = b;
@@ -90,8 +90,8 @@ public static class RepeatMissingNumberArray
         d = p - c;
                
         
-        res.Add(d);
-        res.Add(c);
+        res.Add(Convert.ToInt32(d));
+        res.Add(Convert.ToInt32(c));
 
         return res;
     }

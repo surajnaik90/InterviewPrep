@@ -465,6 +465,10 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int ans = SumOfDigits.solve(4568656);
 
-int ans = MagicNumber1.operate(1291);
+//int ans = MagicNumber1.operate(1291);
+
+TypeCasting.solve();
+
+//List<int> result = RepeatMissingNumberArray.repeatedNumber2(new List<int>() { 3, 1, 2, 5, 3 });
 
 Console.WriteLine("done");
