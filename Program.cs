@@ -471,6 +471,10 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //List<int> result = RepeatMissingNumberArray.repeatedNumber2(new List<int>() { 3, 1, 2, 5, 3 });
 
-int res = ModString.Operation1("4534535234544353", 235677);
+//int res = ModString.Operation1("4534535234544353", 235677);
+
+//string res = LargestInteger.solve(new List<int>() { 3, 30, 34, 5, 9 });
+
+int res = ValidSudoku.solve(new List<string>() { ".........", "...3..5..", ".........", "...8.....", "....116..", ".........", "......1..", "........7", ".......4." });
 
 Console.WriteLine("done");
