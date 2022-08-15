@@ -475,6 +475,10 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //string res = LargestInteger.solve(new List<int>() { 3, 30, 34, 5, 9 });
 
-int res = ValidSudoku.solve(new List<string>() { ".........", "...3..5..", ".........", "...8.....", "....116..", ".........", "......1..", "........7", ".......4." });
+//int res = ValidSudoku.solve(new List<string>() { ".........", "...3..5..", ".........", "...8.....", "....116..", ".........", "......1..", "........7", ".......4." });
+
+//List<int> res = GrayCode.solve(1);
+
+int res = KthSymbol.solve(5, 5);
 
 Console.WriteLine("done");
