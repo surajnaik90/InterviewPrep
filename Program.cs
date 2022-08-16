@@ -479,6 +479,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //List<int> res = GrayCode.solve(1);
 
-int res = KthSymbol.solve(5, 5);
+//int res = KthSymbol.solve(5, 5);
+
+int res = LengthofLongestConsecutiveOnes.solve("11010110000000000");
 
 Console.WriteLine("done");

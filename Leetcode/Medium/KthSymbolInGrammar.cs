@@ -39,30 +39,15 @@ public static class KthSymbolInGrammar779
 {
     public static int solve(int A, int B)
     {
-        int maxLengthStr = (Convert.ToInt32(Math.Pow(2, A - 1)));
-
-        string res = pattern(maxLengthStr, "0");
-
-        return (int)(char.GetNumericValue(res[B - 1]));
-    }
-
-    private static string pattern(int maxLengthStr, string input)
-    {
-        if (input.Length == maxLengthStr) {
-            return input;
+        if (A == 0) {
+            return 0;
         }
 
-        StringBuilder strBuilder = new StringBuilder();
-
-        for (int i = 0; i < input.Length; i++) {
-
-            string str;
-
-            str = input[i] == '0' ? "01" : "10";
-
-            strBuilder.Append(str);
+        if (B % 2 == 0) {
+            return solve(A - 1, B / 2);
         }
-
-        return pattern(maxLengthStr, strBuilder.ToString());
+        else {
+            return 1 - solve(A - 1, B / 2);
+        }   
     }
 }
