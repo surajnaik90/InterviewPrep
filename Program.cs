@@ -491,6 +491,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = ChristmasTree.Operation2(new List<int>() { 1, 6, 4, 2, 6, 9 }, new List<int>() { 2, 5, 7, 3, 2, 7 });
 
-string res = LargestInteger.solve(new List<int>() { 3, 30, 34, 5, 9 });
+//string res = LargestInteger.solve(new List<int>() { 3, 30, 34, 5, 9 });
+
+string res = IntegerRoman.solve(2890);
 
 Console.WriteLine("done");
