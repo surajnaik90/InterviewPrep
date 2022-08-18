@@ -49,45 +49,31 @@ public static class LargestInteger
             list.Add(A[i].ToString());
         }
 
-        list.Sort();
+        list.Sort(new NumComparer2());
 
         string output = string.Empty; int count = 0;
+        StringBuilder strBuilder = new StringBuilder();
         for (int i = 0; i < list.Count; i++) {
 
-            if (A[i]=='0') { count++; }
+            if (list[i]=="0") { count++; }
 
-            output += list[i];
+            strBuilder.Append(list[i]);
         }
 
         if (count==A.Count) { return "0"; }
 
-        return output;
+        return strBuilder.ToString();
     }
 
+    
     private class NumComparer2 : IComparer<string>
     {
         public int Compare(string? x, string? y)
         {
-            StringBuilder s1 = new StringBuilder();
-            StringBuilder s2 = new StringBuilder();
+            string m = x + y;
+            string n = y + x;
 
-            s1.Append(x);
-            s1.Append(y);
-
-            s2.Append(y);
-            s2.Append(x);
-
-            string n = s1.ToString(), m = s2.ToString();
-
-            if (m.CompareTo(n) < 0) {
-                return -1;
-            }
-            else if (m.CompareTo(n) == 0) {
-                return 0;
-            }
-            else {
-                return 1;
-            }
+            return n.CompareTo(m);
         }
     }
 
