@@ -43,14 +43,20 @@ public static class LargestInteger
 {
     public static string solve(List<int> A)
     {
-        A.Sort(new NumComparer()); 
+        List<string> list = new List<string>();
+
+        for (int i = 0; i < A.Count; i++) { 
+            list.Add(A[i].ToString());
+        }
+
+        list.Sort(new NumComparer2());
 
         string output = string.Empty; int count = 0;
-        for (int i = 0; i < A.Count; i++) {
+        for (int i = 0; i < list.Count; i++) {
 
-            if (A[i]==0) { count++; }
+            if (A[i]=='0') { count++; }
 
-            output += A[i];
+            output += list[i];
         }
 
         if (count==A.Count) { return "0"; }
@@ -58,10 +64,39 @@ public static class LargestInteger
         return output;
     }
 
+    private class NumComparer2 : IComparer<string>
+    {
+        public int Compare(string? x, string? y)
+        {
+            StringBuilder s1 = new StringBuilder();
+            StringBuilder s2 = new StringBuilder();
+
+            s1.Append(x);
+            s1.Append(y);
+
+            s2.Append(y);
+            s2.Append(x);
+
+            string n = s1.ToString(), m = s2.ToString();
+
+            if (m.CompareTo(n) < 0) {
+                return -1;
+            }
+            else if (m.CompareTo(n) == 0) {
+                return 0;
+            }
+            else {
+                return 1;
+            }
+        }
+    }
+
     private class NumComparer : IComparer<int>
     {
-        public int Compare(int x, int y)
-        {
+        public int Compare(int x, int y) {
+
+            if(x==y) { return 0; }
+
             StringBuilder s1 = new StringBuilder();
             StringBuilder s2 = new StringBuilder();
 
@@ -84,6 +119,7 @@ public static class LargestInteger
             }
         }
     }
+
 
 
     // TIME LIMIT EXCEEDED

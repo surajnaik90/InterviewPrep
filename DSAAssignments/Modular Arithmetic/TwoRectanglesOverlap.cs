@@ -92,4 +92,13 @@ public static class TwoRectanglesOverlap
 
         return 0;
     }
+
+    public static int Operation2(int A, int B, int C, int D, int E, int F, int G, int H)
+    {
+        if(E>C || A > G) {
+            return 0;
+        }
+
+        return 1;
+    }
 }

@@ -481,6 +481,10 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = KthSymbol.solve(5, 5);
 
-int res = LengthofLongestConsecutiveOnes.solve("11010110000000000");
+//int res = LengthofLongestConsecutiveOnes.solve("11010110000000000");
+
+//string res = LargestInteger.solve(new List<int>() { 3, 30, 34, 5, 9 });
+
+int res = PowerFunction.pow(71045970, 41535484, 64735492);
 
 Console.WriteLine("done");
