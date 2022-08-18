@@ -49,7 +49,7 @@ public static class LargestInteger
             list.Add(A[i].ToString());
         }
 
-        list.Sort(new NumComparer2());
+        list.Sort();
 
         string output = string.Empty; int count = 0;
         for (int i = 0; i < list.Count; i++) {

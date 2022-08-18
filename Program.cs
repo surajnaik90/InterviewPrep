@@ -487,6 +487,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //int res = PowerFunction.pow(71045970, 41535484, 64735492);
 
-List<int> grayCodes = GrayCode.solve(4);
+//List<int> grayCodes = GrayCode.solve(4);
+
+int res = ChristmasTree.Operation2(new List<int>() { 1, 6, 4, 2, 6, 9 }, new List<int>() { 2, 5, 7, 3, 2, 7 });
 
 Console.WriteLine("done");
