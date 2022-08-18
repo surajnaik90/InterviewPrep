@@ -52,17 +52,44 @@ public static class GrayCode
     {
         List<int> result = new List<int>();
 
-        result.Add(toggleBit(A));
+        List<string> grayCodes = generateGrayCodes(A, new List<string>() { "0", "1" });
+
+        for (int i = 0; i < grayCodes.Count; i++) { 
+
+            int value=0;
+
+            for (int j = grayCodes[i].Length-1,k=0; j >=0 ; j--,k++) {
+
+                value += (Convert.ToInt32(Math.Pow(2, k))) * (Convert.ToInt32(char.GetNumericValue(grayCodes[i][j])));
+            }
+
+            result.Add(value);
+        }
 
         return result;
     }
 
-    private static int toggleBit(int n)
+    private static List<string> generateGrayCodes(int A, List<string> codes)
     {
-        if(n==0) { 
-            return 0;
+        int value = Convert.ToInt32(Math.Pow(2, A));
+        
+        if(codes.Count == value) {
+            return codes;
         }
 
-        return toggleBit(n ^ 1);
+        List<string> grayCodes = new List<string>();
+
+        for (int i = 0; i < codes.Count; i++) {
+            string grayCode = "0" + codes[i];
+            grayCodes.Add(grayCode);
+
+        }
+
+        for (int i = codes.Count-1; i >=0; i--) {
+            string grayCode = "1" + codes[i];
+            grayCodes.Add(grayCode);
+        }
+
+        return generateGrayCodes(A, grayCodes);
     }
 }

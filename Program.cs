@@ -485,6 +485,8 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //string res = LargestInteger.solve(new List<int>() { 3, 30, 34, 5, 9 });
 
-int res = PowerFunction.pow(71045970, 41535484, 64735492);
+//int res = PowerFunction.pow(71045970, 41535484, 64735492);
+
+List<int> grayCodes = GrayCode.solve(4);
 
 Console.WriteLine("done");
