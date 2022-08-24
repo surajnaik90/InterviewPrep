@@ -493,6 +493,47 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //string res = LargestInteger.solve(new List<int>() { 3, 30, 34, 5, 9 });
 
-string res = IntegerRoman.solve(2890);
+//string res = IntegerRoman.solve(2890);
+
+List<List<int>> operations1 = new List<List<int>>()
+{
+    new List<int>() { 0, 1, -1 }, new List<int>() { 1, 2, -1 }, new List<int>() { 2, 3, 1 }
+};
+
+List<List<int>> operations2 = new List<List<int>>()
+{
+    new List<int>() { 1, 13, -1 }, new List<int>() { 3, 0, -1 }, new List<int>() { 3, 1, -1 },
+    new List<int>() { 2, 15, 0 }, new List<int>() { 3, 0, -1 }, new List<int>() { 1, 12, -1 },
+    new List<int>() { 3, 0, -1 }, new List<int>() { 1, 19, -1 }, new List<int>() { 1, 13, -1 },
+    new List<int>() { 3, 0, -1 }, new List<int>() { 0, 12, -1 }, new List<int>() { 1, 13, -1 },
+    new List<int>() { 3, 2, -1 }
+
+};
+
+//ListNode node = DesignLinkedList.solve(operations1);
+
+ListNode node1 = new ListNode(4);
+ListNode node2 =node1.next = new ListNode(5);
+ListNode node3 = node2.next = new ListNode(1);
+ListNode node4 = node3.next = new ListNode(9);
+ListNode headnode = node1;
+
+//DeleteNode237.DeleteNode(node2);
+
+TreeNode one = new TreeNode(1);
+TreeNode two = new TreeNode(2);
+TreeNode three = new TreeNode(3);
+
+one.left = new TreeNode(-1);
+one.right = two;
+
+two.left = three;
+two.right = new TreeNode(-1);
+
+three.left = new TreeNode(-1);
+three.right = new TreeNode(-1);
+
+List<int> res = PreorderTraversal.solve(one);
+
 
 Console.WriteLine("done");
