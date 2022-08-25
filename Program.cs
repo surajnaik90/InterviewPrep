@@ -533,7 +533,31 @@ two.right = new TreeNode(-1);
 three.left = new TreeNode(-1);
 three.right = new TreeNode(-1);
 
-List<int> res = PreorderTraversal.solve(one);
+//List<int> res = PreorderTraversal.solve(one);
 
+
+TreeNode one1 = new TreeNode(1);
+TreeNode two2 = new TreeNode(2);
+TreeNode three3 = new TreeNode(3);
+TreeNode four4 = new TreeNode(4);
+TreeNode five5 = new TreeNode(5);
+TreeNode six6 = new TreeNode(6);
+TreeNode seven7 = new TreeNode(7);
+TreeNode eight8 = new TreeNode(8);
+TreeNode nine9 = new TreeNode(9);
+
+one1.left = two2;
+two2.left = four4;
+two2.right = five5;
+four4.right = eight8;
+
+one1.right = three3;
+three3.left = six6;
+three3.right = seven7;
+seven7.left = nine9;
+
+//TreeHeight.solveusingstack(one1);
+
+int ans = NodesCount.solve(one1);
 
 Console.WriteLine("done");
