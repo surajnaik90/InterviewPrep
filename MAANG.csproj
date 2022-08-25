@@ -16,7 +16,6 @@
   <ItemGroup>
     <Folder Include="DSAAssignments\Matrices\" />
     <Folder Include="DSAAssignments\Arrays\" />
-    <Folder Include="DSAAssignments\Trees\" />
     <Folder Include="DSAAssignments\Others\" />
   </ItemGroup>
 
