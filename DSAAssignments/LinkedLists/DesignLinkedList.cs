@@ -56,167 +56,94 @@ public class ListNode {
 }
 public static class DesignLinkedList
 {
-
+    static ListNode head = null;
     public static ListNode operation(List<List<int>> A)
     {
-        ListNode headnode = null, tailnode = null, newnode = null;
-        int length = 0, index;
-
         for (int i = 0; i < A.Count; i++) {
 
-            int element; 
-            switch (A[i][0])
-            {
+            switch (A[i][0]) {
                 case 0:
-                    //Insert node at the beginning
-                    element = A[i][1];
-                    newnode = new ListNode(element);
-
-                    if(headnode == null) {
-                        headnode = newnode;
-                        tailnode = headnode;
-                        length = 1;
-                        break;
-                    }
-                    else {
-                        newnode.next = headnode;
-                        headnode = newnode;
-                    }
+                    insert_node(0, A[i][1]);
                     break;
-                
                 case 1:
-                    //Insert node at the end
-                    element = A[i][1]; newnode = new ListNode(element);
-
-                    if(headnode == null) {
-                        headnode = newnode;
-                        tailnode = headnode;
-                        length = 1;
-                        break;
-                    }
-                    if (tailnode == headnode) {
-                        ListNode tempnode = headnode;
-                        while (tempnode.next != null) {
-                            tempnode = tempnode.next;
-                            length++;
-                        }
-                        tempnode.next = newnode;
-                        tailnode = newnode;
-                    }
-                    else {
-                        tailnode.next = newnode;
-                        tailnode = newnode;
-                    }
+                    insert_node(int.MaxValue, A[i][1]);
                     break;
-
                 case 2:
-                    index = A[i][2]; element = A[i][1];
-                    newnode = new ListNode(element);
-
+                    insert_node(A[i][2], A[i][1]);
                     break;
-                
                 case 3:
-
+                    delete_node(A[i][1]);
                     break;
             }
         }
-
-
-        return headnode;
+        return head;
     }
 
-    public static ListNode solve(List<List<int>> A)
+    public static void insert_node(int position, int value)
     {
-        ListNode headnode = null, tailnode=null; int element, index;
+        ListNode node = new ListNode(value);
 
-        for (int i = 0; i < A.Count; i++) {
-
-            switch (A[i][0])
-            {
-                case 0:
-                    element = A[i][1];
-                    ListNode insertheadnode = new ListNode(element);
-                    insertheadnode.next = headnode;
-                    headnode = insertheadnode;
-                    break;
-
-                case 1:
-                    element = A[i][1];
-
-                    if (headnode == null) { 
-                        headnode = new ListNode(element);
-                        break;
-                    }
-
-                    ListNode tempnode = headnode;
-                    while (tempnode.next != null) {
-                        tempnode = tempnode.next;
-                    }
-                    ListNode tail = new ListNode(element);
-                    tempnode.next = tail;
-                    tailnode = tail;
-                    break;
-
-                case 2:
-                    element = A[i][1]; index = A[i][2];
-
-                    ListNode insertindexnode = new ListNode(element);
-
-                    if (headnode == null) { headnode = insertindexnode; break; };
-                    
-                    ListNode indexthnode = headnode, previndexnode = headnode, prevnode=headnode;
-                    ListNode tempinsertnode = headnode;
-                    int count = 0, j=0;
-                    while (tempinsertnode != null) {
-                        
-                        if (j == index){
-                            previndexnode = prevnode;
-                            indexthnode = tempinsertnode.next;
-                        }
-                        count++; j++;
-                        prevnode = tempinsertnode;
-                        tempinsertnode = tempinsertnode.next;
-                    }
-                    if (index == count) {
-                        prevnode.next = insertindexnode;
-                    }
-                    else if(index < count) {
-                        previndexnode.next = insertindexnode;
-                        insertindexnode.next = prevnode;
-                    }
-                    break;
-
-                case 3:
-                    index = A[i][1];
-
-                    if (headnode == null) { break; }
-
-                    ListNode prevdeletenode=null, tempdeletenode = headnode;
-                    int cnt = 0, k = 0; 
-                    
-                    while (tempdeletenode != null) {
-
-                        if (k == index) {
-
-                            if (prevdeletenode != null) {
-                                prevdeletenode.next = tempdeletenode.next;
-                            }
-                            else {
-                                headnode = headnode.next;
-                            }
-                            break;
-                        }
-
-                        prevdeletenode = tempdeletenode;
-                        tempdeletenode = tempdeletenode.next;
-                        cnt++;k++;
-                    }
-                    break;
-
-                default: 
-                    break;
-            }
+        //Insert at the beginning
+        if (head == null) {
+            head = node;
+            return;
         }
-        return headnode;
+
+        ListNode temp = head, prevNode = null; int i = 0;
+        while (temp != null) {
+            if (i == position) {
+                if (i == 0){
+                    node.next = head;
+                    head = node;
+                }
+                else {
+                    prevNode.next = node;
+                    node.next = temp;
+                }
+                return;
+            }
+            prevNode = temp;
+            temp = temp.next;
+            i++;
+        }
+        //Insert last
+        if (i == position) {
+            prevNode.next = node;
+        }
+
+        if (position == int.MaxValue) {
+            prevNode.next = node;
+        }
+    }
+
+    public static void delete_node(int position)
+    {
+        ListNode node = null;
+
+        if (head == null) {
+            return;
+        }
+
+        ListNode temp = head, prevNode = null; int i = 0;
+        while (temp != null) {
+
+            if (i == position) { 
+                if (i == 0) {
+                    head = head.next;
+                }
+                else {
+                    prevNode.next = temp.next;
+                }
+                return;
+            }
+            prevNode = temp;
+            temp = temp.next;
+            i++;
+        }
+
+        //Delete last
+        if (i == position) {
+            prevNode.next = null;
+        }
     }
 }

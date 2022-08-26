@@ -510,7 +510,16 @@ List<List<int>> operations2 = new List<List<int>>()
 
 };
 
-//ListNode node = DesignLinkedList.solve(operations1);
+List<List<int>> operations3 = new List<List<int>>()
+{
+    new List<int>() { 2, 18, 0 },
+    new List<int>() { 2, 5, 1 }, 
+    new List<int>() { 2, 8, 0 },
+    new List<int>() { 1, 7, -1 },
+    new List<int>() { 1, 5, -1 }
+};
+
+ListNode node = DesignLinkedList.operation(operations3);
 
 ListNode node1 = new ListNode(4);
 ListNode node2 =node1.next = new ListNode(5);
@@ -558,6 +567,6 @@ seven7.left = nine9;
 
 //TreeHeight.solveusingstack(one1);
 
-int ans = NodesCount.solve(one1);
+//int ans = NodesCount.solve(one1);
 
 Console.WriteLine("done");
