@@ -45,58 +45,52 @@ Explanation 2:
  */
 public static class IdenticalBinaryTrees
 {
-    //Created a custom stack & have not used the language provided stack
     public static int solve(TreeNode A, TreeNode B)
     {
         if(A== null && B == null) {
             return 1;
         }
 
-        Dictionary<char, int> value = new Dictionary<char, int>();
+        List<int> listA = preOrderTraverse(A);
+        List<int> listB = preOrderTraverse(B);
 
-        int a = 1,i;
+        if(listA.Count != listB.Count) {
+            return 0;
+        }
+        else {
 
-        string x = "harsh95";
+            for (int i = 0; i < listA.Count; i++) {
 
-        int m;
-        for (i = 0; i < x.Length; i++)
-        {
-
-            if (x[i] >= 48 && x[i] <= 57)
-            {
-                break;
+                if (listA[i] != listB[i]) {
+                    return 0;
+                }
             }
         }
-        m = Convert.ToInt32(x.Substring(i));
 
-        Stack<TreeNode> stackA = new Stack<TreeNode>();
-        Stack<TreeNode> stackB = new Stack<TreeNode>();
-
-        stackA.Push(A); stackB.Push(B);
-
-        while (stackA.Count != 0) {
-
-            TreeNode nodeA = stackA.Pop();
-            TreeNode nodeB = stackB.Pop();
-
-            if (nodeA != nodeB) {
-                return 0;
-            }
-            if(nodeA.right != nodeB.right) {
-                return 0;
-            }
-            if (nodeA.left != nodeB.left) {
-                return 0;
-            }
-            if (nodeA.right != null || nodeA.val != -1) {
-                stackA.Push(nodeA.right);
-                stackB.Push(nodeB.right);
-            }
-            if (nodeA.left != null || nodeA.val != -1) {
-                stackA.Push(nodeA.left);
-                stackB.Push(nodeB.left);
-            }
-        }
         return 1;
+    }
+
+    public static List<int> preOrderTraverse(TreeNode node)
+    {
+        List<int> list = new List<int>();
+
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        stack.Push(node); list.Add(node.val);
+
+        while (stack.Count > 0) { 
+        
+            TreeNode treeNode = stack.Pop();
+
+            if (treeNode.right != null) {
+                stack.Push(treeNode.right);
+                list.Add(treeNode.right.val);
+            }
+            if (treeNode.left != null) {
+                stack.Push(treeNode.left);
+                list.Add(treeNode.left.val);
+            }
+        }
+
+        return list;
     }
 }

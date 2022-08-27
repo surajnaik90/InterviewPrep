@@ -571,6 +571,10 @@ seven7.left = nine9;
 
 //IdenticalBinaryTrees.solve(one1, two2);
 
-MarksSort.solve(new List<string>() { "adarsh80", "harsh95", "shivam95" });
+//MarksSort.solve(new List<string>() { "adarsh80", "harsh95", "shivam95" });
+
+//int res = IdenticalBinaryTrees.solve(one1, one1);
+
+int res = TreeHeight.solve(one1);
 
 Console.WriteLine("done");

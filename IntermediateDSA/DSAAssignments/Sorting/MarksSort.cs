@@ -45,7 +45,7 @@ public static class MarksSort
     {
         List<string> result = new List<string>();
 
-        result.Sort()
+        result.Sort();
 
         for (int i = 0; i < A.Count; i++)
         {
