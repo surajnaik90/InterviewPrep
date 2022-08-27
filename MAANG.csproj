@@ -8,15 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DSAAssignments\**" />
     <Compile Remove="Hard\**" />
+    <EmbeddedResource Remove="DSAAssignments\**" />
     <EmbeddedResource Remove="Hard\**" />
+    <None Remove="DSAAssignments\**" />
     <None Remove="Hard\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DSAAssignments\Matrices\" />
-    <Folder Include="DSAAssignments\Arrays\" />
-    <Folder Include="DSAAssignments\Others\" />
     <Folder Include="IntermediateDSA\" />
   </ItemGroup>
 
