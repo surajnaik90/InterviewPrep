@@ -17,6 +17,7 @@
     <Folder Include="DSAAssignments\Matrices\" />
     <Folder Include="DSAAssignments\Arrays\" />
     <Folder Include="DSAAssignments\Others\" />
+    <Folder Include="IntermediateDSA\" />
   </ItemGroup>
 
 </Project>
