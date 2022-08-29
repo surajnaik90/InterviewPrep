@@ -495,37 +495,37 @@ input.Add(input1); input.Add(input2); input.Add(input3);
 
 //string res = IntegerRoman.solve(2890);
 
-List<List<int>> operations1 = new List<List<int>>()
-{
-    new List<int>() { 0, 1, -1 }, new List<int>() { 1, 2, -1 }, new List<int>() { 2, 3, 1 }
-};
+//List<List<int>> operations1 = new List<List<int>>()
+//{
+//    new List<int>() { 0, 1, -1 }, new List<int>() { 1, 2, -1 }, new List<int>() { 2, 3, 1 }
+//};
 
-List<List<int>> operations2 = new List<List<int>>()
-{
-    new List<int>() { 1, 13, -1 }, new List<int>() { 3, 0, -1 }, new List<int>() { 3, 1, -1 },
-    new List<int>() { 2, 15, 0 }, new List<int>() { 3, 0, -1 }, new List<int>() { 1, 12, -1 },
-    new List<int>() { 3, 0, -1 }, new List<int>() { 1, 19, -1 }, new List<int>() { 1, 13, -1 },
-    new List<int>() { 3, 0, -1 }, new List<int>() { 0, 12, -1 }, new List<int>() { 1, 13, -1 },
-    new List<int>() { 3, 2, -1 }
+//List<List<int>> operations2 = new List<List<int>>()
+//{
+//    new List<int>() { 1, 13, -1 }, new List<int>() { 3, 0, -1 }, new List<int>() { 3, 1, -1 },
+//    new List<int>() { 2, 15, 0 }, new List<int>() { 3, 0, -1 }, new List<int>() { 1, 12, -1 },
+//    new List<int>() { 3, 0, -1 }, new List<int>() { 1, 19, -1 }, new List<int>() { 1, 13, -1 },
+//    new List<int>() { 3, 0, -1 }, new List<int>() { 0, 12, -1 }, new List<int>() { 1, 13, -1 },
+//    new List<int>() { 3, 2, -1 }
 
-};
+//};
 
-List<List<int>> operations3 = new List<List<int>>()
-{
-    new List<int>() { 2, 18, 0 },
-    new List<int>() { 2, 5, 1 }, 
-    new List<int>() { 2, 8, 0 },
-    new List<int>() { 1, 7, -1 },
-    new List<int>() { 1, 5, -1 }
-};
+//List<List<int>> operations3 = new List<List<int>>()
+//{
+//    new List<int>() { 2, 18, 0 },
+//    new List<int>() { 2, 5, 1 }, 
+//    new List<int>() { 2, 8, 0 },
+//    new List<int>() { 1, 7, -1 },
+//    new List<int>() { 1, 5, -1 }
+//};
 
-ListNode node = DesignLinkedList.operation(operations3);
+//ListNode node = DesignLinkedList.operation(operations3);
 
-ListNode node1 = new ListNode(4);
-ListNode node2 =node1.next = new ListNode(5);
-ListNode node3 = node2.next = new ListNode(1);
-ListNode node4 = node3.next = new ListNode(9);
-ListNode headnode = node1;
+//ListNode node1 = new ListNode(4);
+//ListNode node2 =node1.next = new ListNode(5);
+//ListNode node3 = node2.next = new ListNode(1);
+//ListNode node4 = node3.next = new ListNode(9);
+//ListNode headnode = node1;
 
 //DeleteNode237.DeleteNode(node2);
 
@@ -575,6 +575,55 @@ seven7.left = nine9;
 
 //int res = IdenticalBinaryTrees.solve(one1, one1);
 
-int res = TreeHeight.solve(one1);
+//int res = TreeHeight.solve(one1);
+
+//int res = CountingtheNodes.solve(one1);
+
+TreeNode trn1 = new TreeNode(1);
+TreeNode trn2 = new TreeNode(0);
+TreeNode trn3 = new TreeNode(0);
+TreeNode trn4 = new TreeNode(1);
+TreeNode trn5 = new TreeNode(-1);
+TreeNode trn6 = new TreeNode(-1);
+TreeNode trn7 = new TreeNode(-1);
+TreeNode trn8 = new TreeNode(-1);
+TreeNode trn9 = new TreeNode(-1);
+
+TreeNode trn10 = new TreeNode(-1);
+TreeNode trn11 = new TreeNode(-1);
+
+//trn1.left = trn2;
+//trn1.right = trn3;
+
+//trn2.left = trn4;
+//trn2.right = trn5;
+
+//trn3.left = trn6;
+//trn3.right = trn7;
+
+//trn6.left = trn8;
+//trn6.right = trn9;
+
+//trn7.left = trn10;
+//trn7.right = trn11;
+
+trn1.left = trn2;
+trn1.right = trn3;
+
+trn2.left = trn4;
+trn2.right = trn5;
+
+trn3.left = trn6;
+trn3.right = trn7;
+
+trn4.left = trn8;
+trn4.right = trn9;
+
+//trn7.left = trn10;
+//trn7.right = trn11;
+
+//CountingtheNodes.solve(trn1);
+
+int res = TreeHeight.solve(trn1);
 
 Console.WriteLine("done");

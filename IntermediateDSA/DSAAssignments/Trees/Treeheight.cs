@@ -58,23 +58,43 @@ public static class TreeHeight
         if (A == null) { return 0; }
 
         int output = 0;
+
+        output = Math.Max(output, calculateHeight(A.right));
+
+        output = Math.Max(output, calculateHeight(A.left));
+        
+        return output+1;
+    }
+
+    public static int calculateHeight(TreeNode treeNode)
+    {
+
+        if(treeNode == null) { return 0; }
+
+        int output = 1;
+
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        stack.Push(A);
+        stack.Push(treeNode);
 
-        while (stack.Count != 0) {
-
-            output = Math.Max(output, stack.Count);
+        while(stack.Count > 0) {
 
             TreeNode node = stack.Pop();
 
-            if (node.left != null) {
-                stack.Push(node.left);
+            if (node.left != null && node.right != null) {
+
+                if (node.left.val != -1 || node.right.val != -1) {
+                    output++;
+                }
             }
 
-            if (node.right != null) {
+            if (node.right != null && node.right.val != -1) {
                 stack.Push(node.right);
             }
+            if(node.left != null && node.left.val != -1) {
+                stack.Push(node.left);
+            }
         }
+
         return output;
     }
 }
