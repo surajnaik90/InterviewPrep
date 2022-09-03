@@ -624,6 +624,14 @@ trn4.right = trn9;
 
 //CountingtheNodes.solve(trn1);
 
-int res = TreeHeight.solve(trn1);
+//int res = TreeHeight.solve(trn1);
+
+//int res = TwoRectanglesOverlap.Operation1(0, 0, 4, 4, 2, 2, 6, 6);
+
+//List<int> res = BeggersOutsideTemple.solve(5, new List<List<int>>() { new List<int>(){ 1, 2, 10 },
+//   new List<int>(){ 2, 3, 20 },  new List<int>(){ 2, 5, 25 } });
+
+
+List<int> result = AddOneToNumber.solve(new List<int>() { 0, 0, 0, 9, 8, 9 });
 
 Console.WriteLine("done");
