@@ -634,8 +634,18 @@ trn4.right = trn9;
 
 //List<int> result = AddOneToNumber.solve(new List<int>() { 0, 0, 0, 9, 8, 9 });
 
-List<int> result1 = new MaxSumNonNegativeSubarray().solve(new List<int>() { 1967513926, 1540383426, -1303455736, -521595368 });
+//List<int> result1 = new MaxSumNonNegativeSubarray().solve(new List<int>() { 1967513926, 1540383426, -1303455736, -521595368 });
 
-List<int> result2 = new MaxSumNonNegativeSubarray().solveItSimple(new List<int>() { 1967513926, 1540383426, -1303455736, -521595368 });
+//List<int> result2 = new MaxSumNonNegativeSubarray().solveItSimple(new List<int>() { 1967513926, 1540383426, -1303455736, -521595368 });
+
+
+//List<int> res = new Flip().solve("010");
+
+List<int> res = BeggersOutsideTemple.solve(5, new List<List<int>>()
+{
+    new List<int>() { 1, 2, 10 },
+    new List<int>() { 2, 3, 20 },
+    new List<int>() { 2, 5, 25 },
+});
 
 Console.WriteLine("done");
