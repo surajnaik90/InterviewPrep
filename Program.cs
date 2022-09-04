@@ -641,11 +641,13 @@ trn4.right = trn9;
 
 //List<int> res = new Flip().solve("010");
 
-List<int> res = BeggersOutsideTemple.solve(5, new List<List<int>>()
-{
-    new List<int>() { 1, 2, 10 },
-    new List<int>() { 2, 3, 20 },
-    new List<int>() { 2, 5, 25 },
-});
+//List<int> res = BeggersOutsideTemple.solve(5, new List<List<int>>()
+//{
+//    new List<int>() { 1, 2, 10 },
+//    new List<int>() { 2, 3, 20 },
+//    new List<int>() { 2, 5, 25 },
+//});
+
+int ans = RainWaterTrapped.solve(new List<int>() { 1, 2 });
 
 Console.WriteLine("done");

@@ -42,13 +42,28 @@ Final amount in each beggars pot after third devotee: [10, 55, 45, 25, 25]
 
 public static class RainWaterTrapped
 {
-    public static List<int> solve(int A, List<List<int>> B)
+    public static int solve(List<int> A)
     {
-        List<int> result = new List<int>();
 
+        int[] leftMax = new int[A.Count]; leftMax[0] = -1;
+        for (int i = 1; i < leftMax.Length; i++) {
+            leftMax[i] = Math.Max(leftMax[i-1], A[i-1]);
+        }
 
+        int[] rightMax = new int[A.Count]; rightMax[A.Count-1] = -1;
+        for (int j = rightMax.Length-2; j >=0; j--) {
+            rightMax[j] = Math.Max(rightMax[j+1], A[j+1]);
+        }
 
+        int output = 0;
+        for (int k = 0; k < A.Count; k++) {
 
-        return result;
+            int height = Math.Min(leftMax[k], rightMax[k]);
+
+            if (height - A[k] >= 0) {
+                output += height - A[k];
+            }
+        }
+        return output;
     }
 }
