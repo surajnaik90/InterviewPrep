@@ -648,6 +648,8 @@ trn4.right = trn9;
 //    new List<int>() { 2, 5, 25 },
 //});
 
-int ans = RainWaterTrapped.solve(new List<int>() { 1, 2 });
+//int ans = RainWaterTrapped.solve(new List<int>() { 1, 2 });
+
+int res = SumofallSubmatrices.solve()
 
 Console.WriteLine("done");
