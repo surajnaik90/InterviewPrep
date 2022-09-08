@@ -650,6 +650,13 @@ trn4.right = trn9;
 
 //int ans = RainWaterTrapped.solve(new List<int>() { 1, 2 });
 
-int res = SumofallSubmatrices.solve()
+List<List<int>> matrix = new List<List<int>>()
+{
+    new List<int>() {2,8,8,8},
+    new List<int>() {2,8,8,8},
+    new List<int>() {2,8,8,8}
+};
+
+int res = SearchInMatrix.solve(matrix, 8);
 
 Console.WriteLine("done");
