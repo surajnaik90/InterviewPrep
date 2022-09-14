@@ -668,6 +668,14 @@ List<List<int>> matrix = new List<List<int>>()
 
 //int res = MinimumSwaps.solve2(new List<int>() { 1, 12, 10, 3, 14, 10, 5 },8);
 
-int res = MinimumSwaps2.solve(new List<int>() { 1, 2, 3, 4, 0 });
+//int res = MinimumSwaps2.solve(new List<int>() { 1, 2, 3, 4, 0 });
+
+//int res = MaxDistance.solve(new List<int>() { 4, 2, 3, 6, 7, 8, 11 });
+
+//int res = MaxChunkstomakeSorted.solve(new List<int>() { 0,1,3,6,4,5,2,7 });
+
+//int res = MinXOR.solve(new List<int>() { 0, 4, 7, 9 });
+
+int ans = SingleNumberII.solve(new List<int>() { 0, 0, 0, 1 });
 
 Console.WriteLine("done");
