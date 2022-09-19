@@ -676,6 +676,15 @@ List<List<int>> matrix = new List<List<int>>()
 
 //int res = MinXOR.solve(new List<int>() { 0, 4, 7, 9 });
 
-int ans = SingleNumberII.solve(new List<int>() { 0, 0, 0, 1 });
+//int ans = SingleNumberII.solve(new List<int>() { 0, 0, 0, 1 });
+
+
+//int res = CountSetBits.solve2(16);
+
+//int res = VeryLargePower.solve(25, 2);
+
+//RearrangeArray.solve(new List<int>() { 1, 0 });
+
+int ans = GCD.solve(4, 6);
 
 Console.WriteLine("done");
