@@ -685,6 +685,8 @@ List<List<int>> matrix = new List<List<int>>()
 
 //RearrangeArray.solve(new List<int>() { 1, 0 });
 
-int ans = GCD.solve(4, 6);
+//int ans = GCD.solve(4, 6);
+
+int ans = DeleteOne.solve(new List<int>() { 12, 15, 18 });
 
 Console.WriteLine("done");
