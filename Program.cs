@@ -681,12 +681,18 @@ List<List<int>> matrix = new List<List<int>>()
 
 //int res = CountSetBits.solve2(16);
 
-//int res = VeryLargePower.solve(25, 2);
+//int res = VeryLargePower.solve(3, 5);
 
 //RearrangeArray.solve(new List<int>() { 1, 0 });
 
 //int ans = GCD.solve(4, 6);
 
-int ans = DeleteOne.solve(new List<int>() { 12, 15, 18 });
+//int ans = DeleteOne.solve(new List<int>() { 12, 15, 18 });
+
+//List<int> res = CountofDivisors.optimallySolve(new List<int>() { 8, 9, 10 });
+
+//int ans = PairsumDivisibleByM.solve(new List<int>() { 5, 17, 100, 11 }, 28);
+
+List<int> divisorsCount = CountDivisors.solve(new List<int>() { 8,9,10 });
 
 Console.WriteLine("done");

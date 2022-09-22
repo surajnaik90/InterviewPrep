@@ -48,15 +48,19 @@ Explanation 2:
 
 public static class VeryLargePower
 {
+
+    //Use Fermat's little theorem to solve this A ^ (p-1) % P = 1
     public static int solve(int A, int B)
     {
-        int output = 1, val = (int)(Math.Pow(10,9) + 7 );
+        int output = A, val = (int)(Math.Pow(10,9) + 7 );
 
-        
-        int ans = (int) ((Math.Pow(3,122))%14);
+        for (int i = 1; i <= B; i++) {
 
-        int ans2 = 382459076 % 14;
+            output = (i * output) % B;
+        }
 
-        return ans;
+        output = output % val;
+
+        return output;
     }
 }

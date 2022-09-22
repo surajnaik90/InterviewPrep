@@ -13,7 +13,7 @@ N * N does not overflow for a signed integer
 
 public static class RearrangeArray
 {
-    public static void solve(List<int> A)
+    public static void solve(List<int> A, int B)
     {
         
     }
