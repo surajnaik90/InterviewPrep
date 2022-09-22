@@ -44,7 +44,7 @@ Explanation 2:
 
 public static class CountDivisors
 {
-    //Use Fermat's little theorem to solve this A ^ (p-1) % P = 1
+    // Sieve's technique
     public static List<int> solve(List<int> A)
     {
         List<int> result = new List<int>();

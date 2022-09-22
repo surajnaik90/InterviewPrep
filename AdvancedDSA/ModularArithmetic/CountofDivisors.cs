@@ -97,7 +97,7 @@ public static class CountofDivisors
     }
 
 
-    //Approach 3: 
+    //Approach 3: Optimal approach - Sieve's technique
     public static List<int> optimallySolve2(List<int> A)
     {
         List<int> result = new List<int>();
