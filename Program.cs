@@ -693,6 +693,10 @@ List<List<int>> matrix = new List<List<int>>()
 
 //int ans = PairsumDivisibleByM.solve(new List<int>() { 5, 17, 100, 11 }, 28);
 
-List<int> divisorsCount = CountDivisors.solve(new List<int>() { 8,9,10 });
+//List<int> divisorsCount = CountDivisors.solve(new List<int>() { 8,9,10 });
+
+//int res = LuckyNumbers.solve(8);
+
+List<int> res = PrimeSum.solve(14);
 
 Console.WriteLine("done");
