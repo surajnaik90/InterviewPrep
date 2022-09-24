@@ -48,6 +48,8 @@ Explanation 2:
 
 public static class DivisorGame
 {
+
+    //Time Limit Exceeds
     public static int solve(int A, int B, int C)
     {
         int output = 0;
@@ -62,19 +64,46 @@ public static class DivisorGame
         return output;
     }
 
-    public static int gcd(int n, int m)
+    //Optimal solution
+    public static int solve2(int A, int B, int C)
     {
-        if (n % m == 0) return m;
+        long res = B * C;
 
-        if (n < m) {
-            int t = n;
-            n = m;
-            m= t;
-        }
-        while (m > 0) {
-            n = n % m;
-            //swap(n, m);
-        }
-        return n;
+        long gcd = DivisorGame.gcd(B, C);
+
+        long lcm = res / gcd;
+
+        long a = Convert.ToInt64(A);
+
+        long ans = a / lcm;
+
+        return Convert.ToInt32(ans);
     }
+
+    public static int gcd(int m, int n)
+    {
+        int a, b;
+
+        if (m <= n)
+        {
+            a = m;
+            b = n;
+        }
+        else
+        {
+            b = m;
+            a = n;
+        }
+
+        if (b == 0)
+        {
+            return a;
+        }
+        else if (a == 0)
+        {
+            return b;
+        }
+        return gcd(a, b % a);
+    }
+
 }

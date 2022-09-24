@@ -31,6 +31,7 @@ public static class DistinctPrimes
     public static int solve(List<int> A)
     {
         int N = A.Count, max = int.MinValue;
+        Dictionary<int, HashSet<int>> distinctPrimes = new Dictionary<int, HashSet<int>>();
         HashSet<int> primes = new HashSet<int>();
 
         for (int i = 0; i < N; i++) {

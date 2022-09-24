@@ -704,7 +704,7 @@ List<List<int>> matrix = new List<List<int>>()
 List<int> list = new List<int>() { 2, 2, 4, 7, 8, 11 };
 list.RemoveAll(x => list.Contains(2));
 
-int res = PrimeSubsequence.solve(new List<int>() { 2, 2 });
+//int res = PrimeSubsequence.solve(new List<int>() { 2, 2 });
 
 //int res = DistinctPrimes.solve(new List<int>() { 96, 98, 5, 41, 80 });
 
@@ -713,5 +713,7 @@ int res = PrimeSubsequence.solve(new List<int>() { 2, 2 });
 //int res = NoofOpenDoors.solve(46);
 
 //int res = PrimeAddition.solve(234);
+
+int res = DivisorGame.solve2(52503, 9013, 2254);
 
 Console.WriteLine("done");

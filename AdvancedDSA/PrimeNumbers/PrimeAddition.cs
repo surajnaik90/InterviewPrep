@@ -35,9 +35,9 @@ public static class PrimeAddition
         bool[] primes = new bool[A + 1];
         primes = Enumerable.Repeat(true, A + 1).ToArray();
 
-        for (int i = 2; i <= A; i++) {
+        for (int i = 2; i*i <= A; i++) {
 
-            for (int j = 2 * i; j <= A; j += i) {
+            for (int j = i * i; j <= A; j += i) {
                 primes[j] = false;
             }
         }
