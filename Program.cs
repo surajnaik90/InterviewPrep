@@ -699,15 +699,19 @@ List<List<int>> matrix = new List<List<int>>()
 
 //List<int> res = PrimeSum.solve(14);
 
-//int res = DistinctPrimes.solve(new List<int>() { 1, 2, 3, 4 });
+//int res = DistinctPrimes.solve(new List<int>() { 63, 52, 28, 72, 9, 62, 79, 71, 43, 15, 82, 21, 10, 12, 38, 96, 58, 99, 59, 100, 10, 38, 92, 30, 24, 3, 49, 17, 2, 63, 54, 18, 71, 7, 65, 87, 82, 31, 48, 39, 100, 82, 15, 60, 44, 84, 43, 5, 63, 17, 100, 94, 62, 26, 35, 29 });
 
 List<int> list = new List<int>() { 2, 2, 4, 7, 8, 11 };
 list.RemoveAll(x => list.Contains(2));
 
-//int res = PrimeSubsequence.solve(new List<int>() { 6,8,1,3 });
+int res = PrimeSubsequence.solve(new List<int>() { 2, 2 });
 
 //int res = DistinctPrimes.solve(new List<int>() { 96, 98, 5, 41, 80 });
 
-int res = LuckyNumbers.solve(98);
+//int res = LuckyNumbers.solve(98);
+
+//int res = NoofOpenDoors.solve(46);
+
+//int res = PrimeAddition.solve(234);
 
 Console.WriteLine("done");

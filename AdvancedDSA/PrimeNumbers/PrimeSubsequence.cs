@@ -40,8 +40,9 @@ public static class PrimeSubsequence
 {
     public static int solve(List<int> A)
     {
-        int output = 0, N = A.Count, max = int.MinValue;
+        int N = A.Count, max = int.MinValue;
         int mod = (int)(Math.Pow(10, 9) + 7);
+        List<int> primeNumbers = new List<int>();
 
         for (int i = 0; i < N; i++) {
             max = Math.Max(max, A[i]);
@@ -50,19 +51,22 @@ public static class PrimeSubsequence
         bool[] primes = new bool[max + 1];
         primes = Enumerable.Repeat(true, max + 1).ToArray();
 
-        for (int i = 2; i <= max; i++) {
+        for (int i = 2; i*i <= max; i++) {
 
-            for (int j = 2 * i; j <= max; j += i) {
+            for (int j = i * i; j <= max; j += i) {
                 primes[j] = false;
-
-                A.RemoveAll(element => element == j);
             }
         }
 
-        A.RemoveAll(element => element == 0);
-        A.RemoveAll(element => element == 1);
+        for (int i = 0; i < A.Count; i++) {
 
-        
-        return (Convert.ToInt32(Math.Pow(2, A.Count)%mod) - 1);
+            if (A[i]==0 || A[i] == 1) { continue; }
+
+            if (primes[A[i]] == true) {
+                primeNumbers.Add(A[i]);
+            }
+        }
+
+        return (Convert.ToInt32(Math.Pow(2, primeNumbers.Count)%mod) - 1);
     }
 }
