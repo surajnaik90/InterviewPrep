@@ -714,6 +714,8 @@ list.RemoveAll(x => list.Contains(2));
 
 //int res = PrimeAddition.solve(234);
 
-int res = DivisorGame.solve2(52503, 9013, 2254);
+//int res = DivisorGame.solve2(52503, 9013, 2254);
+
+int res = Pubg.solve(new List<int>() { 2, 3, 4});
 
 Console.WriteLine("done");
