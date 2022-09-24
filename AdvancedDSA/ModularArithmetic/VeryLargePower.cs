@@ -52,15 +52,15 @@ public static class VeryLargePower
     //Use Fermat's little theorem to solve this A ^ (p-1) % P = 1
     public static int solve(int A, int B)
     {
-        int output = A, val = (int)(Math.Pow(10,9) + 7 );
+        int output = 1, val = (int)(Math.Pow(10,9) + 7 );
 
         for (int i = 1; i <= B; i++) {
 
-            output = (i * output) % B;
+            output = (i * output) % val;
         }
 
-        output = output % val;
+        int res = (int)(Math.Pow(A,output)%val);
 
-        return output;
+        return res;
     }
 }

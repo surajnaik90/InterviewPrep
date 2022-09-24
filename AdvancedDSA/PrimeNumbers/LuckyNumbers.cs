@@ -49,14 +49,17 @@ public static class LuckyNumbers
         int[] count = new int[A + 1];
         for (int i = 2; i <= A; i++) {
 
-            for (int j = 2 * i; j <= A; j+=i) {
-                count[j]++;
+            for (int j = 2 * i; j <= A; j += i) {
+
+                if (count[i] == 0) {
+                    count[j]++;
+                }
             }
         }
 
-        for (int i = 0; i <= count.Length; i++) {
+        for (int i = 0; i < count.Length; i++) {
 
-            if (count[i] == 2) {
+            if (count[i] == 2)  {
                 output++;
             }
         }

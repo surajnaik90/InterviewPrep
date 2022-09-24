@@ -697,6 +697,17 @@ List<List<int>> matrix = new List<List<int>>()
 
 //int res = LuckyNumbers.solve(8);
 
-List<int> res = PrimeSum.solve(14);
+//List<int> res = PrimeSum.solve(14);
+
+//int res = DistinctPrimes.solve(new List<int>() { 1, 2, 3, 4 });
+
+List<int> list = new List<int>() { 2, 2, 4, 7, 8, 11 };
+list.RemoveAll(x => list.Contains(2));
+
+//int res = PrimeSubsequence.solve(new List<int>() { 6,8,1,3 });
+
+//int res = DistinctPrimes.solve(new List<int>() { 96, 98, 5, 41, 80 });
+
+int res = LuckyNumbers.solve(98);
 
 Console.WriteLine("done");
