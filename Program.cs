@@ -716,6 +716,10 @@ list.RemoveAll(x => list.Contains(2));
 
 //int res = DivisorGame.solve2(52503, 9013, 2254);
 
-int res = Pubg.solve(new List<int>() { 2, 3, 4});
+//int res = Pubg.solve(new List<int>() { 2, 3, 4});
+
+//int res = LargestCoprimeDivisor.solve(984980470, 276719888);
+
+int res = FirstMissingInteger.solve(new List<int>() { -8,-7,-6});
 
 Console.WriteLine("done");
