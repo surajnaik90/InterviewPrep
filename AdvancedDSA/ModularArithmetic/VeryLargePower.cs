@@ -56,7 +56,13 @@ public static class VeryLargePower
 
         for (int i = 1; i <= B; i++) {
 
-            output = (i * output) % val;
+            output = (i * output) % (val-1);
+        }
+
+        int powRes = 1;
+        for (int j = 1; j <=output; j++) {
+
+            powRes = (A * powRes) % (val);
         }
 
         int res = (int)(Math.Pow(A,output)%val);

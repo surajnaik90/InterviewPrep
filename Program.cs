@@ -720,6 +720,18 @@ list.RemoveAll(x => list.Contains(2));
 
 //int res = LargestCoprimeDivisor.solve(984980470, 276719888);
 
-int res = FirstMissingInteger.solve(new List<int>() { -8,-7,-6});
+//int res = FirstMissingInteger.solve(new List<int>() { -8,-7,-6});
+
+//int res = PrimeModuloInverse.solve(1525, 999996223);
+
+//int res = VeryLargePower.solve(2, 27);
+
+int min_index = RowMax1s.solve(new List<List<int>>() {
+                                    new List<int>() {0,0,1,1,1},
+                                    new List<int>() {0,0,0,1,1},
+                                    new List<int>() {0,0,0,1,1},
+                                    new List<int>() {0,0,0,0,1},
+                                    new List<int>() {0,0,0,1,1}
+                              });
 
 Console.WriteLine("done");
