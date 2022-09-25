@@ -32,25 +32,17 @@ public static class MaxDistance
 {
     public static int solve(List<int> A)
     {
-        int output = int.MinValue, N = A.Count;
-        int[] B = new int[N];
+        int maxDistance = 0, N = A.Count;
 
-        B[0] = 0;
-        for (int i = 1; i < N; i++) {
+        int i = 0;
+        for (int j = N-1; j >= i; j--) {
 
-            if (A[B[i - 1]] <= A[i]) {
-                B[i] = B[i - 1];
-            }
-            else {
-                B[i] = i;
+            if (A[i] <= A[j]) {
+                maxDistance = Math.Max(maxDistance, j-i);
+                j = N; i++;
             }
         }
 
-        for (int i = 0; i < N; i++) {
-
-            output = Math.Max(output, i - B[i]);
-        }
-
-        return output;
+        return maxDistance;
     }
 }

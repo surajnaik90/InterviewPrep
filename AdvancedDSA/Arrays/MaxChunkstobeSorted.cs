@@ -48,26 +48,20 @@ public static class MaxChunkstomakeSorted
 {
     public static int solve(List<int> A)
     {
-        int N = A.Count,chunk = 0;
-        int[] B = new int[N];
+        int N = A.Count,chunk = 1;
 
-        for (int i = 0; i < N; i++) {
+        for (int i = 1; i < N; i++) {
 
             if (A[i] == i) {
-                B[i] = 1;
+                if (A[i-1] != i - 1) {
+                    chunk++;
+                }
             }
             else {
-                B[i] = 0;
-            }
-        }
 
-        for (int j = 1; j < N; j++) {
-
-            if (B[j] == B[j - 1]) {
-                continue;
-            }
-            else {
-                chunk++;
+                if (A[i-1] == i - 1) {
+                    chunk++;
+                }
             }
         }
 
