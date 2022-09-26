@@ -69,18 +69,6 @@ public static class PrimeModuloInverse
     //Optimal approach
     public static int solve2(int A, int B)
     {
-        int i = 1;
-
-        for (int m = A; m < int.MaxValue; m+=A) {
-
-            if (m % B == 1) {
-
-                return i;
-            }
-
-            i++;
-        }
-
-        return i;
+        return PowerFunction.pow(A, B - 2, B);
     }
 }

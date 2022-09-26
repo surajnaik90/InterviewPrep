@@ -39,14 +39,25 @@ public static class DistinctPrimes
         }
 
         int[] count = new int[max + 1];
-        for (int i = 2; i <= max; i++) {
+        for (int i = 2; i*i <= max; i++) {
 
-            for (int j = i; j <= max; j += i) {
+            for (int j = i*i; j <= max; j += i) {
 
                 if (count[i] == 0) {
                     count[j]++;
-                    primes.Add(i);
+
+                    if (A.Contains(j)) {
+                        primes.Add(i);
+                    }
                 }
+            }
+        }
+
+        List<int> p = new List<int>();
+        for (int i = 0; i < count.Length; i++) {
+
+            if (count[i] == 0) {
+                p.Add(i);
             }
         }
 

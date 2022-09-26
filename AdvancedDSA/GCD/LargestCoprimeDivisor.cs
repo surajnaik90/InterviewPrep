@@ -55,14 +55,20 @@ public static class LargestCoprimeDivisor
     {
         int gcd, max = int.MinValue;
 
-        for (int i = 1; i <= A; i++) {
+        //Find the divisors of A
+        List<int> divisors = new List<int>();
+        for (int i = 1; i <=A; i++) {
 
-            if (A % i == 0) {
+            for (int j = i; j <=A; j+=i) {
 
-                gcd = GCD.solve(i, B);
+                if (j == A) {
+                    divisors.Add(i);
 
-                if (gcd == 1) {
-                    max = Math.Max(max, i);
+                    gcd = GCD.solve(i, B);
+
+                    if (gcd == 1) {
+                        max = Math.Max(max, i);
+                    }
                 }
             }
         }
