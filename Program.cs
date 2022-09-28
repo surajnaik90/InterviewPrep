@@ -746,6 +746,10 @@ list.RemoveAll(x => list.Contains(2));
 
 //int ans = SequenceProblem.solve(3);
 
-int ncr = ncrmodm.solve(5, 2, 13);
+//int ncr = ncrmodm.solve(5, 2, 13);
+
+int ncr = ncrmodp.solve(67443, 47735, 3897559);
+
+//int ncr = ncrmodp.solve(5, 2, 13);
 
 Console.WriteLine("done");

@@ -50,11 +50,37 @@ Explanation 1:
 
 public static class ncrmodp
 {
-    // Time Limit exceeds
-    public static int solve(int A)
+    public static int solve(int A, int B, int C)
     {
-        int output = 0;
+        int[] factorial = new int[A+1];
+        long mod = Convert.ToInt64(C);
 
-        return output;
+        factorial[0] = 1;
+        for (int i = 1; i <=A; i++) {
+
+            long nminusonefactorial = Convert.ToInt64(factorial[i - 1]);
+            long currentElement = Convert.ToInt64(i);
+
+            factorial[i] = (int)((nminusonefactorial * currentElement)%mod);
+        }
+
+        int nfactorial = factorial[A];
+        int nminusrfactorial = factorial[A - B];
+        int rfactorial = factorial[B];
+
+        int inversenminusrfactorial = moduloinverse(nminusrfactorial, C);
+        int inverserfactorial = moduloinverse(rfactorial, C);
+
+
+        int ans = (int)((Convert.ToInt64(nfactorial) * Convert.ToInt64(inversenminusrfactorial)) % mod);
+
+        ans = (int)((Convert.ToInt64(ans) * (Convert.ToInt64(inverserfactorial)) % mod));
+
+        return ans;
+    }
+
+    public static int moduloinverse(int A, int C)
+    {
+        return PowerFunction.pow(A, C - 2, C);
     }
 }

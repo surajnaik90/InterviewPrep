@@ -64,7 +64,7 @@ public static class ncrmodm
                     ncrvalues[i, j] = 1;
                 }
                 else if (j == 1) {
-                    ncrvalues[i, j] = i % C;
+                    ncrvalues[i, j] = i ;
                 }
             }
         }
