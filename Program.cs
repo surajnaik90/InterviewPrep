@@ -744,6 +744,8 @@ list.RemoveAll(x => list.Contains(2));
 
 //int rank = SortedPermutationRank.solve("dbca");
 
-int ans = SequenceProblem.solve(3);
+//int ans = SequenceProblem.solve(3);
+
+int ncr = ncrmodm.solve(5, 2, 13);
 
 Console.WriteLine("done");

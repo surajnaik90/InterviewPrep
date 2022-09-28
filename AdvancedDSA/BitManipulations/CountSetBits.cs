@@ -1,5 +1,6 @@
 ﻿/*
-Given a positive integer A, the task is to count the total number of set bits in the binary representation of all the numbers from 1 to A.
+Given a positive integer A, the task is to count the total number of set bits in the binary
+representation of all the numbers from 1 to A.
 
 Return the count modulo 109 + 7.
 
@@ -15,7 +16,8 @@ First and only argument is an integer A.
 
 Output Format
 
-Return an integer denoting the ( Total number of set bits in the binary representation of all the numbers from 1 to A )modulo 109 + 7.
+Return an integer denoting the ( Total number of set bits in the binary representation of 
+all the numbers from 1 to A )modulo 109 + 7.
 
 
 Example Input
