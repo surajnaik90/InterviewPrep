@@ -72,16 +72,8 @@ public static class ncrmodm
         for (int i = 1; i <= A; i++) {
 
             for (int j = 1; j <= B; j++) {
-
-                if (j == 0) { 
-                    ncrvalues[i,j] = 1;
-                }
-                else if(j==1) { 
-                    ncrvalues[i,j] = i%C; 
-                }
-                else {
-                    ncrvalues[i, j] = ((ncrvalues[i - 1, j - 1])%C + (ncrvalues[i - 1, j])%C)%C;
-                }
+                
+                ncrvalues[i, j] = ((ncrvalues[i - 1, j - 1])%C + (ncrvalues[i - 1, j])%C)%C;
             }
         }
 
