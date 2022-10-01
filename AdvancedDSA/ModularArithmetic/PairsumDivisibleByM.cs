@@ -44,28 +44,61 @@ public static class PairsumDivisibleByM
 {
     public static int solve(List<int> A, int B)
     {
-        int N = A.Count, output = 0;
+        int N = A.Count, output = 0, max = int.MinValue;
         Dictionary<int, int> map = new Dictionary<int, int>();
 
         for (int i = 0; i < N; i++) {
 
-            int mod = A[i] % B;
+            max = Math.Max(max, A[i]);
 
-            if (map.ContainsKey(mod)) {
-                map[mod]++;
+            if (map.ContainsKey(A[i])) {
+                map[A[i]]++;
             }
             else {
-                map[mod] = 1;
+                map[A[i]] = 1;
             }
         }
 
+        
         for (int i = 0; i < N; i++) {
 
-            int mod = A[i] % B;
+            map[A[i]]--;
 
-            if (map[mod] > 0) {
-                map[mod]--;
-                output += map[mod];
+            if (map[A[i]] == 0) {
+                map.Remove(A[i]);
+            }
+
+            int sum = 0, diff = Math.Abs(A[i] - B);
+
+            while (sum <= max) {
+
+                if (diff == 0) {
+
+                    if (map[A[i]] > 1) {
+
+                        output += map[A[i]];
+                    }
+                }
+
+                sum = A[i] + diff;
+
+                if (diff == A[i]) {
+
+                    if (map[A[i]] > 1) {
+                        output += map[A[i]];
+                    }
+
+                    diff += B; continue;
+                }
+
+                if (sum % B == 0) {
+
+                    if(map.ContainsKey(diff)) {
+                        output += map[diff];
+                    }
+                }
+
+                diff += B;
             }
         }
 

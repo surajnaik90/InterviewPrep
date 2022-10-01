@@ -748,8 +748,15 @@ list.RemoveAll(x => list.Contains(2));
 
 //int ncr = ncrmodm.solve(5, 2, 13);
 
-int ncr = ncrmodp.solve(67443, 47735, 3897559);
+//int ncr = ncrmodp.solve(67443, 47735, 3897559);
 
 //int ncr = ncrmodp.solve(5, 2, 13);
+
+//int value = StrangeEquality.solve(5);
+
+//int pairsCount = PairsumDivisibleByM.solve(new List<int>() { 1, 2, 3, 4, 5, 5 }, 2);
+
+
+List<int> res = MergeElements.solve(new List<int>() { 4, 7, 9 }, new List<int>() { 2, 11, 19 });
 
 Console.WriteLine("done");
