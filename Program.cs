@@ -757,6 +757,8 @@ list.RemoveAll(x => list.Contains(2));
 //int pairsCount = PairsumDivisibleByM.solve(new List<int>() { 1, 2, 3, 4, 5, 5 }, 2);
 
 
-List<int> res = MergeElements.solve(new List<int>() { 4, 7, 9 }, new List<int>() { 2, 11, 19 });
+//List<int> res = MergeElements.solve(new List<int>() { 4, 7, 9 }, new List<int>() { 2, 11, 19 });
+
+int res = ConsecutiveElements.solve(new List<int>() { 1, 3, 2, 5 });
 
 Console.WriteLine("done");
