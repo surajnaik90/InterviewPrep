@@ -759,6 +759,8 @@ list.RemoveAll(x => list.Contains(2));
 
 //List<int> res = MergeElements.solve(new List<int>() { 4, 7, 9 }, new List<int>() { 2, 11, 19 });
 
-int res = ConsecutiveElements.solve(new List<int>() { 1, 3, 2, 5 });
+//int res = ConsecutiveElements.solve(new List<int>() { 1, 3, 2, 5 });
+
+int minSteps = UniqueElements.solve(new List<int>() { 1,1,2,2,2,3,3,3});
 
 Console.WriteLine("done");
