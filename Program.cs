@@ -761,6 +761,11 @@ list.RemoveAll(x => list.Contains(2));
 
 //int res = ConsecutiveElements.solve(new List<int>() { 1, 3, 2, 5 });
 
-int minSteps = UniqueElements.solve(new List<int>() { 1,1,2,2,2,3,3,3});
+//int minSteps = UniqueElements.solve(new List<int>() { 1,1,2,2,2,3,3,3});
+
+//int reversePairs = ReversePairs.solve(new List<int>() {1,3,2,3,1 });
+
+
+List<int> res = QuickSort.solve(new List<int>() { 1, 4, 10, 2, 1, 5, 7, 3, 17, 15, 21, 13, 14 });
 
 Console.WriteLine("done");
