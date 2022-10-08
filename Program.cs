@@ -766,6 +766,8 @@ list.RemoveAll(x => list.Contains(2));
 //int reversePairs = ReversePairs.solve(new List<int>() {1,3,2,3,1 });
 
 
-List<int> res = QuickSort.solve(new List<int>() { 1, 4, 10, 2, 1, 5, 7, 3, 17, 15, 21, 13, 14 });
+//List<int> res = QuickSort.solve(new List<int>() { 1, 4, 10, 2, 1, 5, 7, 3, 17, 15, 21, 13, 14 });
+
+List<List<int>> subsequences = Subsequences.solve(new List<int>() { 1, 3, 5, 6 });
 
 Console.WriteLine("done");
