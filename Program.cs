@@ -776,6 +776,8 @@ list.RemoveAll(x => list.Contains(2));
 
 //int res = MaxModPairs.solve(new List<int>() { 1, 2, 44, 3 });
 
-int diff = ChocolateDistribution.solve(new List<int>() { 1,2,3 }, 0);
+//int diff = ChocolateDistribution.solve(new List<int>() { 1,2,3 }, 0);
+
+List<int> result = MaxUnsortedSubarray.solve(new List<int>() { 1, 2,3 });
 
 Console.WriteLine("done");
