@@ -778,6 +778,11 @@ list.RemoveAll(x => list.Contains(2));
 
 //int diff = ChocolateDistribution.solve(new List<int>() { 1,2,3 }, 0);
 
-List<int> result = MaxUnsortedSubarray.solve(new List<int>() { 1, 2,3 });
+//List<int> result = MaxUnsortedSubarray.solve(new List<int>() { 1, 2,3 });
+
+//int res = DivideIntegers.solve(-1, 1);
+
+int position = SortedInsertPosition.solve(new List<int>() { 1,3,5,6},4);
+
 
 Console.WriteLine("done");
