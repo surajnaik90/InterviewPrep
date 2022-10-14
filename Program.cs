@@ -786,6 +786,9 @@ list.RemoveAll(x => list.Contains(2));
 
 //double res = MedianofArray.solve(new List<int>() { -50, -41, -40, -19, 5, 21, 28 }, new List<int>() { -50, -21, -10 });
 
-int ans = SqRoot.solve(2147483647);
+//int ans = SqRoot.solve(2147483647);
+
+int output = SpecialInteger.solve(new List<int>() { 5, 17, 100, 11 }, 130);
+
 
 Console.WriteLine("done");
