@@ -782,7 +782,10 @@ list.RemoveAll(x => list.Contains(2));
 
 //int res = DivideIntegers.solve(-1, 1);
 
-int position = SortedInsertPosition.solve(new List<int>() { 1,3,5,6},4);
+//int position = SortedInsertPosition.solve(new List<int>() { 1,3,5,6},4);
 
+//double res = MedianofArray.solve(new List<int>() { -50, -41, -40, -19, 5, 21, 28 }, new List<int>() { -50, -21, -10 });
+
+int ans = SqRoot.solve(2147483647);
 
 Console.WriteLine("done");
