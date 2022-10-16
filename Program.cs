@@ -788,7 +788,10 @@ list.RemoveAll(x => list.Contains(2));
 
 //int ans = SqRoot.solve(2147483647);
 
-int output = SpecialInteger.solve(new List<int>() { 5, 17, 100, 11 }, 130);
+//int output = SpecialInteger.solve(new List<int>() { 5, 17, 100, 11 }, 130);
 
+//int res = RotatedSortedArraySearch.solve(new List<int>() { 4, 5, 6, 7, 0, 1, 2, 3 }, 4);
+
+int ans = AggressiveCows.solve(new List<int>() { 1, 2, 3, 4, 5 }, 3);
 
 Console.WriteLine("done");
