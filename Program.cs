@@ -792,6 +792,20 @@ list.RemoveAll(x => list.Contains(2));
 
 //int res = RotatedSortedArraySearch.solve(new List<int>() { 4, 5, 6, 7, 0, 1, 2, 3 }, 4);
 
-int ans = AggressiveCows.solve(new List<int>() { 1, 2, 3, 4, 5 }, 3);
+//int ans = AggressiveCows.solve(new List<int>() { 1, 2, 3, 4, 5 }, 3);
+
+//int res1 = PainterPartition.solve(4, 10, new List<int>() { 884, 228, 442, 889 });
+
+//int res2 = PainterPartition.solve(3, 10, new List<int>() { 185, 186, 938, 558, 655, 461, 441, 234, 902, 681 });
+
+//int res1 = AllocateBooks.solve(new List<int>() { 12, 34, 67, 90 }, 2);
+
+//int res2 = AllocateBooks.solve(new List<int>() { 73, 58, 30, 72, 44, 78, 23, 9 }, 5);
+
+//List<int> res = SubarrayGivenSumTwoPointers.solve(new List<int>() { 1, 2, 3, 4, 5 }, 5);
+
+//List<int> res2 = SubarrayGivenSumTwoPointers.solve(new List<int>() { 5, 10, 20, 100, 105 }, 110);
+
+List<int> res3 = SubarrayGivenSumTwoPointers.solve(new List<int>() { 1, 1000000000 }, 1000000000);
 
 Console.WriteLine("done");
