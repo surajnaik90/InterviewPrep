@@ -806,6 +806,18 @@ list.RemoveAll(x => list.Contains(2));
 
 //List<int> res2 = SubarrayGivenSumTwoPointers.solve(new List<int>() { 5, 10, 20, 100, 105 }, 110);
 
-List<int> res3 = SubarrayGivenSumTwoPointers.solve(new List<int>() { 1, 1000000000 }, 1000000000);
+//List<int> res3 = SubarrayGivenSumTwoPointers.solve(new List<int>() { 1, 1000000000 }, 1000000000);
+
+//int ans = PairsGivenDifference.solve(new List<int>() { 8, 5, 1, 10, 5, 9, 9, 3, 5, 6, 6, 2, 8, 2, 2, 6, 3, 8, 7, 2, 5, 3, 4, 3, 3, 2, 7, 9, 6, 8, 7, 2, 9, 10, 3, 8, 10, 6, 5, 4, 2, 3 }, 3);
+
+//int ans2 = PairsGivenDifference.solve(new List<int>() { 1, 8, 2, 8, 8, 8, 8, 4, 4, 6, 10, 10, 9, 2, 9, 3, 7 }, 1);
+
+//int ans = PairsGivenDifference.solve(new List<int>() { 1, 2}, 0);
+
+//int ans = PairsGivenDifference.solve(new List<int>() { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, 0);
+
+int ans1 = CountPairsGivenSum.solve(new List<int>() { 1, 2, 3, 4, 5 }, 5);
+
+int ans2 = CountPairsGivenSum.solve(new List<int>() { 5, 10, 20, 100, 105 }, 110);
 
 Console.WriteLine("done");
