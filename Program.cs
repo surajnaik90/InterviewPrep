@@ -828,6 +828,11 @@ list.RemoveAll(x => list.Contains(2));
 
 //int pairs2 = PairsWithGivenSumII.solve(new List<int>() { 1, 1 }, 2);
 
-List<int> res = MaxMinMagic.solve(new List<int>() { 14, 9, 15, 8, -1, 3 });
+//List<int> res = MaxMinMagic.solve(new List<int>() { 14, 9, 15, 8, -1, 3 });
+
+List<List<int>> res = BClosestPointsOrigin.solve(new List<List<int>>()
+{
+    new List<int>(){1,-1}, new List<int>(){2,-1}
+}, 1);
 
 Console.WriteLine("done");
