@@ -816,8 +816,18 @@ list.RemoveAll(x => list.Contains(2));
 
 //int ans = PairsGivenDifference.solve(new List<int>() { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, 0);
 
-int ans1 = CountPairsGivenSum.solve(new List<int>() { 1, 2, 3, 4, 5 }, 5);
+//int ans1 = CountPairsGivenSum.solve(new List<int>() { 1, 2, 3, 4, 5 }, 5);
 
-int ans2 = CountPairsGivenSum.solve(new List<int>() { 5, 10, 20, 100, 105 }, 110);
+//int ans2 = CountPairsGivenSum.solve(new List<int>() { 5, 10, 20, 100, 105 }, 110);
+
+//List<List<int>> triplets1 = ThreeSumZero.solve(new List<int>() { -1, 0, 1, 2, -1, 4 });
+
+//List<List<int>> triplets2 = ThreeSumZero.solve(new List<int>() { 1, -4, 0, 0, 5, -5, 1, 0, -2, 4, -4, 1, -1, -4, 3, 4, -1, -1, -3 });
+
+//int pairs1 = PairsWithGivenSumII.solve(new List<int>() { 1, 2, 3, 3, 4, 6, 7 }, 13);
+
+//int pairs2 = PairsWithGivenSumII.solve(new List<int>() { 1, 1 }, 2);
+
+List<int> res = MaxMinMagic.solve(new List<int>() { 14, 9, 15, 8, -1, 3 });
 
 Console.WriteLine("done");

@@ -68,9 +68,33 @@ public static class MaxMinMagic
     public static List<int> solve(List<int> A)
     {
         List<int> result = new List<int>();
-        int N = A.Count - 1;
+        int N = A.Count; long mod = (long)(Math.Pow(10, 9) + 7);
 
+        long max = 0, min = 0;
+        A.Sort();
+
+        int mid = (N / 2);
+        int l = 0, r = mid;
+
+        long sum = 0;
+        while (l < mid) {
+            sum = A[l] - A[r];
+            max += Math.Abs(sum);
+            max = max % mod;
+            l++;r++;
+        }
+        max = max % mod;
+        result.Add((int)max);
         
+        l = N - 2; r = N - 1;
+        while (l >= 0) {
+            sum = A[l] - A[r];
+            min += Math.Abs(sum);
+            min = min % mod;
+            l -= 2; r -= 2;
+        }
+        min = min % mod;
+        result.Add((int)min);
 
         return result;
     }
