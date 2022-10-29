@@ -60,40 +60,25 @@ Input 2:
 
 public static class NoofOpenDoors
 {
-    // Time Limit exceeds
     public static int solve(int A)
     {
         int output = 0;
 
         int[] doors = new int[A + 1];
+        doors = Enumerable.Repeat(1, A + 1).ToArray();
 
-        
+        for (int i = 2; i*i <= A; i++) {
 
-        for (int i = 1; i <= A; i++) {
-
-            for (int j = i; j <= A; j+=i) {
-
-                doors[j] = doors[j] == 0 ? 1 : 0;
-
-                if (doors[j] == 1) {
-                    output++;
-                }
-                else {
-                    output--;
-                }
+            for (int j = i; j <= A; j += i) {
+                doors[j] = doors[j]==0 ? 1 : 0;
             }
         }
 
-        return output;
-    }
+        for (int i = 1; i < doors.Length; i++) {
 
-    public static int solve2(int A)
-    {
-        int output = 0;
-
-        for (int i = 1; i <=A; i++) {
-
-
+            if (doors[i] == 1) {
+                output++;
+            }
         }
 
         return output;
