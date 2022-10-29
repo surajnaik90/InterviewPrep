@@ -841,6 +841,8 @@ list.RemoveAll(x => list.Contains(2));
 
 //int length = LongestConsecutiveSequence.solve(new List<int> { 2,1 });
 
-int distance = ShaggyDistances.solve(new List<int>() { 7, 1, 3, 4, 1, 7 });
+//int distance = ShaggyDistances.solve(new List<int>() { 7, 1, 3, 4, 1, 7 });
+
+int ans = SubarrayZeroSum.solve(new List<int>() { 4,5,6,-2, 3, 2, -4,8 });
 
 Console.WriteLine("done");
