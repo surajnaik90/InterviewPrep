@@ -839,6 +839,8 @@ list.RemoveAll(x => list.Contains(2));
 
 //int openDoors = NoofOpenDoors.solve(10);
 
-int length = LongestConsecutiveSequence.solve(new List<int> { 2,1 });
+//int length = LongestConsecutiveSequence.solve(new List<int> { 2,1 });
+
+int distance = ShaggyDistances.solve(new List<int>() { 7, 1, 3, 4, 1, 7 });
 
 Console.WriteLine("done");
