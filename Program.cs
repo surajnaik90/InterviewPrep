@@ -843,6 +843,18 @@ list.RemoveAll(x => list.Contains(2));
 
 //int distance = ShaggyDistances.solve(new List<int>() { 7, 1, 3, 4, 1, 7 });
 
-int ans = SubarrayZeroSum.solve(new List<int>() { 4,5,6,-2, 3, 2, -4,8 });
+//int ans = SubarrayZeroSum.solve(new List<int>() { 4,5,6,-2, 3, 2, -4,8 });
+
+//List<int> res = LargestSequenceZeroSum.solve(new List<int>() { 1, 2, -2, 4, -4 });
+
+//List<int> res = LargestSequenceZeroSum.solve(new List<int>() { 0, -10, 20, 3, 23, 10, -20, 2, 19, -29, 0 });
+
+List<int> res = LargestSequenceZeroSum.solve(new List<int>() { 0, 22, 7, 21, -11, -6, -7, -16, -2 });
+//ans should be 0
+
+//List<int> res = LargestSequenceZeroSum.solve(new List<int>() { -19, 8, 2, -8, 19, 5, -2, -23 });
+//ans shouldbe empty
+
+//List<int> res = LargestSequenceZeroSum.solve(new List<int>() { 1, 2, -3, 3 });
 
 Console.WriteLine("done");
