@@ -857,6 +857,24 @@ list.RemoveAll(x => list.Contains(2));
 
 //List<int> res = LargestSequenceZeroSum.solve(new List<int>() { 1, 2, -3, 3 });
 
-List<int> distinctNumbers = DistinctNumberWindow.solve(new List<int>() { 1, 2, 1, 3, 4, 3 }, 3);
+//List<int> distinctNumbers = DistinctNumberWindow.solve(new List<int>() { 1, 2, 1, 3, 4, 3 }, 3);
+
+//List<int> res = SortArrayGivenOrder.solve(new List<int>() { 10, 2, 18, 16, 16, 16 }, new List<int>() { 3, 13, 2, 16, 4, 19 });
+
+//int ans = FoodPacketDistribution.solve(new List<int>() { 10000, 20000, 30000 }, 6);
+
+//int ans = FoodPacketDistribution.solve(new List<int>() { 1,1,1 }, 4);
+
+//int ans = FoodPacketDistribution.solve(new List<int>() { 8, 7, 1, 5, 5, 10, 10, 1, 5, 3 }, 17);
+
+//int length = LongestSubstringHashMap.solve("abcabcbb");
+
+//int length = PeriodString.solve("aaaa");
+
+//int count = CyclicPermutaions.solve("1001", "0011");
+
+//int count = MakeStringPalindrome.solve("babb");
+
+int count = CountA.solve("daghaicacmaxya");
 
 Console.WriteLine("done");
