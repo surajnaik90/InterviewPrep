@@ -875,6 +875,8 @@ list.RemoveAll(x => list.Contains(2));
 
 //int count = MakeStringPalindrome.solve("babb");
 
-int count = CountA.solve("daghaicacmaxya");
+//int count = CountA.solve("daghaicacmaxya");
+
+string ans = ClosestPalindrome.solve2("asdfghjklasdfghjklasdfgqjklasdfghjkllkjhgfdsalkjhgfdsalkjhgfdsalkjhgfdsa");
 
 Console.WriteLine("done");
