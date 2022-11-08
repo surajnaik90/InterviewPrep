@@ -11,7 +11,6 @@ Return the head of the linked list after removing the middle node.
 
 If the input linked list has 1 node, then this node should be deleted and a null node should be returned.
 
-
 Input Format
 
 The only argument given is the node pointing to the head node of the linked list
