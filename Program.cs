@@ -898,6 +898,8 @@ nodeg.next = nodeh;
 
 //ListNode Anode = RemoveNthNode.solve(nodea, 1);
 
-ListNode res = RemoveDuplicates.solve(nodea);
+//ListNode res = RemoveDuplicates.solve(nodea);
+
+ListNode reverse = ReverseLinkedList.solve(nodea);
 
 Console.WriteLine("done");
