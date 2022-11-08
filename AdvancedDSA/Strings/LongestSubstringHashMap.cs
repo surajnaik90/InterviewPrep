@@ -58,8 +58,14 @@ public static class LongestSubstringHashMap
 
             if (!isUniqueCharHashMap(map)) {
 
-                while (A[l] != A[r]) {
-                    l++;
+                if (A[l] != A[r]) {
+                    while (A[l] != A[r]) {
+                        l++;
+                    }
+                }
+                else {
+
+
                 }
             }
             else {

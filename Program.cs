@@ -867,7 +867,7 @@ list.RemoveAll(x => list.Contains(2));
 
 //int ans = FoodPacketDistribution.solve(new List<int>() { 8, 7, 1, 5, 5, 10, 10, 1, 5, 3 }, 17);
 
-//int length = LongestSubstringHashMap.solve("abcabcbb");
+int length = LongestSubstringHashMap.solve("abcabcbb");
 
 //int length = PeriodString.solve("aaaa");
 
@@ -877,6 +877,6 @@ list.RemoveAll(x => list.Contains(2));
 
 //int count = CountA.solve("daghaicacmaxya");
 
-string ans = ClosestPalindrome.solve2("asdfghjklasdfghjklasdfgqjklasdfghjkllkjhgfdsalkjhgfdsalkjhgfdsalkjhgfdsa");
+//string ans = ClosestPalindrome.solve2("asdfghjklasdfghjklasdfgqjklasdfghjkllkjhgfdsalkjhgfdsalkjhgfdsalkjhgfdsa");
 
 Console.WriteLine("done");
