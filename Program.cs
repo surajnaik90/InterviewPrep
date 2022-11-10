@@ -880,26 +880,30 @@ list.RemoveAll(x => list.Contains(2));
 //string ans = ClosestPalindrome.solve2("asdfghjklasdfghjklasdfgqjklasdfghjkllkjhgfdsalkjhgfdsalkjhgfdsalkjhgfdsa");
 
 ListNode nodea = new ListNode(1);
-ListNode nodeb = new ListNode(1);
-ListNode nodec = new ListNode(1);
+ListNode nodeb = new ListNode(3);
+ListNode nodec = new ListNode(4);
 ListNode noded = new ListNode(2);
-ListNode nodee = new ListNode(3);
-ListNode nodef = new ListNode(4);
-ListNode nodeg = new ListNode(4);
-ListNode nodeh = new ListNode(4);
+ListNode nodee = new ListNode(5);
+ListNode nodef = new ListNode(6);
+//ListNode nodeg = new ListNode(4);
+//ListNode nodeh = new ListNode(4);
 
 nodea.next = nodeb;
 nodeb.next = nodec;
-nodec.next = noded;
+//nodec.next = noded;
 noded.next = nodee;
-nodee.next = nodef; 
-nodef.next = nodeg;
-nodeg.next = nodeh;
+nodee.next = nodef;
+//nodef.next = nodeg;
+//nodeg.next = nodeh;
 
 //ListNode Anode = RemoveNthNode.solve(nodea, 1);
 
 //ListNode res = RemoveDuplicates.solve(nodea);
 
-ListNode reverse = ReverseLinkedList.solve(nodea);
+//ListNode reverse = ReverseLinkedList.solve(nodea);
+
+//ListNode reverse = ReverseLinkedListII.solve(nodea, 2, 3);
+
+ListNode node = MergeLists.solve(nodea, noded);
 
 Console.WriteLine("done");
