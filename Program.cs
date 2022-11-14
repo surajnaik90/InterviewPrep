@@ -880,21 +880,21 @@ list.RemoveAll(x => list.Contains(2));
 //string ans = ClosestPalindrome.solve2("asdfghjklasdfghjklasdfgqjklasdfghjkllkjhgfdsalkjhgfdsalkjhgfdsalkjhgfdsa");
 
 ListNode nodea = new ListNode(1);
-ListNode nodeb = new ListNode(3);
-ListNode nodec = new ListNode(4);
-ListNode noded = new ListNode(2);
+ListNode nodeb = new ListNode(2);
+ListNode nodec = new ListNode(3);
+ListNode noded = new ListNode(4);
 ListNode nodee = new ListNode(5);
 ListNode nodef = new ListNode(6);
-//ListNode nodeg = new ListNode(4);
-//ListNode nodeh = new ListNode(4);
+ListNode nodeg = new ListNode(7);
+ListNode nodeh = new ListNode(8);
 
 nodea.next = nodeb;
 nodeb.next = nodec;
-//nodec.next = noded;
+nodec.next = noded;
 noded.next = nodee;
 nodee.next = nodef;
-//nodef.next = nodeg;
-//nodeg.next = nodeh;
+nodef.next = nodeg;
+nodeg.next = nodeh;
 
 //ListNode Anode = RemoveNthNode.solve(nodea, 1);
 
@@ -904,6 +904,21 @@ nodee.next = nodef;
 
 //ListNode reverse = ReverseLinkedListII.solve(nodea, 2, 3);
 
-ListNode node = MergeLists.solve(nodea, noded);
+//ListNode node = MergeLists.solve(nodea, noded);
+
+//ListNode node = SortList.solve(nodea);
+
+//ListNode node = PartitionList.solve(nodea, 8);
+
+//LRUCache cache = new LRUCache(2);
+//cache.set(1, 10);
+//cache.set(5, 12);
+//int val = cache.get(5);
+//val = cache.get(1);
+//val = cache.get(10);
+//cache.set(6, 14);
+//val = cache.get(5);
+
+int res = BalancedParanthesis.solve("()[]");
 
 Console.WriteLine("done");
