@@ -919,6 +919,8 @@ nodeg.next = nodeh;
 //cache.set(6, 14);
 //val = cache.get(5);
 
-int res = BalancedParanthesis.solve("()[]");
+//int res = BalancedParanthesis.solve("()[]");
+
+string str = DoubleCharacterTrouble.solve("abccbc");
 
 Console.WriteLine("done");
