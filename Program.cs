@@ -921,6 +921,8 @@ nodeg.next = nodeh;
 
 //int res = BalancedParanthesis.solve("()[]");
 
-string str = DoubleCharacterTrouble.solve("abccbc");
+//string str = DoubleCharacterTrouble.solve("abccbc");
+
+int ans = EvaluateExpression.solve(new List<string>() { "4", "13", "5", "/", "+" });
 
 Console.WriteLine("done");
