@@ -63,24 +63,32 @@ public static class NearestSmallerElement
 {
     public static List<int> solve(List<int> A)
     {
-        List<int> result = new List<int>();
+        List<int> result = new List<int>() { -1 };
 
         Stack<int> stack = new Stack<int>();
+        stack.Push(A[0]);
 
-        for (int i = 0; i < A.Count; i++) {
+        for (int i = 1; i < A.Count; i++) {
 
-            while(stack.Count!=0 && A[stack.Peek()] >= A[i]) {
-                stack.Pop();
-            }
-
-            if (stack.Count == 0) {
-                result.Add(-1);
+            if(stack.Peek() < A[i]) {
+                result.Add(stack.Peek());
+                stack.Push(A[i]);
             }
             else {
-                result.Add(A[stack.Pop()]);
-            }
+                while (stack.Count != 0 && stack.Peek() >= A[i]) {
+                    stack.Pop();
+                }
 
-            stack.Push(i);
+                if (stack.Count == 0) {
+                    result.Add(-1);
+                    stack.Push(A[i]);
+                }
+
+                if (stack.Peek() < A[i]) {
+                    result.Add(stack.Peek());
+                    stack.Push(A[i]);
+                }
+            }
         }
 
         return result;
