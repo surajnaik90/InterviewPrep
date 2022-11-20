@@ -931,6 +931,8 @@ nodeg.next = nodeh;
 
 //List<int> res = ReverseElements.solve(new List<int>() { 43, 35, 25, 5, 34, 5, 8, 7 }, 6);
 
-int totalCycles = TaskScheduler.solve(new List<int>() { 2, 3, 1, 5, 4 }, new List<int>() { 1, 3, 5, 4, 2 });
+//int totalCycles = TaskScheduler.solve(new List<int>() { 2, 3, 1, 5, 4 }, new List<int>() { 1, 3, 5, 4, 2 });
+
+string str = PerfectNumbers.solve(5);
 
 Console.WriteLine("done");
