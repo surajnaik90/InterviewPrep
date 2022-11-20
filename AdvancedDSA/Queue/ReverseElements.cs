@@ -47,8 +47,6 @@ public static class ReverseElements
 {
     public static List<int> solve(List<int> A, int B)
     {
-        List<int> result = new List<int>();
-
         Stack<int> stack = new Stack<int>();
         Queue<int> q = new Queue<int>();
 

@@ -929,6 +929,8 @@ nodeg.next = nodeh;
 
 //List<int> res = NearestSmallerElement.solve(new List<int>() { 34, 35, 27, 42, 5, 28, 39, 20, 28 });
 
-List<int> res = ReverseElements.solve(new List<int>() { 43, 35, 25, 5, 34, 5, 8, 7 }, 6);
+//List<int> res = ReverseElements.solve(new List<int>() { 43, 35, 25, 5, 34, 5, 8, 7 }, 6);
+
+int totalCycles = TaskScheduler.solve(new List<int>() { 2, 3, 1, 5, 4 }, new List<int>() { 1, 3, 5, 4, 2 });
 
 Console.WriteLine("done");
