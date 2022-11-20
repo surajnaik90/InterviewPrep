@@ -933,6 +933,8 @@ nodeg.next = nodeh;
 
 //int totalCycles = TaskScheduler.solve(new List<int>() { 2, 3, 1, 5, 4 }, new List<int>() { 1, 3, 5, 4, 2 });
 
-string str = PerfectNumbers.solve(5);
+//string str = PerfectNumbers.solve(5);
+
+List<int> res = NIntegers.solve(7);
 
 Console.WriteLine("done");
