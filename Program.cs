@@ -923,6 +923,12 @@ nodeg.next = nodeh;
 
 //string str = DoubleCharacterTrouble.solve("abccbc");
 
-int ans = EvaluateExpression.solve(new List<string>() { "4", "13", "5", "/", "+" });
+//int ans = EvaluateExpression.solve(new List<string>() { "4", "13", "5", "/", "+" });
+
+//int ans = Check2BracketExpressions.solve("-(-(-(-a+b)-d+c)-q)", "a-b-d+c+q");
+
+//List<int> res = NearestSmallerElement.solve(new List<int>() { 34, 35, 27, 42, 5, 28, 39, 20, 28 });
+
+List<int> res = ReverseElements.solve(new List<int>() { 43, 35, 25, 5, 34, 5, 8, 7 }, 6);
 
 Console.WriteLine("done");
