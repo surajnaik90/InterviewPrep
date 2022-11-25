@@ -952,6 +952,8 @@ root.right.left = new TreeNode(3);
 
 //List<int> res = Inorder.solve(root);
 
-List<List<int>> res = LevelOrder.solve(root);
+//List<List<int>> res = LevelOrder.solve(root);
+
+List<int> res = RightView.solve(root);
 
 Console.WriteLine("done");
