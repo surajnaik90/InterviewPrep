@@ -927,7 +927,7 @@ nodeg.next = nodeh;
 
 //int ans = Check2BracketExpressions.solve("-(-(-(-a+b)-d+c)-q)", "a-b-d+c+q");
 
-List<int> res = NearestSmallerElement.solve(new List<int>() { 34, 35, 27, 42, 5, 28, 39, 20, 28 });
+//List<int> res = NearestSmallerElement.solve(new List<int>() { 34, 35, 27, 42, 5, 28, 39, 20, 28 });
 
 //List<int> res = ReverseElements.solve(new List<int>() { 43, 35, 25, 5, 34, 5, 8, 7 }, 6);
 
@@ -940,5 +940,18 @@ List<int> res = NearestSmallerElement.solve(new List<int>() { 34, 35, 27, 42, 5,
 //int sum = Q3.solve(new List<int>() { 8,15,16,3,10}, new List<int>() { 2,1,1}, new List<int>() { 2,3,1});
 
 //int ans = Q5.solve(4, 6);
+
+//List<int> res = NextGreater.solve(new List<int>() { 34, 35, 27, 42, 5, 28, 39, 20, 28 });
+
+//MinStack.solve();
+
+TreeNode root = new TreeNode(1);
+root.left = new TreeNode(6);
+root.right = new TreeNode(2);
+root.right.left = new TreeNode(3);
+
+//List<int> res = Inorder.solve(root);
+
+List<List<int>> res = LevelOrder.solve(root);
 
 Console.WriteLine("done");
