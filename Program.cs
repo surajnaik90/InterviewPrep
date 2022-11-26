@@ -956,6 +956,8 @@ root.right.left = new TreeNode(3);
 
 //List<int> res = RightView.solve(root);
 
-List<int> res = Serialize.solve(root);
+//List<int> res = Serialize.solve(root);
+
+TreeNode node = BuildTree1.solve(new List<int>() { 1, 2, 3 }, new List<int>() { 2, 1, 3 });
 
 Console.WriteLine("done");
