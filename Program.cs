@@ -964,6 +964,8 @@ root.right.left = new TreeNode(3);
 
 //int sum = LevelDiff.solve(root);
 
-List<int> res = Preorder.solve(root);
+//List<int> res = Preorder.solve(root);
+
+List<int> res = Postorder.solve(root);
 
 Console.WriteLine("done");
