@@ -958,6 +958,8 @@ root.right.left = new TreeNode(3);
 
 //List<int> res = Serialize.solve(root);
 
-TreeNode node = BuildTree1.solve(new List<int>() { 1, 2, 3 }, new List<int>() { 2, 1, 3 });
+//TreeNode node = BuildTree1.solve(new List<int>() { 1, 2, 3 }, new List<int>() { 2, 1, 3 });
+
+TreeNode node = BuildTree2.solve(new List<int>() { 4, 5, 2, 6, 7, 3, 1 }, new List<int>() { 4, 2, 5, 1, 6, 3, 7 });
 
 Console.WriteLine("done");
