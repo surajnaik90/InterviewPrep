@@ -75,6 +75,8 @@ public static class Serialize
 
             if (node == null && q.Count == 0) { break; }
 
+            if(node != null && node.val == -1) { continue; }
+
             if (node == null) {
                 q.Enqueue(null);
                 levelNodes.Enqueue(null);
@@ -85,10 +87,18 @@ public static class Serialize
                     q.Enqueue(node.left);
                     levelNodes.Enqueue(node.left);
                 }
+                else {
+                    q.Enqueue(new TreeNode(-1));
+                    levelNodes.Enqueue(new TreeNode(-1));
+                }
 
                 if (node.right != null) {
                     q.Enqueue(node.right);
                     levelNodes.Enqueue(node.right);
+                }
+                else {
+                    q.Enqueue(new TreeNode(-1));
+                    levelNodes.Enqueue(new TreeNode(-1));
                 }
             }
         }
@@ -99,14 +109,14 @@ public static class Serialize
             TreeNode node = levelNodes.Dequeue();
 
             if (node == null) {
-                res.Add(lvlNodes);
-                lvlNodes = new List<int>();
+                continue;
             }
             else {
                 lvlNodes.Add(node.val);
             }
         }
 
-        return output;
+
+        return lvlNodes;
     }
 }

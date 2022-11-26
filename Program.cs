@@ -954,6 +954,8 @@ root.right.left = new TreeNode(3);
 
 //List<List<int>> res = LevelOrder.solve(root);
 
-List<int> res = RightView.solve(root);
+//List<int> res = RightView.solve(root);
+
+List<int> res = Serialize.solve(root);
 
 Console.WriteLine("done");
