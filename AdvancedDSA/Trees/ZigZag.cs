@@ -59,33 +59,71 @@ public static class ZigZag
     public static List<List<int>> solve(TreeNode A)
     {
         List<List<int>> res = new List<List<int>>();
-        bool isOddLevel = true;
+        List<TreeNode> serializedNodes = new List<TreeNode>();
+        Dictionary<int, int> map = new Dictionary<int, int>();
 
         Queue<TreeNode> q = new Queue<TreeNode>();
         q.Enqueue(A); q.Enqueue(null);
-        List<int> list = new List<int>();
+        serializedNodes.Add(A); serializedNodes.Add(null);
 
+        int index = -1, level = 1;
         while (q.Count > 0) {
+
+            index++;
 
             TreeNode node = q.Dequeue();
 
-            if (node == null && q.Count == 0) { break; }
+            if(node == null & q.Count == 0) {
+                break;
+            }
 
-            if (node == null) {
+            if(node == null) {
                 q.Enqueue(null);
-                isOddLevel = isOddLevel == true ? false : true;
-                res.Add(list);
-                list = new List<int>();
+                serializedNodes.Add(null);
+                map.Add(level, index);
+                level++;
                 continue;
             }
 
             if (node.left != null) {
                 q.Enqueue(node.left);
+                serializedNodes.Add(node.left);
             }
+
             if (node.right != null) {
                 q.Enqueue(node.right);
+                serializedNodes.Add(node.right);
             }
         }
+        map.Add(level, index);
+
+        int startIndex = 0, endIndex = 0, prevEndIndex = -1;
+
+        for (int i = 0; i < map.Count; i++) {
+
+            List<int> lst = new List<int>();
+            int lvl = map.ElementAt(i).Key;
+            endIndex = map.ElementAt(i).Value;
+            startIndex = prevEndIndex + 1;
+            prevEndIndex = endIndex;
+
+            if (lvl % 2 != 0) {
+                while (startIndex < endIndex) {
+                    lst.Add(serializedNodes[startIndex].val);
+                    startIndex++;
+                }
+            }
+            else {
+                endIndex = endIndex - 1;
+                while (endIndex >= startIndex) { 
+                    lst.Add(serializedNodes[endIndex].val);
+                    endIndex--;
+                }
+                
+            }
+            res.Add(lst);
+        }
+        
         return res;
     }
 }

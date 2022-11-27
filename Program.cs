@@ -970,11 +970,13 @@ root.right.left = new TreeNode(3);
 
 //List<int> res = Inorder.solve(root);
 
-TreeNode node = Deserialize.solve(new List<int>() { 5090, 9569, -1, 3628, -1, -1, -1 });
+TreeNode node = Deserialize.solve(new List<int>() { 1, 2, 3, 4, 5, 6, 7, -1, -1, -1, -1, -1, -1, -1, -1, });
 
-List<int> preorder = Preorder.solve(node);
-List<int> postorder = Postorder.solve(node);
+//List<int> preorder = Preorder.solve(node);
+//List<int> postorder = Postorder.solve(node);
 
-List<List<int>> res = Verticalorder.solve(node);
+//List<List<int>> res = Verticalorder.solve(node);
+
+List<List<int>> res = ZigZag.solve(node);
 
 Console.WriteLine("done");
