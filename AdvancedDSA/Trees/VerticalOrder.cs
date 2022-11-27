@@ -72,7 +72,7 @@ public static class Verticalorder
     public static List<List<int>> solve(TreeNode A)
     {
         List<List<int>> res = new List<List<int>>();
-        int min = int.MaxValue, max = int.MinValue;
+        int min = 0, max = 0;
 
         Queue<VerticalNode> q = new Queue<VerticalNode> ();
         Queue<VerticalNode> sq = new Queue<VerticalNode>();
@@ -81,6 +81,7 @@ public static class Verticalorder
         q.Enqueue(new VerticalNode(A, 0));q.Enqueue(null);
         sq.Enqueue(new VerticalNode(A, 0)); sq.Enqueue(null);
 
+        
         axisNodes.Add(0, new List<int>() { A.val });
 
         while (q.Count > 0) {
