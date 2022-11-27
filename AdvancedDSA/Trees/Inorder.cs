@@ -56,31 +56,29 @@ public static class Inorder
         List<int> res = new List<int>();
 
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        stack.Push(A);
+        Stack<TreeNode> inorderStack = new Stack<TreeNode>();
 
-        TreeNode x = A;
+        stack.Push(A);
 
         while(stack.Count > 0) {
 
-            while (x.left != null) {
-                stack.Push(x.left);
-                x = x.left;
-            }
+            TreeNode node = stack.Peek();
 
-            if(x.left != null) {
-                stack.Push(x.left);
-                x = x.left;
+            if(node.left != null) {
+                stack.Push(node.left);
             }
             else {
-                x = stack.Pop();
-                res.Add(x.val);
 
-                if (x.right != null) {
-                    stack.Push(x.right);
+                stack.Pop();
+                res.Add(node.val);
+
+                if (node.right == null) {
+
+                    node = stack.Pop();
+                    res.Add(node.val);
                 }
                 else {
-                    x = stack.Pop();
-                    res.Add(x.val);
+                    stack.Push(node.right);
                 }
             }
         }

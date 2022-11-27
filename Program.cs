@@ -966,6 +966,14 @@ root.right.left = new TreeNode(3);
 
 //List<int> res = Preorder.solve(root);
 
-List<int> res = Postorder.solve(root);
+//List<int> res = Postorder.solve(root);
+
+//List<int> res = Inorder.solve(root);
+
+TreeNode node = Deserialize.solve(new List<int>() { 1, 2, 4, -1, 3, -1, 5, 7, -1, -1, 6, -1, 8, -1, -1, -1, -1 });
+
+List<int> preorder = Preorder.solve(node);
+
+//List<List<int>> res = Verticalorder.solve(root);
 
 Console.WriteLine("done");

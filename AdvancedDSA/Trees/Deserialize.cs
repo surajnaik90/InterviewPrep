@@ -64,11 +64,63 @@ public static class Deserialize
 {
     public static TreeNode solve(List<int> A)
     {
-        TreeNode root = new TreeNode(A[0]);
+        Queue<int> q1 = new Queue<int>();
+        Dictionary<int, TreeNode> map = new Dictionary<int, TreeNode>();
+        
+        
+        for (int i = 0; i < A.Count; i++) {
+            q1.Enqueue(A[i]);
+        }
 
+        Queue<int> q2 = new Queue<int>(q1);
+        q2.Dequeue();
 
+        while(q2.Count > 0) {
 
+            TreeNode node = null;
 
-        return root;
+            int val = q1.Dequeue();
+
+            if (val == -1) { continue; }
+
+            if (map.ContainsKey(val)) {
+                node = map[val];
+            }
+            else {
+                map[val] = new TreeNode(val);
+                node = map[val];
+            }
+
+            TreeNode leftNode = null, rightNode = null;
+
+            int left = q2.Dequeue();
+            if (map.ContainsKey(left)) {
+                leftNode = map[left];
+            }
+            else {
+                map[left] = new TreeNode(left);
+                leftNode = map[left];
+            }
+
+            int right = q2.Dequeue();
+            if (map.ContainsKey(right)) {
+                rightNode = map[right];
+            }
+            else {
+                map[right] = new TreeNode(right);
+                rightNode = map[right];
+            }
+            
+
+            if (leftNode.val != -1) {
+                node.left = leftNode;
+            }
+
+            if (rightNode.val != -1) {
+                node.right = rightNode;
+            }
+        }
+
+        return map[A[0]];
     }
 }
