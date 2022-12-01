@@ -983,6 +983,10 @@ TreeNode node = Deserialize.solve(new List<int>() { 15, 12, 20, 10, 14, 16, 27, 
 
 //int res = BSTNodesRange.solve(node, 12, 20);
 
-TreeNode rootnode = SortedArrayBST.solve(new List<int>() { 1, 2, 3 });
+//TreeNode rootnode = SortedArrayBST.solve(new List<int>() { 1, 2, 3 });
+
+TreeNode sumnode = Deserialize.solve(new List<int>() { 10, 9, 20, -1, -1, -1, -1 });
+
+int ans = TwoSumBST.solve(sumnode, 40);
 
 Console.WriteLine("done");
