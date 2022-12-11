@@ -985,7 +985,7 @@ TreeNode node = Deserialize.solve(new List<int>() { 15, 12, 20, 10, 14, 16, 27, 
 
 //TreeNode rootnode = SortedArrayBST.solve(new List<int>() { 1, 2, 3 });
 
-TreeNode sumnode = Deserialize.solve(new List<int>() { 10, 4, 2, - 1, - 1, - 1, - 1 });
+TreeNode sumnode = Deserialize.solve(new List<int>() { 5,2,8,1,4,6,11, -1,-1, -1, -1, -1, -1, -1, -1 });
 
 //int ans = TwoSumBST.solve(sumnode, 40);
 
@@ -994,6 +994,10 @@ TreeNode sumnode = Deserialize.solve(new List<int>() { 10, 4, 2, - 1, - 1, - 1, 
 
 //int ans = SumBinaryTree.solve(sumnode);
 
-TreeNode rootnode = InvertBinaryTree.invert(sumnode);
+//TreeNode rootnode = InvertBinaryTree.invert(sumnode);
 
+//int ans = DistanceBetweenNodesBST.solve(sumnode, 2, 11);
+
+List<int> res = SpellChecker.solve(new List<string>() {"hat", "cat", "rat"}, 
+                                    new List<string>() {"cat", "doll"});
 Console.WriteLine("done");
