@@ -998,6 +998,9 @@ TreeNode sumnode = Deserialize.solve(new List<int>() { 5,2,8,1,4,6,11, -1,-1, -1
 
 //int ans = DistanceBetweenNodesBST.solve(sumnode, 2, 11);
 
-List<int> res = SpellChecker.solve(new List<string>() {"hat", "cat", "rat"}, 
-                                    new List<string>() {"cat", "doll"});
+//List<int> res = SpellChecker.solve(new List<string>() {"hat", "cat", "rat"}, 
+//                                    new List<string>() {"cat", "doll"});
+
+List<string> res = ShortestUniquePrefix.solve(new List<string>() { "bearcat", "bert" });
+
 Console.WriteLine("done");

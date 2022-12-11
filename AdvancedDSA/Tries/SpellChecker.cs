@@ -55,20 +55,21 @@ None of the words are present in the dictionary.
 
 using System.Collections;
 
-public class TrieNode
-{
-    public char data;
-    public Dictionary<char, TrieNode> children;
-    public bool isEnd;
 
-    public TrieNode()
-    {
-        this.children = new Dictionary<char, TrieNode> ();
-        this.isEnd = false; 
-    }
-}
 public static class SpellChecker
 {
+    private class TrieNode
+    {
+        public char data;
+        public Dictionary<char, TrieNode> children;
+        public bool isEnd;
+
+        public TrieNode()
+        {
+            this.children = new Dictionary<char, TrieNode>();
+            this.isEnd = false;
+        }
+    }
     public static List<int> solve(List<string> A, List<string> B)
     {
         List<int> result = new List<int>();
