@@ -47,11 +47,11 @@ using System.Collections;
 public static class FibonacciDP
 {
     static int[] fib;
-    public static void solve(int A)
+    public static int solve(int A)
     {
         fib = new int[A + 1];
 
-        
+        return fibonacci(A);
     }
 
     static int fibonacci(int n)
