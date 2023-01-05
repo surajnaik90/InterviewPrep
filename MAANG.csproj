@@ -16,4 +16,8 @@
     <None Remove="Hard\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="AdvancedDSA\GreedyAlgorithms\" />
+  </ItemGroup>
+
 </Project>

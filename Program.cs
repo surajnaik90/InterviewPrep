@@ -1001,6 +1001,14 @@ TreeNode sumnode = Deserialize.solve(new List<int>() { 5,2,8,1,4,6,11, -1,-1, -1
 //List<int> res = SpellChecker.solve(new List<string>() {"hat", "cat", "rat"}, 
 //                                    new List<string>() {"cat", "doll"});
 
-List<string> res = ShortestUniquePrefix.solve(new List<string>() { "bearcat", "bert" });
+//List<string> res = ShortestUniquePrefix.solve(new List<string>() { "bearcat", "bert" });
+
+//List<int> res = ContactFinder.solve(new List<int>() { 0, 0, 1, 1 }, new List<string>() { "hack", "hacker", "hac", "hak" });
+
+//Subsets.solve(new List<int>() { 1, 2, 3 });
+
+//List<int> res = Product3.solve(new List<int>() { 10, 2, 13, 4 });
+
+int n = Fibonacci.solve(6);
 
 Console.WriteLine("done");
