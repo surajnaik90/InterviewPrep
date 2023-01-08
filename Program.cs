@@ -1009,6 +1009,12 @@ TreeNode sumnode = Deserialize.solve(new List<int>() { 5,2,8,1,4,6,11, -1,-1, -1
 
 //List<int> res = Product3.solve(new List<int>() { 10, 2, 13, 4 });
 
-int n = Fibonacci.solve(6);
+//int n = Fibonacci.solve(6);
 
-Console.WriteLine("done");
+//Console.WriteLine("done");
+
+//int ans = WaysDecode.solve("2611055971756562");
+
+int ans = WaysDecode.solve("22617");
+
+Console.WriteLine();
