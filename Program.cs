@@ -1015,6 +1015,31 @@ TreeNode sumnode = Deserialize.solve(new List<int>() { 5,2,8,1,4,6,11, -1,-1, -1
 
 //int ans = WaysDecode.solve("2611055971756562");
 
-int ans = WaysDecode.solve("22617");
+//int ans = WaysDecode.solve("22617");
+
+//int ans = MaxProduct.solve(new List<int>() { 4, 2, -5, 1 });
+
+//int ans = NdigitNumbers.solve(4, 12);
+
+//List<List<int>> res = Permutations.solve(new List<int>() { 1, 2, 3 });
+
+//int ans = PathDirectedGraph.solve(5, new List<List<int>>()
+//{
+//    new List<int>(){1,2},
+//    new List<int>(){4,1},
+//    new List<int>(){2,4},
+//    new List<int>(){3,4},
+//    new List<int>(){5,2},
+//    new List<int>(){1,3}
+//}
+
+//);
+
+int ans = PathDirectedGraph.solve(2, new List<List<int>>()
+{
+    new List<int>(){1,2}
+}
+
+);
 
 Console.WriteLine();
