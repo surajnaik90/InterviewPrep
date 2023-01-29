@@ -1035,11 +1035,15 @@ TreeNode sumnode = Deserialize.solve(new List<int>() { 5,2,8,1,4,6,11, -1,-1, -1
 
 //);
 
-int ans = PathDirectedGraph.solve(2, new List<List<int>>()
-{
-    new List<int>(){1,2}
-}
+//int ans = PathDirectedGraph.solve(2, new List<List<int>>()
+//{
+//    new List<int>(){1,2}
+//}
 
-);
+//);
+
+List<int> lst = new List<int>() { 1, 1, 1, 3, 3, 2, 2, 7, 6 };
+
+int ans = DepthFirstSearch.solve(lst, 9, 1);
 
 Console.WriteLine();
