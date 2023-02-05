@@ -1046,6 +1046,24 @@ TreeNode sumnode = Deserialize.solve(new List<int>() { 5,2,8,1,4,6,11, -1,-1, -1
 
 //int ans = DepthFirstSearch.solve(lst, 9, 1);
 
-int ans = MagicianChocolates.solve(10, new List<int>() { 2147483647, 2000000014, 2147483647 });
+//int ans = MagicianChocolates.solve(10, new List<int>() { 2147483647, 2000000014, 2147483647 });
+
+//ListNode nodeA = new ListNode(3);
+
+//nodeA.next = new ListNode(4);
+
+//nodeA.next.next = new ListNode(5);
+
+//CAQ1.solve(nodeA, 3);
+
+//int ans = CAQ2.solve(11, 1);
+
+//TreeNode nodeA = Deserialize.solve(new List<int>() { 1, 2, 3, 5, -1, -1, -1 });
+
+//TreeNode nodeB = Deserialize.solve(new List<int>() { 1, 3, 2, -1, -1, -1, 5});
+
+//CAQ3.solve(nodeA, nodeB);
+
+int val = MaxArraySum.solve(new List<int>() { 24, -68, -29, -9, 84 }, 4);
 
 Console.WriteLine();
