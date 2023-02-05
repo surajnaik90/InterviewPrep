@@ -55,8 +55,11 @@ Explanation 2:
  So, the output is [-1, -1, 260, 520].
  */
 
-using System.Collections;
 
+//https://github.com/dotnet/runtime/blob/main/src/libraries/System.Collections/src/System/Collections/Generic/PriorityQueue.cs
+//https://visualstudiomagazine.com/Articles/2012/11/01/Priority-Queues-with-C.aspx?Page=2
+
+using System.Collections.Generic;
 
 public static class Product3
 {
@@ -64,32 +67,62 @@ public static class Product3
     {
         List<int> result = new List<int>();
 
-        PriorityQueue<int, int> pq =
-            new PriorityQueue<int, int>(Comparer<int>.Create((x, y) => y - x));
+        PriorityQueue<int, int> q = new PriorityQueue<int, int>();
 
         for (int i = 0; i < A.Count; i++) {
-            pq.Enqueue(A[i],i);
-        }
 
-        //int element = pq.Peek();
-       //element = pq.Dequeue();
+            q.Enqueue(A[i], A[i]);
+            
+            if(q.Count > 3) {
+                q.Dequeue();
+            }
+
+            int product = 1;
+
+            if(i >= 2) {
+
+                for (int j = 0; j < 3; j++) {
+                    product *= q.UnorderedItems.ElementAt(j).Element;
+                }
+
+                result.Add(product);
+            }
+            else {
+                result.Add(-1);
+            }
+        }
 
         return result;
     }
 
-    public class PriorityComparer : IComparer<int>
+    public static List<int> solve2(List<int> A)
     {
-        public int Compare(int x, int y)
-        {
-            if (x < y) {
-                return -1;
+        List<int> result = new List<int>();     
+
+        PriorityQueue<PQItem> q = new PriorityQueue<PQItem>();
+
+        for (int i = 0; i < A.Count; i++) {
+
+            q.Enqueue(new PQItem(A[i], A[i]));
+
+            if (q.Count() > 3) {
+                q.Dequeue();
             }
-            else if (x == y) {
-                return 0;
+
+            int product = 1;
+
+            if (i >= 2) {
+
+                for (int j = 0; j < 3; j++) {
+                    product *= q.data.ElementAt(j).element;
+                }
+
+                result.Add(product);
             }
             else {
-                return 1;
+                result.Add(-1);
             }
         }
+        return result;
     }
 }

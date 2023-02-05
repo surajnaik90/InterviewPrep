@@ -1007,7 +1007,7 @@ TreeNode sumnode = Deserialize.solve(new List<int>() { 5,2,8,1,4,6,11, -1,-1, -1
 
 //Subsets.solve(new List<int>() { 1, 2, 3 });
 
-//List<int> res = Product3.solve(new List<int>() { 10, 2, 13, 4 });
+List<int> res = Product3.solve2(new List<int>() { 10, 2, 13, 4 });
 
 //int n = Fibonacci.solve(6);
 
@@ -1042,8 +1042,10 @@ TreeNode sumnode = Deserialize.solve(new List<int>() { 5,2,8,1,4,6,11, -1,-1, -1
 
 //);
 
-List<int> lst = new List<int>() { 1, 1, 1, 3, 3, 2, 2, 7, 6 };
+//List<int> lst = new List<int>() { 1, 1, 1, 3, 3, 2, 2, 7, 6 };
 
-int ans = DepthFirstSearch.solve(lst, 9, 1);
+//int ans = DepthFirstSearch.solve(lst, 9, 1);
+
+
 
 Console.WriteLine();
