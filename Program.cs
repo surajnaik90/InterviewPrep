@@ -1066,6 +1066,22 @@ TreeNode sumnode = Deserialize.solve(new List<int>() { 5,2,8,1,4,6,11, -1,-1, -1
 
 //int val = MaxArraySum.solve(new List<int>() { 24, -68, -29, -9, 84 }, 4);
 
-List<int> ans = ALargestElement.solve2(2, new List<int>() { 15, 20, 99, 1 });
+//List<int> ans = ALargestElement.solve2(2, new List<int>() { 15, 20, 99, 1 });
+
+
+List<int> res1 = TopologicalSort.solve(3, new List<List<int>>() {
+   new List<int>() {1,2},
+   new List<int>() {2,3},
+   new List<int>() {3,1}
+});
+
+List<int> res = TopologicalSort.solve(6, new List<List<int>>() {  
+   new List<int>() {6,3},
+   new List<int>() {6,1},
+   new List<int>() {5,1},
+   new List<int>() {5,2},
+   new List<int>() {3,4},
+   new List<int>() {4,2}
+});
 
 Console.WriteLine();
