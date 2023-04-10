@@ -1086,6 +1086,10 @@ TreeNode sumnode = Deserialize.solve(new List<int>() { 5,2,8,1,4,6,11, -1,-1, -1
 
 //string s = FirstNonRepeatingCharacters.solve("jyhrcwuengcbnuchctluxjgtxqtfvrebveewgasluuwooupcyxwgl");
 
-List<int> res = SortStack.solve(new List<int>() { 4, 5, 2, 3, 1, 97, 105, 34, 57, 23 });
+//List<int> res = SortStack.solve(new List<int>() { 4, 5, 2, 3, 1, 97, 105, 34, 57, 23 });
+
+//int ans = MaxMinStack.solve(new List<int>() { 992387, 932142, 971117, 934674, 988917, 967890, 948508, 970347 });
+
+int res = FinishMaxJobs.solve(new List<int>() { 4, 4, 8, 15, 6 }, new List<int>() { 9, 5, 15, 16, 7 });
 
 Console.WriteLine();
