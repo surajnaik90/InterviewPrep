@@ -950,7 +950,9 @@ root.left = new TreeNode(6);
 root.right = new TreeNode(2);
 root.right.left = new TreeNode(3);
 
-//List<int> res = Inorder.solve(root);
+//TreeNode node = Deserialize.solve(new List<int>() { 1,6,2,8,12,3,9,-1,-1,21,32,-1,-1,-1,-1});
+
+//List<int> res = Inorder.solve(node);
 
 //List<List<int>> res = LevelOrder.solve(root);
 
@@ -970,7 +972,7 @@ root.right.left = new TreeNode(3);
 
 //List<int> res = Inorder.solve(root);
 
-TreeNode node = Deserialize.solve(new List<int>() { 15, 12, 20, 10, 14, 16, 27, 8, -1, -1, -1, -1, -1, -1, -1 });
+//TreeNode node = Deserialize.solve(new List<int>() { 15, 12, 20, 10, 14, 16, 27, 8, -1, -1, -1, -1, -1, -1, -1 });
 
 //List<int> preorder = Preorder.solve(node);
 //List<int> postorder = Postorder.solve(node);
@@ -985,7 +987,7 @@ TreeNode node = Deserialize.solve(new List<int>() { 15, 12, 20, 10, 14, 16, 27, 
 
 //TreeNode rootnode = SortedArrayBST.solve(new List<int>() { 1, 2, 3 });
 
-TreeNode sumnode = Deserialize.solve(new List<int>() { 5,2,8,1,4,6,11, -1,-1, -1, -1, -1, -1, -1, -1 });
+//TreeNode sumnode = Deserialize.solve(new List<int>() { 5,2,8,1,4,6,11, -1,-1, -1, -1, -1, -1, -1, -1 });
 
 //int ans = TwoSumBST.solve(sumnode, 40);
 
@@ -1090,6 +1092,8 @@ TreeNode sumnode = Deserialize.solve(new List<int>() { 5,2,8,1,4,6,11, -1,-1, -1
 
 //int ans = MaxMinStack.solve(new List<int>() { 992387, 932142, 971117, 934674, 988917, 967890, 948508, 970347 });
 
-int res = FinishMaxJobs.solve(new List<int>() { 4, 4, 8, 15, 6 }, new List<int>() { 9, 5, 15, 16, 7 });
+//int res = FinishMaxJobs.solve(new List<int>() { 4, 4, 8, 15, 6 }, new List<int>() { 9, 5, 15, 16, 7 });
+
+
 
 Console.WriteLine();
