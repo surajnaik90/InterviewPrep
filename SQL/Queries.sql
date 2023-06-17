@@ -103,6 +103,14 @@ limit 2;
 # Biggest Single Number
 select max(num) as num from MyNumbers;
 
+#Duplicate emails
+select email from Person
+group by email 
+having count(*) > 1
+
+
+
+
 
 
 

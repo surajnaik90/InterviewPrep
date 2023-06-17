@@ -8,6 +8,7 @@ namespace LowLevelDesign.Interfaces
 {
     internal interface IMusicSystem
     {
+        static int MaxVolumeLevel;
         void play();
         void pause();
         void forward(int duration);

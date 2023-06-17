@@ -47,22 +47,26 @@ public static class Stairs
     static int[] fib;
     public static int solve(int A)
     {
-        fib = new int[A + 1];
-
-        return fibonacci(A);
-    }
-
-    static int fibonacci(int n)
-    {
-        if (n < 1) { return 0; }
-
-        if (n == 1) { return 1; }
-
-        if (fib[n] != 0) { return fib[n]; }
-
-        int res = fibonacci(n - 1) + fibonacci(n - 2);
-        fib[n] = res;
+        int res =  takeSteps(0, A);
 
         return res;
+    }
+
+    static int takeSteps(int step, int totalSteps)
+    {
+        if(step == totalSteps) {
+            return 1;
+        }
+        if (step > totalSteps) {
+            return 0;
+        }
+
+        step++;
+        takeSteps(step, totalSteps);
+
+        step += 2;
+        takeSteps(step, totalSteps);
+
+        return 0;
     }
 }

@@ -1,7 +1,7 @@
-﻿public class StaticMembers
-{
-    public int age;
-    public string name;
+﻿//public class StaticMembers
+//{
+//    public int age;
+//    public string name;
 
-    public static string? schoolName;
-}
+//    public static string? schoolName;
+//}
