@@ -1096,4 +1096,12 @@
 
 ////Console.WriteLine();
 
-int steps = Stairs.solve(3);
+//int steps = Stairs.solve(3);
+
+//int res = MinXOR.solve(new List<int>() { 0, 2, 5, 7 });
+
+//short ans = Convert.ToInt16(Math.Log2(513));
+
+int ans = CountSetBits.solve2(1000000000);
+
+Console.WriteLine();
