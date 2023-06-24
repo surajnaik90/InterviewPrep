@@ -1102,6 +1102,20 @@
 
 //short ans = Convert.ToInt16(Math.Log2(513));
 
-int ans = CountSetBits.solve2(1000000000);
+//int ans = CountSetBits.solve2(1000000000);
+//int a = 3788, b = 807414236;
+//long res = ((a * b) / 3788) % 1000000007;
+
+
+int ans = AthMagicalNumber.solve(19, 11, 13);
 
 Console.WriteLine();
+
+
+//List<int> query1 = new List<int>() { 2, 3 };
+//List<int> query2 = new List<int>() { 2, 3 };
+//List<int> query3 = new List<int>() { 2, 3 };
+
+//List<List<int>> dictionary = new List<List<int>>() { query1, query2, query3 };
+
+//List<int> ans = Problem1.solve2(new List<int>() { 1, 4, 5, 2 }, dictionary);
