@@ -1107,9 +1107,9 @@
 //long res = ((a * b) / 3788) % 1000000007;
 
 
-int ans = AthMagicalNumber.solve(19, 11, 13);
+//int ans = AthMagicalNumber.solve(19, 11, 13);
 
-Console.WriteLine();
+//Console.WriteLine();
 
 
 //List<int> query1 = new List<int>() { 2, 3 };
@@ -1119,3 +1119,36 @@ Console.WriteLine();
 //List<List<int>> dictionary = new List<List<int>>() { query1, query2, query3 };
 
 //List<int> ans = Problem1.solve2(new List<int>() { 1, 4, 5, 2 }, dictionary);
+
+//int count1 = PairsWithGivenSumII.solve(
+//    new List<int>() { 1, 1, 1 },
+//    2);
+
+//int count2 = PairsWithGivenSumII.solve(
+//    new List<int>() { 1, 5, 7, 10 },
+//    8);
+
+//int count3 = PairsWithGivenSumII.solve(
+//    new List<int>() { 1, 1, 1, 1, 1 },
+//    2);
+
+//int count4 = PairsWithGivenSumII.solve(
+//    new List<int>() { 1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 9, 10 },
+//    5);
+
+////out - 2
+//int count5 = PairsWithGivenSumII.solve(
+//    new List<int>() { 1, 1, 1, 2, 2, 3, 4, 5, 6, 7, 8, 9 },
+//    2);
+
+//out - 0
+int count6 = PairsWithGivenSumII.solve(
+    new List<int>() { 979702, 979702, 979702, 979702, 979702, 979702, 979702, 979702, 979702 },
+    241993);
+
+//out - 14
+//int count6 = PairsWithGivenSumII.solve(
+//    new List<int>() { 1,2,3,4,4,4,6,6,6,6,7,8,10},
+//    10);
+
+Console.WriteLine();

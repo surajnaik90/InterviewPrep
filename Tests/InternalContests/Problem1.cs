@@ -81,4 +81,52 @@ public static class Problem1
 
         return result;
     }
+
+    public static string solve3(List<string> A, List<string> B)
+    {
+
+        Dictionary<string, int> map = new Dictionary<string, int>();
+
+        for (int i = 0; i < A.Count; i++)
+        {
+            if (map.ContainsKey(A[i]) && !B.Contains(A[i]))
+            {
+                map[A[i]]++;
+            }
+            else if (!B.Contains(A[i]))
+            {
+                map[A[i]] = 1;
+            }
+        }
+
+        string output = string.Empty;
+        List<string> temp = new List<string>();
+        List<int> tempInts = new List<int>();
+        int repCount = int.MinValue;
+        //Find the min
+        for (int i = 0; i < map.Count; i++)
+        {
+            temp.Add(map.ElementAt(i).Key);
+            tempInts.Add(map.ElementAt(i).Value);
+            //repCount = Math.Max(repCount, map.ElementAt(i).Value);
+        }
+
+        temp.Sort();
+        tempInts.Sort();
+
+        repCount = tempInts[tempInts.Count - 1];
+
+
+        for (int i = 0; i < temp.Count; i++)
+        {
+
+            if (map[temp[i]] == repCount)
+            {
+                output = temp[i];
+            }
+
+        }
+
+        return output;
+    }
 }
