@@ -60,6 +60,7 @@ Explanation 3:
 
 public static class PairsGivenDifference
 {
+    //Doesn't work
     public static int solve1(List<int> A, int B)
     {   
         A.Sort();
@@ -115,6 +116,7 @@ public static class PairsGivenDifference
         return ans;
     }
 
+    //Doesn't work
     public static int solve2(List<int> A, int B)
     {
         A.Sort();
@@ -156,6 +158,67 @@ public static class PairsGivenDifference
 
             }
         }
+
+        return output;
+    }
+
+    public static int solve3(List<int> A, int B)
+    {
+        Console.WriteLine("B = " + B);
+        int output = 0;
+        Dictionary<int, int> map = new Dictionary<int, int>();
+
+        for (int i = 0; i < A.Count; i++) {
+
+            if (map.ContainsKey(A[i])) {
+                map[A[i]]++;
+            }
+            else {
+                map[A[i]] = 1;
+            }
+        }
+
+        for (int i = 0; i < A.Count; i++) {
+
+            int val = A[i];            
+
+            int possiblePair1Val = A[i] - B;
+            int possiblePair2Val = A[i] + B;
+
+            if (map.ContainsKey(A[i])) {
+
+                if (A[i] == possiblePair1Val || A[i] == possiblePair2Val) {
+
+                    if (map[A[i]] > 1) {
+                        output += 1;
+                        Console.WriteLine("Pair formed is: {" + val + ", " + val + "}");
+                    }
+                }
+                map.Remove(A[i]);
+
+                if (possiblePair1Val >= 0)
+                {
+                    if (map.ContainsKey(possiblePair1Val))
+                    {
+                        output += 1;
+                        Console.WriteLine("Pair formed is: {" + val + ", " + possiblePair1Val + "}");
+                    }
+                }
+
+                if (possiblePair2Val >= 0)
+                {
+                    if (map.ContainsKey(possiblePair2Val))
+                    {
+                        output += 1;
+                        Console.WriteLine("Pair formed is: {" + val + ", " + possiblePair2Val + "}");
+                    }
+                }
+            }
+
+            
+        }
+
+        Console.WriteLine("Total Distinct Pairs Count: " + output);
 
         return output;
     }
