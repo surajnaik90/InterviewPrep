@@ -60,7 +60,7 @@ Explanation 3:
 
 public static class PairsGivenDifference
 {
-    public static int solve(List<int> A, int B)
+    public static int solve1(List<int> A, int B)
     {   
         A.Sort();
 
@@ -113,5 +113,50 @@ public static class PairsGivenDifference
             }
         }
         return ans;
+    }
+
+    public static int solve2(List<int> A, int B)
+    {
+        A.Sort();
+
+        int output = 0;
+        int start = 0, end = A.Count - 1;
+
+        while (start < A.Count)
+        {
+            if (start > end) {
+                end = A.Count - 1;
+            }
+
+            int diff = Math.Abs(A[start] - A[end]);
+
+            if (diff > B) {
+                end--;
+            }
+            else if (diff < B) {
+                start++;
+            }
+            else {
+
+                if (start != end) { 
+                    output++; 
+                }
+
+                int i = start; start++;
+
+                while (start < A.Count) {
+                    
+                    if (A[i] != A[start]) {
+                        break;
+                    }
+
+                    start++;
+                }
+                end = A.Count - 1;
+
+            }
+        }
+
+        return output;
     }
 }
