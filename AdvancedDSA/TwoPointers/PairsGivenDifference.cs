@@ -61,62 +61,6 @@ Explanation 3:
 public static class PairsGivenDifference
 {
     //Doesn't work
-    public static int solve1(List<int> A, int B)
-    {   
-        A.Sort();
-
-        int ans = 0, N = A.Count;
-        Dictionary<int, int> hashMap = new Dictionary<int, int>();        
-
-        for (int i = 0; i < N; i++) {
-
-            if (hashMap.ContainsKey(A[i])) {
-                hashMap[A[i]]++;    
-            }
-            else {
-                hashMap[A[i]] = 1;
-            }
-        }
-
-        if (hashMap.Count == 1) { 
-        
-            int val = hashMap[A[0]];
-
-            if (val > 1) { return 1; }
-        }
-
-        int left = 0, right = hashMap.Count-1, diff = 0;
-
-        while (left < hashMap.Count) {
-
-            if (right < left) {
-                right += 2;
-            }
-
-            diff = Math.Abs(hashMap.Keys.ElementAt(left) - hashMap.Keys.ElementAt(right));
-
-            if (diff < B) {
-                left++;
-            }
-            else if(diff > B) {
-                right--;
-            }
-            else {
-
-                if (left != right) {
-                    ans += 1;
-                }
-                left++; right++;
-
-                if(right >= hashMap.Count) {
-                    break;
-                }
-            }
-        }
-        return ans;
-    }
-
-    //Doesn't work
     public static int solve2(List<int> A, int B)
     {
         A.Sort();
@@ -162,6 +106,7 @@ public static class PairsGivenDifference
         return output;
     }
 
+    //Works - Optimized code
     public static int solve3(List<int> A, int B)
     {
         Console.WriteLine("B = " + B);
