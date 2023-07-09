@@ -44,29 +44,34 @@ using System.Collections;
 
 public static class Stairs
 {
-    static int[] fib;
+    static int[] dp;
     public static int solve(int A)
-    {
-        int res =  takeSteps(0, A);
-
-        return res;
+    {   
+        dp = Enumerable.Repeat(-1, A+1).ToArray();
+        return takeSteps(A);
     }
 
-    static int takeSteps(int step, int totalSteps)
+    public static int takeSteps(int remainingSteps)
     {
-        if(step == totalSteps) {
+        if(remainingSteps == 0) {
             return 1;
         }
-        if (step > totalSteps) {
+        else if(remainingSteps < 0) {
             return 0;
         }
 
-        step++;
-        takeSteps(step, totalSteps);
+        if(dp[remainingSteps] != -1) {
+            return dp[remainingSteps];
+        }
 
-        step += 2;
-        takeSteps(step, totalSteps);
+        long ans = takeSteps(remainingSteps - 1);
+        ans = ans % (1000000007);
 
-        return 0;
+        ans += takeSteps(remainingSteps - 2);
+        ans = ans % (1000000007);
+
+        dp[remainingSteps] = (int)ans;
+
+        return Convert.ToInt32(ans);
     }
 }

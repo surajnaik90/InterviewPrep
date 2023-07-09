@@ -1182,17 +1182,22 @@
 
 //int ans2 = PairsumDivisibleByM.solve(new List<int>() { 5,17,100,11 }, 28);
 
-int ans1 = PairsGivenDifference.solve3(new List<int>() {8,12,16,4,0,20 }, 4);
+//int ans1 = PairsGivenDifference.solve3(new List<int>() {8,12,16,4,0,20 }, 4);
 
-int ans2 = PairsGivenDifference.solve3(new List<int>() {1 ,5, 3, 4, 2}, 3);
+//int ans2 = PairsGivenDifference.solve3(new List<int>() {1 ,5, 3, 4, 2}, 3);
 
-int ans3 = PairsGivenDifference.solve3(
-    new List<int>()
-    {
-        8,5,1,10,5,9,9,3,5,6,6,2,8,2,2,6,3,8,7,2,5,3,4,3,3,2,7,9,6,8,7,2,9,10,3,8,10,6,5,4,2,3
-    }, 3);
+//int ans3 = PairsGivenDifference.solve3(
+//    new List<int>()
+//    {
+//        8,5,1,10,5,9,9,3,5,6,6,2,8,2,2,6,3,8,7,2,5,3,4,3,3,2,7,9,6,8,7,2,9,10,3,8,10,6,5,4,2,3
+//    }, 3);
 
-int ans4 = PairsGivenDifference.solve3(new List<int>() { 1, 1, 1, 2, 2 }, 0);
+//int ans4 = PairsGivenDifference.solve3(new List<int>() { 1, 1, 1, 2, 2 }, 0);
 
-int ans5 = PairsGivenDifference.solve3(new List<int>() { 1, 2 }, 0);
+//int ans5 = PairsGivenDifference.solve3(new List<int>() { 1, 2 }, 0);
+//Console.WriteLine();
+
+
+int ans = Stairs.solve(55007);
+
 Console.WriteLine();
