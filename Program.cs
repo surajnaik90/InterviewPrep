@@ -1198,6 +1198,8 @@
 //Console.WriteLine();
 
 
-int ans = Stairs.solve(55007);
+//int ans = Stairs.solve(55007);
+
+int ans = MinNumberOfSquares.solve(12);
 
 Console.WriteLine();
