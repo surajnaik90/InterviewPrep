@@ -10,7 +10,6 @@
 
 ////int output = LongestSubstring.Operation1("aab");
 
-///*
 //int res14 = StringToIntegerMyAtoi.Approach2("20000000000000000000");
 //int res15 = StringToIntegerMyAtoi.Approach2(" ");
 //int res1 = StringToIntegerMyAtoi.Approach2("-91283472332");
@@ -96,7 +95,6 @@
 
 ////IsItPrime.Operation1(829702);
 
-///*string count = Console.ReadLine();
 //int N = Convert.ToInt32(count);
 
 //if(!(N>=1 && N<=10)) { return; }
@@ -1200,6 +1198,42 @@
 
 //int ans = Stairs.solve(55007);
 
-int ans = MinNumberOfSquares.solve(12);
+//int ans = MinNumberOfSquares.solve(12);
+
+
+using MAANG.AdvancedDSA.DynamicProgramming;
+///*
+///*string count = Console.ReadLine();
+List<List<int>> input1 = new List<List<int>>()
+{
+    new List<int>() {0}
+
+};
+
+List<List<int>> input2 = new List<List<int>>()
+{
+    new List<int>() {1,0},
+    new List<int>() {1,0},
+    new List<int>() {1,0},
+    new List<int>() {0,0},
+    new List<int>() {1,1},
+    new List<int>() {0,0},
+
+};
+
+List<List<int>> input3 = new List<List<int>>()
+{
+    new List<int>() {0,0,0,0,0,1,0,0,0}
+};
+
+List<List<int>> input4 = new List<List<int>>()
+{
+    new List<int>() {1,0}
+
+};
+
+int res = UniquePathsInGrid.uniquePathsWithObstacles(input4);
+
+
 
 Console.WriteLine();
