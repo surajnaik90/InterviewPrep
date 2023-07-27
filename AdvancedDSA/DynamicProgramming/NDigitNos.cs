@@ -48,53 +48,60 @@ Explanation 2:
  Only valid number is 3
  */
 
+using System;
 using System.Collections;
 using System.Net.Http.Headers;
 
 public static class NdigitNumbers
 {
+    public static long count = 0;
+
+    public static int[,] dp;
     public static int solve(int A, int B)
     {
-        int res, mod = (int)((Math.Pow(10,9)) + 7);
+        dp = new int[A+1, B+1];
 
-        res = ways(0, A, B, mod);
+        int ans = ways(A-1, B);
 
-        return res;
+        return ans;
     }
 
-    public static int ways(int sum, int A, int B, int mod)
+    public static int ways(int index, int sum)
     {
-        long ans = 0;
+        int cnt = 0;
 
-        if (A == 0 && sum == B) {
-            return 1;
+        if (index < 0) {
+
+            if (sum == 0) { return 1; }
+
+            else { return 0; }
         }
 
-        if(A == 0 && (sum < B || sum > B)) {
-            return 0;
+        if (dp[index,sum] != 0) {
+            return dp[index, sum];
         }
 
-        if(sum > B) { return 0; }
+        if (sum < 0) { return 0; }
 
         for (int i = 0; i <= 9; i++) {
 
-            sum = sum + i;
-
-            if (sum == 0) { continue; }
-
-            A--;
-
-            long res = ans;
-
-            ans += ways(sum, A, B, mod);
-
-            if(ans == (res + 1)) {
-                break;
+            if (index == 0 & i == 0) {
+                continue;
             }
 
-            A++; sum = sum - i;
+            if((sum-i) < 0) {
+                break;
+            }
+           
+            cnt += ways(index - 1, sum - i);
+            cnt = cnt % (int)(Math.Pow(10, 9) + 7);
+
+            Console.Write("Sum is :" + sum + " Index is: " + index);
+            Console.WriteLine(" Count is: " + cnt);
+
+            dp[index, sum] = cnt;
         }
 
-        return Convert.ToInt32(ans % mod);
+        return cnt;
     }
 }

@@ -1201,39 +1201,54 @@
 //int ans = MinNumberOfSquares.solve(12);
 
 
+//using MAANG.AdvancedDSA.DynamicProgramming;
+/////*
+/////*string count = Console.ReadLine();
+//List<List<int>> input1 = new List<List<int>>()
+//{
+//    new List<int>() {0}
+
+//};
+
+//List<List<int>> input2 = new List<List<int>>()
+//{
+//    new List<int>() {1,0},
+//    new List<int>() {1,0},
+//    new List<int>() {1,0},
+//    new List<int>() {0,0},
+//    new List<int>() {1,1},
+//    new List<int>() {0,0},
+
+//};
+
+//List<List<int>> input3 = new List<List<int>>()
+//{
+//    new List<int>() {0,0,0,0,0,1,0,0,0}
+//};
+
+//List<List<int>> input4 = new List<List<int>>()
+//{
+//    new List<int>() {1,0}
+
+//};
+
+//int res = UniquePathsInGrid.uniquePathsWithObstacles(input4);
+
 using MAANG.AdvancedDSA.DynamicProgramming;
-///*
-///*string count = Console.ReadLine();
-List<List<int>> input1 = new List<List<int>>()
-{
-    new List<int>() {0}
 
-};
+//int res = NdigitNumbers.solve(4, 11);
 
-List<List<int>> input2 = new List<List<int>>()
-{
-    new List<int>() {1,0},
-    new List<int>() {1,0},
-    new List<int>() {1,0},
-    new List<int>() {0,0},
-    new List<int>() {1,1},
-    new List<int>() {0,0},
+List<int> values1 = new List<int>() { 8,7,5,9 };
+List<int> weights1 = new List<int>() { 4,5,3,1 };
 
-};
+List<int> values2 = new List<int>() { 60, 100, 120 };
+List<int> weights2 = new List<int>() { 10, 20, 30};
 
-List<List<int>> input3 = new List<List<int>>()
-{
-    new List<int>() {0,0,0,0,0,1,0,0,0}
-};
-
-List<List<int>> input4 = new List<List<int>>()
-{
-    new List<int>() {1,0}
-
-};
-
-int res = UniquePathsInGrid.uniquePathsWithObstacles(input4);
+List<int> values3 = new List<int>() { 359, 963, 465, 706, 146, 282, 828, 962, 492 };
+List<int> weights3 = new List<int>() { 96, 43, 28, 37, 92, 5, 3, 54, 93 };
+int c3 = 383;
 
 
+int ans = _0_1Knapsack.solve(values3, weights3, c3);
 
 Console.WriteLine();
