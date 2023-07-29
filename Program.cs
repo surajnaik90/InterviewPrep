@@ -1238,17 +1238,31 @@ using MAANG.AdvancedDSA.DynamicProgramming;
 
 //int res = NdigitNumbers.solve(4, 11);
 
-List<int> values1 = new List<int>() { 8,7,5,9 };
-List<int> weights1 = new List<int>() { 4,5,3,1 };
+//List<int> values1 = new List<int>() { 8,7,5,9 };
+//List<int> weights1 = new List<int>() { 4,5,3,1 };
 
-List<int> values2 = new List<int>() { 60, 100, 120 };
-List<int> weights2 = new List<int>() { 10, 20, 30};
+//List<int> values2 = new List<int>() { 60, 100, 120 };
+//List<int> weights2 = new List<int>() { 10, 20, 30};
 
-List<int> values3 = new List<int>() { 359, 963, 465, 706, 146, 282, 828, 962, 492 };
-List<int> weights3 = new List<int>() { 96, 43, 28, 37, 92, 5, 3, 54, 93 };
-int c3 = 383;
+//List<int> values3 = new List<int>() { 359, 963, 465, 706, 146, 282, 828, 962, 492 };
+//List<int> weights3 = new List<int>() { 96, 43, 28, 37, 92, 5, 3, 54, 93 };
+//int c3 = 383;
 
 
-int ans = _0_1Knapsack.solve(values3, weights3, c3);
+//int ans = _0_1Knapsack.solve(values3, weights3, c3);
+
+List<int> input1 = new List<int>() { 15, 10, 6 };
+List<int> input2 = new List<int>() { 14, 10, 4 };
+List<int> input3 = new List<int>() { 2, 3, 6 };
+List<int> input4 = new List<int>() { 9, 6 };
+List<int> input5 = new List<int>() { 5, 4, 6, 8, 7, 2, 3 };
+List<int> input6 = new List<int>() { 8, 4, 5, 7, 6, 2 };
+
+int ans1 = FlipArray.solve(input1);
+int ans2 = FlipArray.solve(input2);
+int ans3 = FlipArray.solve(input3);
+int ans4 = FlipArray.solve(input4);
+int ans5 = FlipArray.solve(input5);
+int ans6 = FlipArray.solve(input6);
 
 Console.WriteLine();
