@@ -1258,11 +1258,21 @@ List<int> input4 = new List<int>() { 9, 6 };
 List<int> input5 = new List<int>() { 5, 4, 6, 8, 7, 2, 3 };
 List<int> input6 = new List<int>() { 8, 4, 5, 7, 6, 2 };
 
-int ans1 = FlipArray.solve(input1);
-int ans2 = FlipArray.solve(input2);
-int ans3 = FlipArray.solve(input3);
-int ans4 = FlipArray.solve(input4);
-int ans5 = FlipArray.solve(input5);
-int ans6 = FlipArray.solve(input6);
+//int ans1 = FlipArray.solve(input1);
+//int ans2 = FlipArray.solve(input2);
+//int ans3 = FlipArray.solve(input3);
+//int ans4 = FlipArray.solve(input4);
+//int ans5 = FlipArray.solve(input5);
+//int ans6 = FlipArray.solve(input6);
+
+
+List<int> v1 = new List<int>() {8,5 };
+List<int> w1 = new List<int>() {1,20 };
+int C = 17;
+
+//int ans = _0_1KnapsackII.solve(v1, w1, C);
+
+List<int> l1 = new List<int>() { 3, 4, 1, 6, 2 };
+int ans = CuttingRod.solve(l1);
 
 Console.WriteLine();
