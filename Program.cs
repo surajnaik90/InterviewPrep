@@ -1235,6 +1235,7 @@
 //int res = UniquePathsInGrid.uniquePathsWithObstacles(input4);
 
 using MAANG.AdvancedDSA.DynamicProgramming;
+using MAANG.AdvancedDSA.Trees;
 
 //int res = NdigitNumbers.solve(4, 11);
 
@@ -1273,6 +1274,23 @@ int C = 17;
 //int ans = _0_1KnapsackII.solve(v1, w1, C);
 
 List<int> l1 = new List<int>() { 3, 4, 1, 6, 2 };
-int ans = CuttingRod.solve(l1);
+//int ans = CuttingRod.solve(l1);
+
+List<int> c = new List<int>() { 2, 5, 3, 6 };
+int B = 10;
+//int ans = CoinSUmInfinite.solve(c, B);
+
+
+TreeNode node1 = Deserialize.solve(new List<int>() { 20,14,12,11,-1,-1,-1,-1,-1});
+
+TreeNode node2 = Deserialize.solve(new List<int>() { 44,30,49,18,40,47,18,9,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1 });
+
+TreeNode node3 = Deserialize.solve(new List<int>() { 20, 12, 34, 6, 18, 30, 21,-1, -1, -1, -1, -1, -1, -1, -1 });
+
+TreeNode node4 = Deserialize.solve(new List<int>() { 2, 1, 3, -1, -1, -1, -1 });
+
+//int ans = LargestBST.solve(node3);
+
+int ans = KthSmallestElementTree.solve(node4, 2);
 
 Console.WriteLine();
