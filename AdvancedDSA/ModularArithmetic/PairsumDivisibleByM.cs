@@ -44,64 +44,53 @@ public static class PairsumDivisibleByM
 {
     public static int solve(List<int> A, int B)
     {
-        int N = A.Count, output = 0, max = int.MinValue;
+        long pairs = 0, mod = (long)(Math.Pow(10, 9) + 7);
         Dictionary<int, int> map = new Dictionary<int, int>();
 
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < A.Count; i++)
+        {
 
-            max = Math.Max(max, A[i]);
+            int reminder = A[i] % B;
 
-            if (map.ContainsKey(A[i])) {
-                map[A[i]]++;
+            if (map.ContainsKey(reminder))
+            {
+                map[reminder]++;
             }
-            else {
-                map[A[i]] = 1;
-            }
-        }
-
-        
-        for (int i = 0; i < N; i++) {
-
-            map[A[i]]--;
-
-            if (map[A[i]] == 0) {
-                map.Remove(A[i]);
-            }
-
-            int sum = 0, diff = Math.Abs(A[i] - B);
-
-            while (sum <= max) {
-
-                if (diff == 0) {
-
-                    if (map[A[i]] > 1) {
-
-                        output += map[A[i]];
-                    }
-                }
-
-                sum = A[i] + diff;
-
-                if (diff == A[i]) {
-
-                    if (map[A[i]] > 1) {
-                        output += map[A[i]];
-                    }
-
-                    diff += B; continue;
-                }
-
-                if (sum % B == 0) {
-
-                    if(map.ContainsKey(diff)) {
-                        output += map[diff];
-                    }
-                }
-
-                diff += B;
+            else
+            {
+                map[reminder] = 1;
             }
         }
 
-        return output;
+        for (int i = 0; i < A.Count; i++)
+        {
+
+            int r;
+
+            double quotient = (double)((double)(A[i] / (double)B));
+
+            int q = (int)(Math.Ceiling(quotient));
+            r = Math.Abs(A[i] - (q * B));
+
+            long ans = 0;
+
+            if (map.ContainsKey(A[i] % B))
+            {
+                if (map[A[i] % B] != 0)
+                {
+                    map[A[i] % B]--;
+                }
+            }
+
+            if (map.ContainsKey(r))
+            {
+                ans = map[r];
+            }
+
+            pairs += ans;
+            pairs %= mod;
+        }
+
+        return (int)pairs;
     }
 }

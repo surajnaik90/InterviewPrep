@@ -81,29 +81,54 @@ public static class CountSetBits
         return output;
     }
 
-
+    //This works - An optimized solution
     public static int solve2(int A)
     {
-        int output = 0, val = (int)((Math.Pow(10, 9)) + 7);
+        long output = 0, mod = ((int)(Math.Pow(10, 9))) + 7;
 
-        int N = A + 1;
-        int mod = (int)(Math.Max(10, 9) + 7);
+        //Calculate the max power to the base 2 
+        //short maxPower = Convert.ToInt16(Math.Log2(A));
+        int maxPower = 0;
 
-        int setSize = 2;
-
-        int ans = 0;
-        while(setSize/2 <= N) {
-
-            ans += (N / setSize) * (setSize / 2);
-            ans %= mod;
-
-            ans += (N%setSize <=  (setSize/2)) ? 0 :  N%setSize - (setSize/2);
-
-            ans %= mod;
-
-            setSize += 2;
+        int val = 1;
+        while(val < A) {
+            val *= 2;
+            if(val > A) { break; }
+            maxPower++;
         }
 
-        return output;
+        long totalBitsInUnitPosition = Convert.ToInt64((Math.Pow(2, (double)maxPower) / 2));
+
+        output += ((totalBitsInUnitPosition * maxPower)) % mod;
+
+        int diff = A - ((int)(Math.Pow(2, maxPower)) - 1);
+
+        if(diff < 0) {
+            return Convert.ToInt32(output + 1);
+        }
+
+        output += diff;
+        output += diff / 2;
+
+        for (int i = maxPower - 1; i >= 1 ; i--) {
+
+            int powerValue = (int)(Math.Pow(2, i));
+
+            int bitsNotInGroups = diff % powerValue;
+            int groupsOfSize2PowerI = diff / powerValue;
+
+            //If Odd
+            if(groupsOfSize2PowerI % 2 != 0) {
+                output += bitsNotInGroups;
+            }
+
+            int groupsOf1s = groupsOfSize2PowerI / 2;
+
+            output = output + powerValue * groupsOf1s;
+
+            output = output % mod;
+        }
+
+        return Convert.ToInt32(output);
     }
 }

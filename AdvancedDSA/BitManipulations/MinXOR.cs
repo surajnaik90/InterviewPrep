@@ -41,13 +41,12 @@ public static class MinXOR
     {
         int N = A.Count, output = int.MaxValue;
 
-        int xor_all = 0;
-        for (int i = 0; i < N; i++) {
-            xor_all ^= A[i];
-        }
-        
-        for (int i = 0; i < N; i++) {
-            output = Math.Min(output, xor_all ^ A[i]);
+        for (int i = 0; i < A.Count - 1; i++) {
+
+            for (int j = i + 1; j < A.Count; j++) {
+
+                output = Math.Min(output, A[i] ^ A[j]);
+            }
         }
 
         return output;

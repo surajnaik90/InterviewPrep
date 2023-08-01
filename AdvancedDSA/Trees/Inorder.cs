@@ -56,7 +56,6 @@ public static class Inorder
         List<int> res = new List<int>();
 
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        Stack<TreeNode> inorderStack = new Stack<TreeNode>();
 
         stack.Push(A);
 
@@ -72,12 +71,7 @@ public static class Inorder
                 stack.Pop();
                 res.Add(node.val);
 
-                if (node.right == null) {
-
-                    node = stack.Pop();
-                    res.Add(node.val);
-                }
-                else {
+                if (node.right != null) {
                     stack.Push(node.right);
                 }
             }

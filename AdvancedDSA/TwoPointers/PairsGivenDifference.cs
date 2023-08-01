@@ -60,58 +60,111 @@ Explanation 3:
 
 public static class PairsGivenDifference
 {
-    public static int solve(List<int> A, int B)
-    {   
+    //Doesn't work
+    public static int solve2(List<int> A, int B)
+    {
         A.Sort();
 
-        int ans = 0, N = A.Count;
-        Dictionary<int, int> hashMap = new Dictionary<int, int>();        
+        int output = 0;
+        int start = 0, end = A.Count - 1;
 
-        for (int i = 0; i < N; i++) {
-
-            if (hashMap.ContainsKey(A[i])) {
-                hashMap[A[i]]++;    
-            }
-            else {
-                hashMap[A[i]] = 1;
-            }
-        }
-
-        if (hashMap.Count == 1) { 
-        
-            int val = hashMap[A[0]];
-
-            if (val > 1) { return 1; }
-        }
-
-        int left = 0, right = hashMap.Count-1, diff = 0;
-
-        while (left < hashMap.Count) {
-
-            if (right < left) {
-                right += 2;
+        while (start < A.Count)
+        {
+            if (start > end) {
+                end = A.Count - 1;
             }
 
-            diff = Math.Abs(hashMap.Keys.ElementAt(left) - hashMap.Keys.ElementAt(right));
+            int diff = Math.Abs(A[start] - A[end]);
 
-            if (diff < B) {
-                left++;
+            if (diff > B) {
+                end--;
             }
-            else if(diff > B) {
-                right--;
+            else if (diff < B) {
+                start++;
             }
             else {
 
-                if (left != right) {
-                    ans += 1;
+                if (start != end) { 
+                    output++; 
                 }
-                left++; right++;
 
-                if(right >= hashMap.Count) {
-                    break;
+                int i = start; start++;
+
+                while (start < A.Count) {
+                    
+                    if (A[i] != A[start]) {
+                        break;
+                    }
+
+                    start++;
                 }
+                end = A.Count - 1;
+
             }
         }
-        return ans;
+
+        return output;
+    }
+
+    //Works - Optimized code
+    public static int solve3(List<int> A, int B)
+    {
+        Console.WriteLine("B = " + B);
+        int output = 0;
+        Dictionary<int, int> map = new Dictionary<int, int>();
+
+        for (int i = 0; i < A.Count; i++) {
+
+            if (map.ContainsKey(A[i])) {
+                map[A[i]]++;
+            }
+            else {
+                map[A[i]] = 1;
+            }
+        }
+
+        for (int i = 0; i < A.Count; i++) {
+
+            int val = A[i];            
+
+            int possiblePair1Val = A[i] - B;
+            int possiblePair2Val = A[i] + B;
+
+            if (map.ContainsKey(A[i])) {
+
+                if (A[i] == possiblePair1Val || A[i] == possiblePair2Val) {
+
+                    if (map[A[i]] > 1) {
+                        output += 1;
+                        Console.WriteLine("Pair formed is: {" + val + ", " + val + "}");
+                    }
+                }
+                map.Remove(A[i]);
+
+                if (possiblePair1Val >= 0)
+                {
+                    if (map.ContainsKey(possiblePair1Val))
+                    {
+                        output += 1;
+                        Console.WriteLine("Pair formed is: {" + val + ", " + possiblePair1Val + "}");
+                    }
+                }
+
+                if (possiblePair2Val >= 0)
+                {
+                    if (map.ContainsKey(possiblePair2Val))
+                    {
+                        output += 1;
+                        Console.WriteLine("Pair formed is: {" + val + ", " + possiblePair2Val + "}");
+                    }
+                }
+            }
+
+            
+        }
+
+        Console.WriteLine("Total Distinct Pairs Count: " + output);
+
+        return output;
     }
 }

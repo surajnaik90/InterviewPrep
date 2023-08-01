@@ -44,25 +44,34 @@ using System.Collections;
 
 public static class Stairs
 {
-    static int[] fib;
+    static int[] dp;
     public static int solve(int A)
-    {
-        fib = new int[A + 1];
-
-        return fibonacci(A);
+    {   
+        dp = Enumerable.Repeat(-1, A+1).ToArray();
+        return takeSteps(A);
     }
 
-    static int fibonacci(int n)
+    public static int takeSteps(int remainingSteps)
     {
-        if (n < 1) { return 0; }
+        if(remainingSteps == 0) {
+            return 1;
+        }
+        else if(remainingSteps < 0) {
+            return 0;
+        }
 
-        if (n == 1) { return 1; }
+        if(dp[remainingSteps] != -1) {
+            return dp[remainingSteps];
+        }
 
-        if (fib[n] != 0) { return fib[n]; }
+        long ans = takeSteps(remainingSteps - 1);
+        ans = ans % (1000000007);
 
-        int res = fibonacci(n - 1) + fibonacci(n - 2);
-        fib[n] = res;
+        ans += takeSteps(remainingSteps - 2);
+        ans = ans % (1000000007);
 
-        return res;
+        dp[remainingSteps] = (int)ans;
+
+        return Convert.ToInt32(ans);
     }
 }

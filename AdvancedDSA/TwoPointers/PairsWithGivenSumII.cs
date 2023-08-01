@@ -48,41 +48,115 @@ Explanation 2:
 
 public static class PairsWithGivenSumII
 {
+    //This is an optimized approach
     public static int solve(List<int> A, int B)
     {
-        int pairs = 0, mod = (int)(Math.Pow(10, 9) + 7);
+        long pairsCount = 0, mod = (int)(Math.Pow(10, 9) + 7);        
 
-        int N = A.Count, l = 0, r = N - 1, R = -1;
-        long b = B;
+        int left = 0, right = A.Count - 1;
+        long previousLeftPairs = 0, previousRightPairs = 0;
+        int previousLeft = -1, previousRight = A.Count - 1;
+        long currentPairs = 0;
 
-        while (l <= r) {
+        while(left != right) {
 
-            long sum = A[l] + A[r];
-
-            if (sum > b) {
-                r--;
-            }
-            else if(sum == b) {
-                R = Math.Max(R, r);
-                pairs++; r--;
-                pairs = pairs % mod;
-
-                if (l == r) {
-                    l++;r = R;
-                    if (l == R) { break; }
-                }
-            }
-            else {
-                l++;
-                if (R != -1) { 
-                    r = R;
+            if(previousLeft != -1) {
+                if (A[left] == A[previousLeft]) {
+                    pairsCount = (pairsCount + previousLeftPairs) % mod;
+                    previousLeft = left;
+                    left++;
+                    continue;
                 }
                 else {
-                    r--;
+                    previousLeftPairs = 0;
                 }
+            }
+
+            if (A[right] != A[previousRight] && currentPairs != 0) {
+                pairsCount = (pairsCount + currentPairs) % mod;
+                previousLeftPairs = currentPairs;
+                currentPairs = 0;
+            }
+
+            long sum = A[left] + A[right];
+
+            if (sum > B) {
+                previousRight = right;
+                right--;
+            }
+            else if (sum < B) {
+                previousLeft = left;
+                left++;
+            }
+            else {
+                currentPairs++;
+                previousRight = right;
+                right--;
             }
         }
 
-        return pairs;
+        pairsCount = (pairsCount + currentPairs) % mod;
+
+        if (previousLeft != -1) {
+            if (A[left] == A[previousLeft]) {
+                pairsCount = (pairsCount + previousLeftPairs) % mod;
+            }
+        }
+        else {
+            previousLeft = left;
+            left++;
+
+            while (A[left] == A[previousLeft] && currentPairs != 0) {
+                currentPairs--;
+                pairsCount = (pairsCount + currentPairs) % mod;
+                previousLeft = left;
+                left++;
+
+                if(left == A.Count) { break; }
+            }
+        }
+
+        return Convert.ToInt32(pairsCount);
+    }
+
+
+    //Simpler solution
+    public static int solve2(List<int> A, int B)
+    {
+        int i = 0, j = A.Count - 1, mod = 1000 * 1000 * 1000 + 7;
+        long ans = 0;
+        while (i < j) {
+            if (A[i] + A[j] == B) {
+                int ii = i, jj = j;
+                if (A[i] == A[j]) {
+                    // equal A[i] and A[j]
+                    long cnt = j - i + 1;
+                    ans += (cnt * (cnt - 1) / 2) % mod;
+                    ans %= mod;
+                    break;
+                }
+                else {
+                    // count number of elements with value A[i]
+                    while (A[i] == A[ii]) {
+                        ii++;
+                    }
+                    int cnt1 = ii - i;
+                    i = ii;
+                    // count number of elements with value A[j]
+                    while (A[jj] == A[j]) {
+                        jj--;
+                    }
+                    int cnt2 = j - jj;
+                    j = jj;
+                    ans += (cnt1 * cnt2) % mod;
+                    ans %= mod;
+                }
+            }
+            else if (A[i] + A[j] > B)
+                j--;
+            else
+                i++;
+        }
+        return (int)ans;
     }
 }
