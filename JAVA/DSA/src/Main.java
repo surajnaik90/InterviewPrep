@@ -1,4 +1,5 @@
 import Backtracking.Permutations;
+import Backtracking.UniquePermutations;
 
 import java.util.ArrayList;
 
@@ -22,9 +23,10 @@ public class Main {
         //int ans  = NDigitNumbers.solve(1000,5000);
 
         ArrayList<Integer> i1 = new ArrayList<>();
-        i1.add(1);
+        i1.add(1);i1.add(1);i1.add(2);
 
-        ArrayList<ArrayList<Integer>> ans = Permutations.permute(i1);
+        //ArrayList<ArrayList<Integer>> ans = Permutations.permute(i1);
+        ArrayList<ArrayList<Integer>> ans = UniquePermutations.permute(i1);
 
         System.out.println(ans);
     }
