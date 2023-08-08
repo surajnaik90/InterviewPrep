@@ -1,5 +1,7 @@
 import Backtracking.Permutations;
 import Backtracking.UniquePermutations;
+import Heaps.AthLargestElement;
+import StacksQueues.FirstNonRepeatingCharacter;
 
 import java.util.ArrayList;
 
@@ -23,10 +25,14 @@ public class Main {
         //int ans  = NDigitNumbers.solve(1000,5000);
 
         ArrayList<Integer> i1 = new ArrayList<>();
-        i1.add(1);i1.add(1);i1.add(2);
+        i1.add(15);i1.add(20);i1.add(99); i1.add(1);
 
         //ArrayList<ArrayList<Integer>> ans = Permutations.permute(i1);
-        ArrayList<ArrayList<Integer>> ans = UniquePermutations.permute(i1);
+        //ArrayList<ArrayList<Integer>> ans = UniquePermutations.permute(i1);
+
+        //ArrayList<Integer> ans = AthLargestElement.solve(2,i1);
+
+        String ans = FirstNonRepeatingCharacter.solve("xxikrwmjvsvckfrqxnibkcasompsuyuogauacjrr");
 
         System.out.println(ans);
     }
