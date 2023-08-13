@@ -1,4 +1,5 @@
 import Backtracking.Permutations;
+import Backtracking.Subset;
 import Backtracking.UniquePathsIII;
 import Backtracking.UniquePermutations;
 import Heaps.AthLargestElement;
@@ -20,21 +21,21 @@ public class Main {
 
         //int ans = EditDistance.minDistance(A,B);
 
-        //ArrayList<Integer> i1 = new ArrayList<>();
-        //i1.add(1); i1.add(2); i1.add(3);
+        ArrayList<Integer> i1 = new ArrayList<>();
+        i1.add(1); i1.add(2); i1.add(3);i1.add(4);
         //int b1 = 4;
 
         //int ans = CoinSumInfinite.coinchange2(i1, b1);
 
         //int ans  = NDigitNumbers.solve(1000,5000);
 
-        ArrayList<Integer> i1 = new ArrayList<>();
-        i1.add(1);i1.add(2);i1.add(5);
-        i1.add(4);i1.add(3);
+        //ArrayList<Integer> i1 = new ArrayList<>();
+        //i1.add(1);i1.add(2);i1.add(5);
+        //i1.add(4);i1.add(3);
 
-        ArrayList<Integer> i2 = new ArrayList<>();
-        i2.add(5);i2.add(17);i2.add(100);
-        i2.add(11);
+        //ArrayList<Integer> i2 = new ArrayList<>();
+        //i2.add(5);i2.add(17);i2.add(100);
+        //i2.add(11);
 
         //ArrayList<ArrayList<Integer>> ans = Permutations.permute(i1);
         //ArrayList<ArrayList<Integer>> ans = UniquePermutations.permute(i1);
@@ -62,10 +63,12 @@ public class Main {
         input1.add(iC2);
         input1.add(iC3);
 
-        int ans = UniquePathsIII.solve(input1);
+        //int ans = UniquePathsIII.solve(input1);
 
         //ArrayList<Integer> ans = RunningMedian.solve(i2);
 
-        System.out.println(ans);
+        ArrayList<ArrayList<Integer>> ans = Subset.subsets(i1);
+
+        //System.out.println(ans);
     }
 }
