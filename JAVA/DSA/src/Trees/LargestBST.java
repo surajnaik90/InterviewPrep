@@ -3,7 +3,6 @@ package Trees;
 import com.sun.source.tree.Tree;
 
 public class LargestBST {
-
     public static int ans = 0;
     public static int solve(TreeNode A) {
 
