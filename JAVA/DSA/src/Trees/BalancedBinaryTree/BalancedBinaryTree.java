@@ -6,6 +6,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class BalancedBinaryTree {
+
+    int balanced = 1;
     public static int isBalanced(TreeNode A) {
 
         List<Object> ans = compute(A);
@@ -64,5 +66,18 @@ public class BalancedBinaryTree {
         depth = Math.max((Integer)left.get(1), (Integer)right.get(1)) + 1;
 
         return Arrays.asList(isValid, depth);
+    }
+
+    //Simple approach
+    public int balanced(TreeNode A) {
+        if (A == null)
+            return 0;
+
+        int heightLeft = 1 + balanced(A.left);
+        int heightRight = 1 + balanced(A.right);
+
+        if (Math.abs(heightLeft - heightRight) > 1)
+            balanced = 0;
+        return Math.max(heightLeft, heightRight);
     }
 }
