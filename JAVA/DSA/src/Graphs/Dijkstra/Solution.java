@@ -23,10 +23,6 @@ public class Solution {
         int[] cost = new int[A];
         Arrays.fill(cost,Integer.MAX_VALUE);
 
-        //Create the hashmap to hold the addresses of the nodes in the priority queue
-        //This is to update the nodes in the priority queue if we encounter low cost
-        HashMap<Integer,GraphNode> map = new HashMap<>();
-
         //Set the pre-requisite to start the Dijkstra's algo
         //Add the source node to the priority queue
         GraphNode srcNode = new GraphNode();
