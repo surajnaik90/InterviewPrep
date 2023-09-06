@@ -1,7 +1,6 @@
 package Graphs.GraphsStorage;
 
-import java.util.ArrayList;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class ConvertGraph {
 
@@ -29,6 +28,95 @@ public class ConvertGraph {
                 }
             }
 
+        }
+        return arrList;
+    }
+
+    public static Queue<Integer>[] convert2(int A, ArrayList<Integer> B, ArrayList<Integer> C) {
+
+        Queue<Integer> arrList[] = new LinkedList[A+1];
+
+        for (int i = 0; i < B.size(); i++) {
+
+            int srcNode = B.get(i),
+                    destNode = C.get(i);
+
+            if(arrList[srcNode] != null) {
+                arrList[srcNode].add(destNode);
+            }
+            else {
+                Queue<Integer> connectedNodes = new LinkedList<>();
+                connectedNodes.add(destNode);
+
+                arrList[srcNode] = connectedNodes;
+            }
+        }
+        return arrList;
+    }
+
+    public static PriorityQueue<GraphNode>[] convert3(int A, ArrayList<ArrayList<Integer>> list) {
+
+        PriorityQueue<GraphNode> arrList[] = new PriorityQueue[A+1];
+
+        for (int i = 0; i < list.size(); i++) {
+
+            int srcNode = list.get(i).get(0),
+                    destNode = list.get(i).get(1),
+                    weight = list.get(i).get(2);
+
+            GraphNode node = new GraphNode();
+            node.val = destNode;
+            node.cost = weight;
+
+            if(arrList[srcNode] != null) {
+                arrList[srcNode].add(node);
+            }
+            else {
+                PriorityQueue<GraphNode> connectedNodes = new PriorityQueue<>(new GraphNodeComparator());
+                connectedNodes.add(node);
+
+                arrList[srcNode] = connectedNodes;
+            }
+        }
+        return arrList;
+    }
+
+    public static HashMap<Integer, ArrayList<GraphNode>> convert4(int A, ArrayList<ArrayList<Integer>> list) {
+
+        HashMap<Integer, ArrayList<GraphNode>> arrList = new HashMap<>();
+
+        for (int i = 0; i < list.size(); i++) {
+
+            int srcNode = list.get(i).get(0),
+                    destNode = list.get(i).get(1),
+                    weight = list.get(i).get(2);
+
+            GraphNode node = new GraphNode();
+            node.val = destNode;
+            node.cost = weight;
+
+            if(arrList.get(srcNode) != null) {
+                arrList.get(srcNode).add(node);
+            }
+            else {
+                ArrayList<GraphNode> connectedNodes = new ArrayList<>();
+                connectedNodes.add(node);
+
+                arrList.put(srcNode, connectedNodes);
+            }
+
+            node = new GraphNode();
+            node.val = srcNode;
+            node.cost = weight;
+            if(arrList.get(destNode) != null) {
+                arrList.get(destNode).add(node);
+            }
+            else {
+                ArrayList<GraphNode> connectedNodes = new ArrayList<>();
+                connectedNodes.add(node);
+
+                arrList.put(destNode, connectedNodes);
+            }
         }
         return arrList;
     }
