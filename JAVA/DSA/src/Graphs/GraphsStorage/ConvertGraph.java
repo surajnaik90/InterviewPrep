@@ -120,4 +120,45 @@ public class ConvertGraph {
         }
         return arrList;
     }
+
+    public static HashMap<Integer, ArrayList<GraphNode>> convert5(int A, ArrayList<ArrayList<Integer>> list) {
+
+        HashMap<Integer, ArrayList<GraphNode>> arrList = new HashMap<>();
+
+        for (int i = 0; i < list.size(); i++) {
+
+            int srcNodeVal = list.get(i).get(0),
+                    destNodeVal = list.get(i).get(1);
+
+            GraphNode srcNode = new GraphNode();
+            srcNode.val = srcNodeVal;
+
+            GraphNode destNode = new GraphNode();
+            destNode.val = destNodeVal;
+
+            //Add the src-dest edge
+            if(arrList.get(srcNodeVal) != null) {
+                arrList.get(srcNodeVal).add(destNode);
+            }
+            else {
+                ArrayList<GraphNode> connectedNodes = new ArrayList<>();
+                connectedNodes.add(destNode);
+
+                arrList.put(srcNodeVal, connectedNodes);
+            }
+
+            //Ads the dest-src edge
+            if(arrList.get(destNodeVal) != null) {
+                arrList.get(destNodeVal).add(srcNode);
+            }
+            else {
+                ArrayList<GraphNode> connectedNodes = new ArrayList<>();
+                connectedNodes.add(srcNode);
+
+                arrList.put(destNodeVal, connectedNodes);
+            }
+        }
+        return arrList;
+    }
+
 }
