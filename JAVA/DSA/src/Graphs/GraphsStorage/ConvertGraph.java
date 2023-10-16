@@ -77,6 +77,20 @@ public class ConvertGraph {
 
                 arrList[srcNode] = connectedNodes;
             }
+
+            GraphNode node2 = new GraphNode();
+            node2.val = srcNode;
+            node2.cost = weight;
+
+            if(arrList[destNode] != null) {
+                arrList[destNode].add(node2);
+            }
+            else {
+                PriorityQueue<GraphNode> connectedNodes = new PriorityQueue<>(new GraphNodeComparator());
+                connectedNodes.add(node2);
+
+                arrList[destNode] = connectedNodes;
+            }
         }
         return arrList;
     }
