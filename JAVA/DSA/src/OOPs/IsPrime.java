@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class IsPrime {
 
-    public static String isPrime(int n){
+    public static String isPrime(int no){
 
         Scanner sc = new Scanner(System.in);
 
