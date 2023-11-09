@@ -40,7 +40,6 @@ Output 2:
 
 */
 public class PrintReverse {
-
     public static void print(){
 
         Scanner sc = new Scanner(System.in);
