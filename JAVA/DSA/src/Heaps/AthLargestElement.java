@@ -1,34 +1,29 @@
 package Heaps;
 
-import java.util.ArrayList;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class AthLargestElement {
-
-    public static PriorityQueue<Integer> pq;
-
-    public static ArrayList<Integer> result = new ArrayList<>();
-
     public static ArrayList<Integer> solve(int A, ArrayList<Integer> B) {
 
-        pq = new PriorityQueue<>(A);
-
-        for (int i = 0; i < A -1 ; i++) {
-            pq.add(B.get(i));
-        }
+        ArrayList<Integer> output = new ArrayList<>();
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
 
         for (int i = 0; i < B.size(); i++) {
 
-            if(i < A - 1) {
-                result.add(-1);
-                continue;
-            }
-
             pq.add(B.get(i));
 
-            result.add(pq.remove());
+            if(pq.size() < A) {
+                output.add(-1);
+            }
+            else if(pq.size() == A) {
+                output.add(pq.peek());
+            }
+            else {
+                pq.remove();
+                output.add(pq.peek());
+            }
         }
 
-        return result;
+        return output;
     }
 }

@@ -1,5 +1,7 @@
 package StacksQueues;
 
+import Heaps.AthLargestElement;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +9,29 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+
+        ArrayList<Integer> arrayList = new ArrayList<>();
+
+        arrayList.add(1);
+        arrayList.add(2);
+        arrayList.add(3);
+        arrayList.add(4);
+        arrayList.add(5);
+        arrayList.add(6);
+
+        ArrayList<Integer> arrayList1 = new ArrayList<>();
+
+        arrayList1.add(5);
+        arrayList1.add(1);
+        arrayList1.add(5);
+        arrayList1.add(7);
+        arrayList1.add(3);
+        arrayList1.add(4);
+        arrayList1.add(6);
+        arrayList1.add(11);
+
+
+        ArrayList<Integer> tempList = AthLargestElement.solve(3, arrayList1);
 
         List<Integer> time = new ArrayList<>();
         time.add(0);
