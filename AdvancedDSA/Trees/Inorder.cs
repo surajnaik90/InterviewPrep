@@ -51,6 +51,7 @@ using System.Text;
 
 public static class Inorder
 {
+    public static List<int> res = new List<int>();
     public static List<int> solve(TreeNode A)
     {
         List<int> res = new List<int>();
@@ -78,5 +79,31 @@ public static class Inorder
         }
 
         return res;
+    }
+
+    public static List<int> solve2(TreeNode A)
+    {
+        traverse(A);
+
+        return res;
+    }
+
+    public static void traverse(TreeNode node)
+    {
+        if (node == null) {
+            return;
+        }
+
+        if(node.left != null) {
+            traverse(node.left);
+        }
+
+        res.Add(node.val);
+
+        if(node.right != null) {
+            traverse(node.right);
+        }
+
+        return;
     }
 }
